@@ -4,6 +4,7 @@ import path from 'node:path';
 import Layout from '../../layouts/Layout.astro';
 import { loadCatalog } from '../../lib/catalog';
 import type { Niggun } from '../../lib/catalog';
+import { tagLabel } from '../../lib/tags';
 
 export async function getStaticPaths() {
   const catalog = loadCatalog();
@@ -51,11 +52,6 @@ function assetUrl(ext: string): string | null {
   return fs.existsSync(localPath) ? `${base}assets/${n.dir}/${filename}` : null;
 }
 
-const TAG_LABELS: Record<string, string> = {
-  chabad: 'Chabad', pesach: 'Pesach', purim: 'Purim',
-  shabbat: 'Shabbat', chag: 'Chag', anytime: 'Anytime', chanukah: 'Chanukah', davening: 'Davening',
-};
-function tagLabel(t: string): string { return TAG_LABELS[t] ?? t; }
 
 function sourceName(url: string): string {
   const domain = new URL(url).hostname.replace(/^www\./, '');

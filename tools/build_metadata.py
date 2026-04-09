@@ -298,11 +298,18 @@ def build_metadata(dir_path: Path) -> dict | None:
     }
 
 
-VALID_TAGS = {"chabad", "pesach", "purim", "shabbat", "chag", "chanukah", "anytime", "davening"}
+def _load_valid_tags(repo_root: Path) -> set[str]:
+    """Load valid tag slugs from tag_defs.json at the repo root."""
+    tag_defs_path = repo_root / "tag_defs.json"
+    if not tag_defs_path.exists():
+        raise ValueError(f"tag_defs.json not found at {tag_defs_path}")
+    defs = json.loads(tag_defs_path.read_text(encoding="utf-8"))
+    return {entry["slug"] for entry in defs}
 
 
 def load_tags(repo_root: Path) -> dict[str, list[str]]:
     """Load tags.json from the repo root. Returns {} if not found."""
+    valid_tags = _load_valid_tags(repo_root)
     tags_path = repo_root / "tags.json"
     if not tags_path.exists():
         return {}
@@ -310,10 +317,10 @@ def load_tags(repo_root: Path) -> dict[str, list[str]]:
     # Validate and normalise
     result = {}
     for dir_name, tags in raw.items():
-        invalid = [t for t in tags if t not in VALID_TAGS]
+        invalid = [t for t in tags if t not in valid_tags]
         if invalid:
             logger.warning(f"{dir_name}: unknown tags {invalid} — skipping them")
-        result[dir_name] = [t for t in tags if t in VALID_TAGS]
+        result[dir_name] = [t for t in tags if t in valid_tags]
     return result
 
 

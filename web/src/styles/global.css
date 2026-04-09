@@ -17,6 +17,7 @@
 }
 
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+[hidden] { display: none !important; }
 
 body {
   font-family: var(--font-latin);
@@ -253,7 +254,9 @@ main { max-width: 1100px; margin: 0 auto; padding: 2rem 1.5rem; }
 .lyrics-col h3 { font-size: 0.8rem; text-transform: uppercase; letter-spacing: 0.05em; color: var(--color-muted); margin-bottom: 0.5rem; }
 .lyrics-col pre { font-family: inherit; white-space: pre-wrap; font-size: 0.9rem; line-height: 1.8; }
 
-/* ── Tags ── */
+/* ── Tags ──
+   Tag slugs/labels are defined in /tag_defs.json (single source of truth).
+   Add a .tag-<slug> and .tag-chip color rule here whenever a new tag is added there. */
 .tag {
   display: inline-block;
   font-size: 0.72rem;

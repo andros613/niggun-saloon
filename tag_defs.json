@@ -1,0 +1,10 @@
+[
+  { "slug": "chabad",   "label": "Chabad"   },
+  { "slug": "pesach",   "label": "Pesach"   },
+  { "slug": "purim",    "label": "Purim"    },
+  { "slug": "shabbat",  "label": "Shabbat"  },
+  { "slug": "chag",     "label": "Chag"     },
+  { "slug": "chanukah", "label": "Chanukah" },
+  { "slug": "anytime",  "label": "Anytime"  },
+  { "slug": "davening", "label": "Davening" }
+]
