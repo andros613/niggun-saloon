@@ -4,8 +4,10 @@
   "title": "Sheyibone Beis Hamikdosh",
   "subtitle": "Jewish Folk Song, popular among Chabad-Lubavitch",
   "arranger": "Amichai Andy Rosenbaum",
-  "date_gregorian": null,
-  "date_hebrew": null,
+  "date_gregorian": "June 2025",
+  "date_hebrew": "Sivan 5785",
+  "version": "v01",
+  "license": "Licensed under CC BY-NC-SA 4.0",
   "key": "E minor",
   "tempo_bpm": 90,
   "description": "",
@@ -27,11 +29,6 @@
       "url": "https://www.chabad.org/multimedia/music_cdo/aid/476629/jewish/Sheyiboneh.htm",
       "label": "Source",
       "type": "chabad_media"
-    },
-    {
-      "url": "https://www.alittlehebrew.com/transliterate/",
-      "label": "Transliteration based on",
-      "type": "link"
     }
   ],
   "tags": [

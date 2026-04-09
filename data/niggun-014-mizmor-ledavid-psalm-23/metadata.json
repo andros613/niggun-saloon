@@ -6,6 +6,8 @@
   "arranger": "Amichai Andy Rosenbaum",
   "date_gregorian": "March 2026",
   "date_hebrew": "Nissan 5786",
+  "version": "v01",
+  "license": "Licensed under CC BY-NC-SA 4.0",
   "key": "B minor",
   "tempo_bpm": 120,
   "description": "",

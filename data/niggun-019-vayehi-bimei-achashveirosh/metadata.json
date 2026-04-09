@@ -6,6 +6,8 @@
   "arranger": "Amichai Andy Rosenbaum",
   "date_gregorian": "February 2026",
   "date_hebrew": "Adar 5786",
+  "version": "v02",
+  "license": "Licensed under CC BY-NC-SA 4.0",
   "key": "D minor",
   "tempo_bpm": 120,
   "description": "",

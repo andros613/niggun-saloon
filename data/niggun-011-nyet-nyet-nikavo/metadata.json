@@ -6,6 +6,8 @@
   "arranger": "Amichai Andy Rosenbaum",
   "date_gregorian": "September 2025",
   "date_hebrew": "Elul 5785",
+  "version": "v02",
+  "license": "Licensed under CC BY-NC-SA 4.0",
   "key": "F major",
   "tempo_bpm": 120,
   "description": "",

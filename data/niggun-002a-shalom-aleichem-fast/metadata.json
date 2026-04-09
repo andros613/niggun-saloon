@@ -6,6 +6,8 @@
   "arranger": "Amichai Andy Rosenbaum",
   "date_gregorian": "May 2025",
   "date_hebrew": "Iyar 5785",
+  "version": "v01",
+  "license": "Licensed under CC BY-NC-SA 4.0",
   "key": "D minor",
   "tempo_bpm": 110,
   "description": "",

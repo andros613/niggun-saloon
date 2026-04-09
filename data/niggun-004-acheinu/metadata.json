@@ -4,8 +4,10 @@
   "title": "Acheinu",
   "subtitle": "Jewish Folk Song",
   "arranger": "Amichai Andy Rosenbaum",
-  "date_gregorian": null,
-  "date_hebrew": null,
+  "date_gregorian": "June 2025",
+  "date_hebrew": "Sivan 5785",
+  "version": "v01",
+  "license": "Licensed under CC BY-NC-SA 4.0",
   "key": "A minor",
   "tempo_bpm": 60,
   "description": "",
@@ -31,11 +33,6 @@
     {
       "url": "https://aish.com/a_prayer_of_the_jewish_people/",
       "label": "English Translation: Aish",
-      "type": "link"
-    },
-    {
-      "url": "https://www.alittlehebrew.com/transliterate/",
-      "label": "Transliteration based on",
       "type": "link"
     }
   ],
