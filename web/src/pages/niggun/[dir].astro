@@ -108,6 +108,8 @@ const lyUrl   = n.assets.has_ly   ? assetUrl('ly')   : null;
       {n.tempo_bpm   && <span>♩= {n.tempo_bpm} bpm</span>}
       {n.arranger    && <span>✍️ {n.arranger}</span>}
       {n.date_gregorian && <span>📅 {n.date_gregorian}{n.date_hebrew ? ` / ${n.date_hebrew}` : ''}</span>}
+      {n.version     && <span>{n.version}</span>}
+      {n.license     && <span>{n.license}</span>}
     </div>
 
     {n.description && (

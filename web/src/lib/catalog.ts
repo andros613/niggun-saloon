@@ -28,6 +28,8 @@ export interface Niggun {
   arranger: string;
   date_gregorian: string | null;
   date_hebrew: string | null;
+  version: string | null;
+  license: string | null;
   key: string | null;
   tempo_bpm: number | null;
   description: string;

@@ -84,51 +84,54 @@ def parse_tempo(text: str) -> int | None:
     return inline_bpm if inline_bpm is not None else variable_bpm
 
 
-def parse_date_from_arranger(arranger: str) -> tuple[str | None, str | None]:
-    """Extract Gregorian and Hebrew dates from arranger/copyright string."""
-    # e.g. "Arranged by Amichai Rosenbaum Nissan 5785 / April 2025 | v02 | BS''D"
-    # or   "Arrangement © October 2025 / Tishrei 5786 by ..."
-    gregorian = None
-    hebrew = None
-
-    months = (
-        "January|February|March|April|May|June|July|August|"
-        "September|October|November|December"
-    )
-    heb_months = (
-        "Nissan|Nisan|Iyar|Sivan|Tammuz|Av|Elul|"
-        "Tishrei|Cheshvan|Kislev|Teves|Tevet|Shevat|Adar"
-    )
-
-    gm = re.search(rf'({months})\s+(\d{{4}})', arranger)
-    if gm:
-        gregorian = f"{gm.group(1)} {gm.group(2)}"
-
-    hm = re.search(rf'({heb_months})\s+(\d{{4}})', arranger)
-    if hm:
-        hebrew = f"{hm.group(1)} {hm.group(2)}"
-
-    return gregorian, hebrew
+_GREG_MONTHS = (
+    "January|February|March|April|May|June|"
+    "July|August|September|October|November|December"
+)
+_HEB_MONTHS = (
+    "Marcheshvan|Menachem\\s+Av|"   # multi-word variants first
+    "Nissan|Nisan|Iyar|Sivan|Tammuz|Av|Elul|"
+    "Tishrei|Cheshvan|Kislev|Teves|Tevet|Shevat|Adar"
+)
 
 
-def parse_arranger_name(arranger: str) -> str:
-    """Strip boilerplate from arranger field to get just the name."""
-    # Pattern: "Arranged by Name ..."  or  "Arrangement ... by Name ..."
-    # Match "by Firstname [Middle] Lastname" (two or more capitalized words)
-    _MONTHS = (r'Nissan|Nisan|Iyar|Sivan|Tammuz|Av|Elul|Tishrei|Cheshvan|Kislev|'
-               r'Teves|Tevet|Shevat|Adar|January|February|March|April|May|June|'
-               r'July|August|September|October|November|December')
-    m = re.search(r'\bby\s+([A-Z][a-z]+(?:\s+[A-Z][a-z]+)+)', arranger)
-    if m:
-        name = m.group(1)
-        # Stop before any month name that leaked into the greedy match
-        name = re.split(rf'\s+(?:{_MONTHS})', name)[0]
-        return name.strip()
-    # Fallback: strip leading boilerplate then take capitalized words
-    name = re.sub(r'^Arrangement\s+by\s+', '', arranger, flags=re.IGNORECASE)
-    name = re.sub(r'^Arranged\s+by\s+', '', name, flags=re.IGNORECASE)
-    name = re.split(r'\s+(?:Nissan|Nisan|Iyar|Sivan|Tammuz|Av|Elul|Tishrei|Cheshvan|Kislev|Teves|Tevet|Shevat|Adar|January|February|March|April|May|June|July|August|September|October|November|December|\|)', name)[0]
-    return name.strip()
+def parse_arranger_field(raw: str) -> dict:
+    """Parse pipe-delimited arranger line into name, dates, and version.
+
+    Format: "Arranged by Name | Hebrew Month Year / Gregorian Month Year | vNN | B''H"
+    All segments after the name are optional and order-independent.
+    """
+    segments = [s.strip() for s in raw.split("|")]
+
+    name = re.sub(r'^Arranged\s+by\s+', '', segments[0], flags=re.IGNORECASE).strip()
+
+    date_gregorian = None
+    date_hebrew = None
+    version = None
+
+    for seg in segments[1:]:
+        # Version token: exactly vNN
+        if re.fullmatch(r'v\d+', seg):
+            version = seg
+            continue
+        # Skip B''H / BS''D blessing tokens
+        if re.search(r"B['S]+''[DHH]", seg):
+            continue
+        # Extract Hebrew month + year
+        hm = re.search(rf'({_HEB_MONTHS})\s+(\d{{4}})', seg)
+        if hm:
+            date_hebrew = f"{hm.group(1)} {hm.group(2)}"
+        # Extract Gregorian month + year
+        gm = re.search(rf'({_GREG_MONTHS})\s+(\d{{4}})', seg)
+        if gm:
+            date_gregorian = f"{gm.group(1)} {gm.group(2)}"
+
+    return {
+        "arranger": name,
+        "date_gregorian": date_gregorian,
+        "date_hebrew": date_hebrew,
+        "version": version,
+    }
 
 
 # ---------------------------------------------------------------------------
@@ -243,11 +246,12 @@ def build_metadata(dir_path: Path) -> dict | None:
 
     subtitle = header.get("subtitle", "")
 
-    # Arranger: prefer \header arranger, fall back to copyright
-    arranger_raw = header.get("arranger") or header.get("copyright") or ""
-    arranger = parse_arranger_name(arranger_raw) if arranger_raw else "Amichai Rosenbaum"
-
-    date_gregorian, date_hebrew = parse_date_from_arranger(arranger_raw)
+    arranger_info = parse_arranger_field(header.get("arranger", ""))
+    arranger = arranger_info["arranger"] or "Amichai Andy Rosenbaum"
+    date_gregorian = arranger_info["date_gregorian"]
+    date_hebrew = arranger_info["date_hebrew"]
+    version = arranger_info["version"]
+    license_str = header.get("copyright") or None
 
     key = parse_key(ly_text)
     tempo_bpm = parse_tempo(ly_text)
@@ -281,6 +285,8 @@ def build_metadata(dir_path: Path) -> dict | None:
         "arranger": arranger,
         "date_gregorian": date_gregorian,
         "date_hebrew": date_hebrew,
+        "version": version,
+        "license": license_str,
         "key": key,
         "tempo_bpm": tempo_bpm,
         "description": description,
