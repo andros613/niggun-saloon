@@ -198,9 +198,6 @@ main { max-width: 1100px; margin: 0 auto; padding: 2rem 1.5rem; }
 .tag-chip.active { opacity: 1; background: var(--color-primary); color: #fff; border-color: var(--color-primary); }
 
 /* ── Browse filters ── */
-.filters { display: flex; gap: 0.75rem; flex-wrap: wrap; margin-top: 0.5rem; }
-.filters label { font-size: 0.85rem; color: var(--color-muted); }
-.filters select { font-size: 0.85rem; padding: 0.25rem 0.5rem; border: 1px solid var(--color-border); border-radius: 4px; background: var(--color-surface); }
 .tag-filter { display: flex; gap: 0.4rem; flex-wrap: wrap; margin-top: 0.6rem; }
 
 .page-title { font-size: 1.5rem; font-weight: 700; }

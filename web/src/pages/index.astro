@@ -5,7 +5,6 @@ import { loadCatalog } from '../lib/catalog';
 const catalog = loadCatalog();
 const nigguns = catalog.nigguns;
 
-const allKeys = [...new Set(nigguns.map(n => n.key).filter(Boolean))].sort() as string[];
 const allTags = ['chabad', 'pesach', 'purim', 'shabbat', 'chag', 'chanukah', 'anytime', 'davening'];
 const tagLabel: Record<string, string> = {
   chabad: 'Chabad', pesach: 'Pesach', purim: 'Purim',
@@ -20,16 +19,6 @@ const base = import.meta.env.BASE_URL;
     {nigguns.length} Jewish liturgical music arrangements by Amichai Rosenbaum
   </p>
 
-  <div class="filters">
-    <label>
-      Key:
-      <select id="filter-key">
-        <option value="">All keys</option>
-        {allKeys.map(k => <option value={k}>{k}</option>)}
-      </select>
-    </label>
-  </div>
-
   <div class="tag-filter" id="tag-filter">
     {allTags.map(t => (
       <button class={`tag-chip tag-${t}`} data-tag={t}>{tagLabel[t]}</button>
@@ -39,7 +28,6 @@ const base = import.meta.env.BASE_URL;
   <div class="niggun-grid" id="niggun-grid">
     {nigguns.map(n => (
       <a href={`${base}niggun/${n.dir}/`} class="niggun-card"
-         data-key={n.key ?? ''}
          data-tags={n.tags.join(',')}>
         <h2>{n.title}</h2>
         {n.subtitle && <p class="subtitle">{n.subtitle}</p>}
@@ -61,23 +49,18 @@ const base = import.meta.env.BASE_URL;
 </Layout>
 
 <script>
-  const keySelect = document.getElementById('filter-key') as HTMLSelectElement;
-  const tagChips  = document.querySelectorAll<HTMLButtonElement>('.tag-chip');
-  const cards     = document.querySelectorAll<HTMLElement>('#niggun-grid .niggun-card');
+  const tagChips = document.querySelectorAll<HTMLButtonElement>('.tag-chip');
+  const cards    = document.querySelectorAll<HTMLElement>('#niggun-grid .niggun-card');
 
   const activeTags = new Set<string>();
 
   function applyFilters() {
-    const key = keySelect.value;
     for (const card of cards) {
       const cardTags = card.dataset.tags ? card.dataset.tags.split(',').filter(Boolean) : [];
-      const matchKey  = !key || card.dataset.key === key;
       const matchTags = activeTags.size === 0 || [...activeTags].every(t => cardTags.includes(t));
-      card.style.display = matchKey && matchTags ? '' : 'none';
+      card.style.display = matchTags ? '' : 'none';
     }
   }
-
-  keySelect.addEventListener('change', applyFilters);
 
   tagChips.forEach(chip => {
     chip.addEventListener('click', () => {
