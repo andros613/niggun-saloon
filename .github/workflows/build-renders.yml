@@ -30,16 +30,20 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
-      - name: Install LilyPond, FluidSynth, FFmpeg, LAME
+      - name: Install LilyPond, FluidSynth, FFmpeg, LAME, soundfont
         run: |
           sudo apt-get update -qq
-          sudo apt-get install -y lilypond fluidsynth ffmpeg lame
+          sudo apt-get install -y lilypond fluidsynth ffmpeg lame fluid-soundfont-gm
 
       - name: Detect changed niggun directories
         id: changed
         run: |
           if [ -n "${{ github.event.inputs.dir }}" ]; then
             echo "dirs=${{ github.event.inputs.dir }}" >> "$GITHUB_OUTPUT"
+          elif [ "${{ github.event_name }}" = "workflow_dispatch" ]; then
+            # No dir specified — rebuild all dirs with a .ly file
+            dirs=$(find data -name '*.ly' | awk -F/ '{print $2}' | sort -u | tr '\n' ' ')
+            echo "dirs=$dirs" >> "$GITHUB_OUTPUT"
           else
             # Find all data/ dirs containing .ly files changed in this push
             dirs=$(git diff --name-only ${{ github.event.before }} ${{ github.sha }} \
@@ -48,6 +52,8 @@ jobs:
           fi
 
       - name: Build renders for changed directories
+        env:
+          NIGGUN_SF: /usr/share/sounds/sf2/FluidR3_GM.sf2
         run: |
           for dir in ${{ steps.changed.outputs.dirs }}; do
             if [ -f "data/$dir/run.sh" ]; then
@@ -82,8 +88,8 @@ jobs:
 
       - name: Rebuild metadata and trigger site deploy
         run: |
-          python tools/build_metadata.py
-          python tools/build_catalog.py
+          python3 tools/build_metadata.py
+          python3 tools/build_catalog.py
           git config user.name  "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
           git add data/**/metadata.json catalog.json
