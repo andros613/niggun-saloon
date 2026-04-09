@@ -75,7 +75,15 @@ const midiUrl = n.assets.has_midi ? assetUrl('midi') : null;
     {mp3Url && (
       <div class="audio-section">
         <h2>Listen</h2>
-        <audio controls src={mp3Url} />
+        <audio id="audio-player" controls src={mp3Url} />
+        <div class="speed-controls">
+          <label for="speed-select">Speed:</label>
+          <select id="speed-select">
+            {[0.5, 0.75, 1, 1.25, 1.5, 1.75, 2].map(s => (
+              <option value={s} selected={s === 1}>{s}x</option>
+            ))}
+          </select>
+        </div>
       </div>
     )}
 
@@ -117,3 +125,11 @@ const midiUrl = n.assets.has_midi ? assetUrl('midi') : null;
     )}
   </div>
 </Layout>
+
+<script>
+  const audio = document.getElementById('audio-player') as HTMLAudioElement | null;
+  const select = document.getElementById('speed-select') as HTMLSelectElement | null;
+  select?.addEventListener('change', () => {
+    if (audio) audio.playbackRate = parseFloat(select.value);
+  });
+</script>
