@@ -139,7 +139,10 @@ function bestWordScore(qw: string, tWords: string[]): number {
   let best = 0;
   for (const tw of tWords) {
     if (tw.startsWith(qw))                    { best = Math.max(best, 0.9);  continue; }
-    if (tw.includes(qw) || qw.includes(tw))   { best = Math.max(best, 0.85); continue; }
+    if (tw.includes(qw))                      { best = Math.max(best, 0.85); continue; }
+    // qw.includes(tw): only when tw is substantial (≥3 chars) to avoid noise words
+    // produced by normalization ("an" from "on", "ah" from "ach", etc.) driving false hits.
+    if (tw.length >= 3 && qw.includes(tw))    { best = Math.max(best, 0.85); continue; }
     best = Math.max(best, trigramSim(qw, tw));
   }
   return best;
