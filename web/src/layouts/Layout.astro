@@ -25,6 +25,50 @@ const base = import.meta.env.BASE_URL;
     <main>
       <slot />
     </main>
+    <footer class="site-footer">
+      <div class="footer-inner">
+
+        <div class="footer-col">
+          <p class="footer-heading">Found a bug?</p>
+          <a
+            class="footer-link"
+            href="https://github.com/andros613/niggun-saloon/issues/new"
+            target="_blank"
+            rel="noopener noreferrer"
+          >Open a GitHub issue</a>
+        </div>
+
+        <div class="footer-col">
+          <p class="footer-heading">Feedback &amp; suggestions</p>
+          <a
+            class="footer-link"
+            href="https://tally.so/r/rjd67M"
+            target="_blank"
+            rel="noopener noreferrer"
+          >Share your thoughts</a>
+        </div>
+
+        <div class="footer-col footer-subscribe">
+          <p class="footer-heading">Stay updated</p>
+          <form
+            action="https://buttondown.com/api/emails/embed-subscribe/andros613"
+            method="post"
+            class="subscribe-form"
+          >
+            <input
+              type="email"
+              name="email"
+              placeholder="your@email.com"
+              required
+              class="subscribe-input"
+              autocomplete="email"
+            />
+            <button type="submit" class="subscribe-btn">Subscribe</button>
+          </form>
+        </div>
+
+      </div>
+    </footer>
   </body>
 </html>
 
