@@ -275,6 +275,25 @@ def build_metadata(dir_path: Path) -> dict | None:
     }
 
 
+VALID_TAGS = {"chabad", "pesach", "purim", "shabbat", "chag", "chanukah", "anytime"}
+
+
+def load_tags(repo_root: Path) -> dict[str, list[str]]:
+    """Load tags.json from the repo root. Returns {} if not found."""
+    tags_path = repo_root / "tags.json"
+    if not tags_path.exists():
+        return {}
+    raw = json.loads(tags_path.read_text(encoding="utf-8"))
+    # Validate and normalise
+    result = {}
+    for dir_name, tags in raw.items():
+        invalid = [t for t in tags if t not in VALID_TAGS]
+        if invalid:
+            logger.warning(f"{dir_name}: unknown tags {invalid} — skipping them")
+        result[dir_name] = [t for t in tags if t in VALID_TAGS]
+    return result
+
+
 def parse_args():
     p = argparse.ArgumentParser(description="Generate metadata.json for each niggun directory.")
     p.add_argument("--data-dir", default="data", help="Path to the data/ directory")
@@ -290,6 +309,10 @@ def main():
     if not data_dir.is_dir():
         raise ValueError(f"Data directory not found: {data_dir}")
 
+    repo_root = data_dir.parent
+    all_tags = load_tags(repo_root)
+    logger.info(f"Loaded tags for {len(all_tags)} dirs from tags.json")
+
     dirs = sorted(p for p in data_dir.iterdir() if p.is_dir())
     processed = skipped = 0
 
@@ -299,6 +322,9 @@ def main():
             logger.info(f"SKIP {dir_path.name} (no .ly file)")
             skipped += 1
             continue
+
+        # Merge hand-curated tags from tags.json
+        metadata["tags"] = all_tags.get(dir_path.name, [])
 
         out_path = dir_path / "metadata.json"
         json_str = json.dumps(metadata, indent=2, ensure_ascii=False)

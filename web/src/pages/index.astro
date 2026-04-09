@@ -6,8 +6,12 @@ import type { Niggun } from '../lib/catalog';
 const catalog = loadCatalog();
 const nigguns = catalog.nigguns;
 
-// Unique keys for the filter dropdown
 const allKeys = [...new Set(nigguns.map(n => n.key).filter(Boolean))].sort() as string[];
+const allTags = ['chabad', 'pesach', 'purim', 'shabbat', 'chag', 'chanukah', 'anytime'];
+const tagLabel: Record<string, string> = {
+  chabad: 'Chabad', pesach: 'Pesach', purim: 'Purim',
+  shabbat: 'Shabbat', chag: 'Chag', chanukah: 'Chanukah', anytime: 'Anytime',
+};
 
 const base = import.meta.env.BASE_URL;
 
@@ -40,21 +44,31 @@ function assetBadges(n: Niggun): { label: string; cls: string }[] {
     </label>
   </div>
 
+  <div class="tag-filter" id="tag-filter">
+    {allTags.map(t => (
+      <button class="tag-chip" data-tag={t}>{tagLabel[t]}</button>
+    ))}
+  </div>
+
   <div class="niggun-grid" id="niggun-grid">
     {nigguns.map(n => (
       <a href={`${base}niggun/${n.dir}/`} class="niggun-card"
          data-key={n.key ?? ''}
-         data-has-audio={n.assets.has_mp3 ? 'true' : 'false'}>
+         data-has-audio={n.assets.has_mp3 ? 'true' : 'false'}
+         data-tags={n.tags.join(',')}>
         <h2>{n.title}</h2>
         {n.subtitle && <p class="subtitle">{n.subtitle}</p>}
         <div class="meta">
-          {n.key     && <span>{n.key}</span>}
+          {n.key       && <span>{n.key}</span>}
           {n.tempo_bpm && <span>♩= {n.tempo_bpm}</span>}
           {n.date_gregorian && <span>{n.date_gregorian}</span>}
         </div>
         <div class="badges">
           {assetBadges(n).map(b => (
             <span class={`badge ${b.cls}`}>{b.label}</span>
+          ))}
+          {n.tags.map(t => (
+            <span class={`tag tag-${t}`}>{tagLabel[t] ?? t}</span>
           ))}
         </div>
       </a>
@@ -63,21 +77,39 @@ function assetBadges(n: Niggun): { label: string; cls: string }[] {
 </Layout>
 
 <script>
-  // Client-side filtering — no framework needed
-  const keySelect = document.getElementById('filter-key') as HTMLSelectElement;
+  const keySelect  = document.getElementById('filter-key') as HTMLSelectElement;
   const audioCheck = document.getElementById('filter-has-audio') as HTMLInputElement;
-  const cards = document.querySelectorAll<HTMLElement>('#niggun-grid .niggun-card');
+  const tagChips   = document.querySelectorAll<HTMLButtonElement>('.tag-chip');
+  const cards      = document.querySelectorAll<HTMLElement>('#niggun-grid .niggun-card');
+
+  const activeTags = new Set<string>();
 
   function applyFilters() {
     const key = keySelect.value;
     const audioOnly = audioCheck.checked;
     for (const card of cards) {
+      const cardTags = card.dataset.tags ? card.dataset.tags.split(',').filter(Boolean) : [];
       const matchKey   = !key || card.dataset.key === key;
       const matchAudio = !audioOnly || card.dataset.hasAudio === 'true';
-      card.style.display = matchKey && matchAudio ? '' : 'none';
+      const matchTags  = activeTags.size === 0 || [...activeTags].every(t => cardTags.includes(t));
+      card.style.display = matchKey && matchAudio && matchTags ? '' : 'none';
     }
   }
 
   keySelect.addEventListener('change', applyFilters);
   audioCheck.addEventListener('change', applyFilters);
+
+  tagChips.forEach(chip => {
+    chip.addEventListener('click', () => {
+      const tag = chip.dataset.tag!;
+      if (activeTags.has(tag)) {
+        activeTags.delete(tag);
+        chip.classList.remove('active');
+      } else {
+        activeTags.add(tag);
+        chip.classList.add('active');
+      }
+      applyFilters();
+    });
+  });
 </script>

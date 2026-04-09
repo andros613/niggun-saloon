@@ -164,6 +164,7 @@ main { max-width: 1100px; margin: 0 auto; padding: 2rem 1.5rem; }
 }
 .ref-label { font-size: 0.85rem; color: var(--color-muted); }
 .ref-source { font-size: 0.8em; color: var(--color-muted); }
+.detail-tags { display: flex; gap: 0.4rem; flex-wrap: wrap; margin-top: 0.5rem; }
 
 .lyrics-pane {
   display: grid;
@@ -174,10 +175,44 @@ main { max-width: 1100px; margin: 0 auto; padding: 2rem 1.5rem; }
 .lyrics-col h3 { font-size: 0.8rem; text-transform: uppercase; letter-spacing: 0.05em; color: var(--color-muted); margin-bottom: 0.5rem; }
 .lyrics-col pre { font-family: inherit; white-space: pre-wrap; font-size: 0.9rem; line-height: 1.8; }
 
+/* ── Tags ── */
+.tag {
+  display: inline-block;
+  font-size: 0.72rem;
+  font-weight: 600;
+  padding: 0.15rem 0.5rem;
+  border-radius: 99px;
+  border: 1px solid transparent;
+  white-space: nowrap;
+}
+.tag-chabad   { background: #fff3e0; border-color: #f0a030; color: #7a4800; }
+.tag-shabbat  { background: #fffbe6; border-color: #f5c000; color: #6a5000; }
+.tag-pesach   { background: #e8f5e8; border-color: #5aaa5a; color: #1e5c1e; }
+.tag-purim    { background: #f3e8ff; border-color: #a060d0; color: #52007a; }
+.tag-chag     { background: #e8f0ff; border-color: #5080d0; color: #1a3a7a; }
+.tag-chanukah { background: #e0f0ff; border-color: #3090e0; color: #003a7a; }
+.tag-anytime  { background: #f0f0f0; border-color: #aaaaaa; color: #444444; }
+
+/* tag filter chips on browse page */
+.tag-chip {
+  cursor: pointer;
+  padding: 0.25rem 0.7rem;
+  border-radius: 99px;
+  border: 1px solid var(--color-border);
+  font-size: 0.8rem;
+  font-weight: 500;
+  background: var(--color-surface);
+  color: var(--color-muted);
+  transition: all 0.1s;
+}
+.tag-chip:hover   { border-color: var(--color-primary); color: var(--color-primary); }
+.tag-chip.active  { background: var(--color-primary); color: #fff; border-color: var(--color-primary); }
+
 /* ── Browse filters ── */
 .filters { display: flex; gap: 0.75rem; flex-wrap: wrap; margin-top: 0.5rem; }
 .filters label { font-size: 0.85rem; color: var(--color-muted); }
 .filters select { font-size: 0.85rem; padding: 0.25rem 0.5rem; border: 1px solid var(--color-border); border-radius: 4px; background: var(--color-surface); }
+.tag-filter { display: flex; gap: 0.4rem; flex-wrap: wrap; margin-top: 0.6rem; }
 
 .page-title { font-size: 1.5rem; font-weight: 700; }
 .page-subtitle { color: var(--color-muted); font-size: 0.95rem; margin-top: 0.25rem; }

@@ -45,6 +45,12 @@ function assetUrl(ext: string): string | null {
   return fs.existsSync(localPath) ? `${base}assets/${n.dir}/${filename}` : null;
 }
 
+const TAG_LABELS: Record<string, string> = {
+  chabad: 'Chabad', pesach: 'Pesach', purim: 'Purim',
+  shabbat: 'Shabbat', chag: 'Chag', anytime: 'Anytime', chanukah: 'Chanukah',
+};
+function tagLabel(t: string): string { return TAG_LABELS[t] ?? t; }
+
 function sourceName(url: string): string {
   const domain = new URL(url).hostname.replace(/^www\./, '');
   const names: Record<string, string> = {
@@ -76,6 +82,13 @@ const lyUrl   = n.assets.has_ly   ? assetUrl('ly')   : null;
     <div>
       <h1>{n.title}</h1>
       {n.subtitle && <p class="sub">{n.subtitle}</p>}
+      {n.tags.length > 0 && (
+        <div class="detail-tags">
+          {n.tags.map(t => (
+            <span class={`tag tag-${t}`}>{tagLabel(t)}</span>
+          ))}
+        </div>
+      )}
     </div>
 
     <div class="meta-row">
