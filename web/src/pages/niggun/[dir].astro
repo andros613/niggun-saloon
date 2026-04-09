@@ -115,7 +115,14 @@ const lyUrl   = n.assets.has_ly   ? assetUrl('ly')   : null;
     {mp3Url && (
       <div class="audio-section">
         <h2>Listen</h2>
-        <audio id="audio-player" controls src={mp3Url} />
+        <audio
+          id="audio-player"
+          controls
+          src={mp3Url}
+          data-title={n.title}
+          data-artist={n.arranger ?? ''}
+          data-artwork={`${base}temple_v02.png`}
+        />
         <div class="speed-controls">
           <label for="speed-select">Speed:</label>
           <select id="speed-select">
@@ -250,8 +257,19 @@ const lyUrl   = n.assets.has_ly   ? assetUrl('ly')   : null;
 </Layout>
 
 <script>
-  // Playback speed
+  // Lock-screen / media session metadata (artwork, title, artist for iOS/Android)
   const audio = document.getElementById('audio-player') as HTMLAudioElement | null;
+  if (audio && 'mediaSession' in navigator) {
+    const artworkSrc = new URL(audio.dataset.artwork ?? '', location.href).href;
+    const metadata = new MediaMetadata({
+      title:  audio.dataset.title  ?? '',
+      artist: audio.dataset.artist ?? '',
+      artwork: [{ src: artworkSrc, type: 'image/png' }],
+    });
+    audio.addEventListener('play', () => { navigator.mediaSession.metadata = metadata; }, { once: true });
+  }
+
+  // Playback speed
   const select = document.getElementById('speed-select') as HTMLSelectElement | null;
   select?.addEventListener('change', () => {
     if (audio) audio.playbackRate = parseFloat(select.value);
