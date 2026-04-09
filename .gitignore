@@ -15,7 +15,13 @@ __pycache__/
 # data/**/*.midi
 # data/**/*.mid
 
-# IDE
+# IDE / OS
 .idea/
 .vscode/
 *.swp
+.DS_Store
+
+# Backup files
+*.bk
+*.old
+*.old2
