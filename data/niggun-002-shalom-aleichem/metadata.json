@@ -14,7 +14,7 @@
   "assets": {
     "has_ly": true,
     "has_pdf": true,
-    "has_mp3": false,
+    "has_mp3": true,
     "has_midi": true,
     "has_words_he": false,
     "has_words_en": false,

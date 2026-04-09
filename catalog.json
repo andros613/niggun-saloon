@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-04-09T04:51:16.104868+00:00",
+  "generated_at": "2026-04-09T14:23:49.023318+00:00",
   "count": 28,
   "nigguns": [
     {
@@ -12,13 +12,13 @@
       "date_hebrew": "Nissan 5785",
       "key": "D minor",
       "tempo_bpm": 110,
-      "description": "Jewish Chassidic Niggun (wordless melody) often sung by Rabbi Mosh Chaim Eade at Aish HaTorah.\n\nArranged by Amichai Rosenbaum, Nissan 5785 / April 2025.",
+      "description": "",
       "variant_of": null,
       "arrangement_type": null,
       "assets": {
         "has_ly": true,
         "has_pdf": true,
-        "has_mp3": false,
+        "has_mp3": true,
         "has_midi": true,
         "has_words_he": false,
         "has_words_en": false,
@@ -49,7 +49,7 @@
       "assets": {
         "has_ly": true,
         "has_pdf": true,
-        "has_mp3": false,
+        "has_mp3": true,
         "has_midi": true,
         "has_words_he": false,
         "has_words_en": false,
@@ -80,7 +80,7 @@
       "assets": {
         "has_ly": true,
         "has_pdf": true,
-        "has_mp3": false,
+        "has_mp3": true,
         "has_midi": true,
         "has_words_he": false,
         "has_words_en": false,
@@ -147,13 +147,13 @@
       "date_hebrew": null,
       "key": "A minor",
       "tempo_bpm": 60,
-      "description": "Jewish Folk Song.\n\nArranged by Amichai Rosenbaum, Sivan 5785 / June 2025.",
+      "description": "",
       "variant_of": null,
       "arrangement_type": null,
       "assets": {
         "has_ly": true,
         "has_pdf": true,
-        "has_mp3": false,
+        "has_mp3": true,
         "has_midi": true,
         "has_words_he": false,
         "has_words_en": false,
@@ -341,7 +341,7 @@
       "assets": {
         "has_ly": true,
         "has_pdf": true,
-        "has_mp3": false,
+        "has_mp3": true,
         "has_midi": true,
         "has_words_he": false,
         "has_words_en": false,
@@ -487,7 +487,7 @@
       "date_hebrew": null,
       "key": "A minor",
       "tempo_bpm": 40,
-      "description": "Jewish Folk Song for Shabbat.\n\nArranged by Amichai Rosenbaum, Nissan 5785 / April 2025.",
+      "description": "",
       "variant_of": null,
       "arrangement_type": null,
       "assets": {
@@ -988,13 +988,13 @@
       "date_hebrew": "Adar 5785",
       "key": "C major",
       "tempo_bpm": null,
-      "description": "Jewish Folk Song for Purim.\n\nArranged by Amichai Rosenbaum, Adar 5785 / March 2025.",
+      "description": "",
       "variant_of": "020",
       "arrangement_type": "piano",
       "assets": {
         "has_ly": true,
         "has_pdf": true,
-        "has_mp3": false,
+        "has_mp3": true,
         "has_midi": true,
         "has_words_he": false,
         "has_words_en": false,
@@ -1020,7 +1020,7 @@
       "date_hebrew": "Adar 5785",
       "key": "C major",
       "tempo_bpm": 100,
-      "description": "Jewish Folk Song for Purim.\n\nArranged by Amichai Rosenbaum, Adar 5786 / Feb 2026.",
+      "description": "",
       "variant_of": "020",
       "arrangement_type": "piano",
       "assets": {
