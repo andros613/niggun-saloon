@@ -45,6 +45,23 @@ function assetUrl(ext: string): string | null {
   return fs.existsSync(localPath) ? `${base}assets/${n.dir}/${filename}` : null;
 }
 
+function sourceName(url: string): string {
+  const domain = new URL(url).hostname.replace(/^www\./, '');
+  const names: Record<string, string> = {
+    'chabad.org':            'Chabad.org',
+    'sefaria.org':           'Sefaria.org',
+    'sefaria.org.il':        'Sefaria.org',
+    'aish.com':              'Aish.com',
+    'zemirotdatabase.org':   'Zemirot Database',
+    'alittlehebrew.com':     'A Little Hebrew',
+    'anash.org':             'Anash.org',
+    'crownheights.info':     'CrownHeights.info',
+    'youtube.com':           'YouTube',
+    'youtu.be':              'YouTube',
+  };
+  return names[domain] ?? domain;
+}
+
 const mp3Url  = n.assets.has_mp3  ? assetUrl('mp3')  : null;
 const pdfUrl  = n.assets.has_pdf  ? assetUrl('pdf')  : null;
 const midiUrl = n.assets.has_midi ? assetUrl('midi') : null;
@@ -130,7 +147,10 @@ const lyUrl   = n.assets.has_ly   ? assetUrl('ly')   : null;
                   <span class="ref-icon">
                     {ref.type === 'chabad_media' ? '🎵' : '🔗'}
                   </span>
-                  <span>{ref.label ?? ref.url}</span>
+                  <span>
+                    {ref.label ?? ref.url}
+                    <span class="ref-source"> (from {sourceName(ref.url)})</span>
+                  </span>
                 </a>
               )}
             </div>
