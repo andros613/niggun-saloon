@@ -201,6 +201,34 @@ describe('non-matches', () => {
 });
 
 // ---------------------------------------------------------------------------
+// beis ↔ beit  (critical: s\b must fire before ei→e)
+// ---------------------------------------------------------------------------
+
+describe('beis ↔ beit (Ashkenazi/Sephardic)', () => {
+  it('beis matches beit', () => expectMatch('beis', 'beit'));
+  it('beit matches beis', () => expectMatch('beit', 'beis'));
+  it('beis matches Beis Hamikdash title', () => expectMatch('beis', 'Beis Hamikdash'));
+  it('beit matches Beis Hamikdash title', () => expectMatch('beit', 'Beis Hamikdash'));
+});
+
+// ---------------------------------------------------------------------------
+// Stopword filtering
+// ---------------------------------------------------------------------------
+
+describe('stopword filtering', () => {
+  it('subtitle filler does not cause false positive ("rachomono" vs eishet chayil)', () => {
+    expectNoMatch('rachomono', 'eishet chayil jewish folk song (based on mayer davis version)');
+  });
+  it('subtitle filler does not cause false positive ("rachomono" vs al tira)', () => {
+    expectNoMatch('rachomono', 'al tira & ach tzadikim jewish folk song (popular in chabad-lubavitch after davening)');
+  });
+  it('stopwords: [] disables filtering', () => {
+    // with no stopwords and no normalization, exact match still works
+    expect(fuzzyScore('shabbat', 'shabbat', { stopwords: new Set() })).toBe(1);
+  });
+});
+
+// ---------------------------------------------------------------------------
 // normRules: [] — disable normalization
 // ---------------------------------------------------------------------------
 
