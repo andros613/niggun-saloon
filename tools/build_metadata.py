@@ -30,7 +30,8 @@ def parse_ly_header(text: str) -> dict:
     m = re.search(r'\\header\s*\{([^}]*)\}', text, re.DOTALL)
     if not m:
         return {}
-    block = m.group(1)
+    # Strip LilyPond comment lines before parsing
+    block = '\n'.join(line for line in m.group(1).splitlines() if not line.strip().startswith('%'))
     fields = {}
     for key in ("title", "subtitle", "arranger", "copyright", "composer", "instrument"):
         km = re.search(rf'{key}\s*=\s*"([^"]*)"', block)
@@ -112,13 +113,20 @@ def parse_date_from_arranger(arranger: str) -> tuple[str | None, str | None]:
 
 def parse_arranger_name(arranger: str) -> str:
     """Strip boilerplate from arranger field to get just the name."""
-    # Pattern: "Arranged by Name ..."  or  "Arrangement © date by Name ..."
-    # Match "by Firstname Lastname" (exactly two capitalized words)
-    m = re.search(r'\bby\s+([A-Z][a-z]+\s+[A-Z][a-z]+)', arranger)
+    # Pattern: "Arranged by Name ..."  or  "Arrangement ... by Name ..."
+    # Match "by Firstname [Middle] Lastname" (two or more capitalized words)
+    _MONTHS = (r'Nissan|Nisan|Iyar|Sivan|Tammuz|Av|Elul|Tishrei|Cheshvan|Kislev|'
+               r'Teves|Tevet|Shevat|Adar|January|February|March|April|May|June|'
+               r'July|August|September|October|November|December')
+    m = re.search(r'\bby\s+([A-Z][a-z]+(?:\s+[A-Z][a-z]+)+)', arranger)
     if m:
-        return m.group(1).strip()
-    # Fallback: strip leading boilerplate then take first two capitalized words
-    name = re.sub(r'^Arranged\s+by\s+', '', arranger, flags=re.IGNORECASE)
+        name = m.group(1)
+        # Stop before any month name that leaked into the greedy match
+        name = re.split(rf'\s+(?:{_MONTHS})', name)[0]
+        return name.strip()
+    # Fallback: strip leading boilerplate then take capitalized words
+    name = re.sub(r'^Arrangement\s+by\s+', '', arranger, flags=re.IGNORECASE)
+    name = re.sub(r'^Arranged\s+by\s+', '', name, flags=re.IGNORECASE)
     name = re.split(r'\s+(?:Nissan|Nisan|Iyar|Sivan|Tammuz|Av|Elul|Tishrei|Cheshvan|Kislev|Teves|Tevet|Shevat|Adar|January|February|March|April|May|June|July|August|September|October|November|December|\|)', name)[0]
     return name.strip()
 

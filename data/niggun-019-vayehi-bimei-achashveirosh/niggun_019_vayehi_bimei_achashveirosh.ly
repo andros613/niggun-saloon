@@ -7,7 +7,8 @@
   subsubtitle = "Transliteration Style: Tehillat Hashem English"
 %   subsubtitle = "Transliteration Style: Modern Israeli"
   % subsubtitle = "Transliteration Style: ArtScroll Ashkenazi"
-  copyright = "Arrangement © February 2026 / Adar 5786 by Amichai Rosenbaum, All Rights Reserved | v02 | BS''D"
+  arranger = "Arranged by Amichai Andy Rosenbaum | Adar 5786 / February 2026 | v02 | B''H"
+  copyright = "Licensed under CC BY-NC-SA 4.0"
 }
 
 pickupA = \relative c' {

@@ -7,14 +7,8 @@
   subsubtitle = "Transliteration Style: Tehillat Hashem English"
 %   subsubtitle = "Transliteration Style: Modern Israeli"
   % subsubtitle = "Transliteration Style: ArtScroll Ashkenazi"
-  copyright = "Arrangement © 2025 / 5785 by Amichai Rosenbaum, All Rights Reserved"
-}
-
-\markup {
-  \vspace #1
-  \fill-line {
-  \line { Arranged by Amichai Rosenbaum Sivan 5785 / June 2025 | v03 | BS''D }
-}
+  arranger = "Arranged by Amichai Andy Rosenbaum | Sivan 5785 / June 2025 | v01 | B''H"
+  copyright = "Licensed under CC BY-NC-SA 4.0"
 }
 
 
@@ -199,7 +193,6 @@ theScore = {
   \abs-fontsize #10
   \center-column {
   \line { Source: https://www.chabad.org/multimedia/music_cdo/aid/476629/jewish/Sheyiboneh.htm }
-  \line { Transliteration based on: https://www.alittlehebrew.com/transliterate/ }
 }
 }
 }

@@ -4,7 +4,8 @@
 \header {
   title = "Niggun 022 - Beinoni"
   subtitle = "Jewish Folk Song - Chabad-Lubavitch Melody"
-  copyright = "Arrangement © March 2026 / Adar 5786 by Amichai Rosenbaum, All Rights Reserved | v01 | BS''D"
+  arranger = "Arranged by Amichai Andy Rosenbaum | Adar 5786 / March 2026 | v01 | B''H"
+  copyright = "Licensed under CC BY-NC-SA 4.0"
 }
 
 upperA = \relative c' {

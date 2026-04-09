@@ -2,27 +2,14 @@
 
 
 \header {
-  title = "Niggun 006 - Baruch Hashem (Zusha melody)"
-  subtitle = "Jewish Folk Song"
+  title = "Niggun 006 - Baruch Hashem"
+  subtitle = "Jewish Folk Song (Zusha & Pumbadisa melody)"
   % subsubtitle = "Transliteration Style: Tehillat Hashem English"
   subsubtitle = "Transliteration Style: Modern Israeli"
   % subsubtitle = "Transliteration Style: ArtScroll Ashkenazi"
-  copyright = "© 2025 / 5785 by Amichai Rosenbaum, All Rights Reserved"
+  arranger = "Arranged by Amichai Andy Rosenbaum | Sivan 5785 / June 2025 | v01 | B''H"
+  copyright = "Licensed under CC BY-NC-SA 4.0"
 }
-
-\markup {
-  \vspace #1
-  \fill-line {
-  \line { Arranged by Amichai Rosenbaum Sivan 5785 / June 2025 | v03 | BS''D }
-}
-}
-\markup {
-  \vspace #1
-  \fill-line {
-	\line { Based on Zusha & Pumpidisa version }
-}
-}
-
 
 
 

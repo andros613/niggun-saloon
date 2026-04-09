@@ -7,7 +7,8 @@
   subsubtitle = "Transliteration Style: Tehillat Hashem English"
 %   subsubtitle = "Transliteration Style: Modern Israeli"
   % subsubtitle = "Transliteration Style: ArtScroll Ashkenazi"
-  arranger = "Arrangement © March 2026 / Nissan 5786 by Amichai Rosenbaum, All Rights Reserved | v01 | BS''D"
+  arranger = "Arranged by Amichai Andy Rosenbaum | Nissan 5786 / March 2026 | v01 | B''H"
+  copyright = "Licensed under CC BY-NC-SA 4.0"
 }
 
 

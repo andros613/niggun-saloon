@@ -7,7 +7,8 @@
   subsubtitle = "Transliteration Style: Tehillat Hashem English"
 %   subsubtitle = "Transliteration Style: Modern Israeli"
   % subsubtitle = "Transliteration Style: ArtScroll Ashkenazi"
-  copyright = "Arrangement © October 2025 / Tishrei 5786 by Amichai Rosenbaum, All Rights Reserved | v01 | BS''D"
+  arranger = "Arranged by Amichai Andy Rosenbaum | Tishrei 5786 / October 2025 | v01 | B''H"
+  copyright = "Licensed under CC BY-NC-SA 4.0"
 }
 
 

@@ -7,16 +7,9 @@
   subsubtitle = "Transliteration Style: Tehillat Hashem English"
   % subsubtitle = "Transliteration Style: Modern Israeli"
   % subsubtitle = "Transliteration Style: ArtScroll Ashkenazi"
-  copyright = "© 2025 / 5785 by Amichai Rosenbaum, All Rights Reserved"
+  arranger = "Arranged by Amichai Andy Rosenbaum | Menachem Av 5785 / August 2025 | v02 | B''H"
+  copyright = "Licensed under CC BY-NC-SA 4.0"
 }
-
-\markup {
-  \vspace #1
-  \fill-line {
-  \line { Arranged by Amichai Rosenbaum Av 5785 / August 2025 | v02 | BS''D }
-}
-}
-
 
 
 upperAOne = \relative c'' {

@@ -3,11 +3,8 @@
 \header {
   title = "Niggun 001 - Rabbi Eade"
   subtitle = "Jewish Chassidich Niggun heard from Rabbi Moshe Chaim Eade at Aish HaTorah"
-  % composer = "foo"
-  arranger = "Arranged by Amichai Rosenbaum Nissan 5785 / April 2025 | v02 | BS''D"
-  % poet = "foo"
-  % instrument = "Piano and Voice"
-  copyright = "© 2025 / 5785 by Amichai Rosenbaum, All Rights Reserved"
+  arranger = "Arranged by Amichai Andy Rosenbaum | Nissan 5785 / April 2025 | v02 | B''H"
+  copyright = "Licensed under CC BY-NC-SA 4.0"
 }
 
 upperACommon = \relative c' {

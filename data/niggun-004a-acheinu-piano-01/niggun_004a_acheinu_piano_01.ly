@@ -7,7 +7,8 @@
 %   subsubtitle = "Transliteration Style: Tehillat Hashem English"
   % subsubtitle = "Transliteration Style: Modern Israeli"
 %   subsubtitle = "Transliteration Style: ArtScroll Ashkenazi"
-  copyright = "© 2025 / 5785 by Amichai Rosenbaum, All Rights Reserved"
+  arranger = "Arranged by Amichai Andy Rosenbaum | Sivan 5785 / June 2025 | B''H"
+  copyright = "Licensed under CC BY-NC-SA 4.0"
 }
 
 \markup {
@@ -513,7 +514,6 @@ theScoreForMidi = {
   \center-column {
   \line { Hebrew Source: Zemirot Database https://zemirotdatabase.org/view_song.php?id=19 }
   \line { English Translation: Aish https://aish.com/a_prayer_of_the_jewish_people/ }
-  \line { Transliteration based on: https://www.alittlehebrew.com/transliterate/ }
 }
 }
 }

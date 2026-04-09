@@ -3,11 +3,8 @@
 \header {
   title = "Niggun 002 - Shalom Aleichem Melody 1"
   subtitle = "Jewish Folk Song"
-  % composer = "foo"
-  arranger = "Arranged by Amichai Rosenbaum Iyar 5785 / May 2025 | v02 | BS''D"
-  % poet = "foo"
-  % instrument = "Piano and Voice"
-  copyright = "© 2025 / 5785 by Amichai Rosenbaum, All Rights Reserved"
+  arranger = "Arranged by Amichai Andy Rosenbaum | Iyar 5785 / May 2025 | v02 | B''H"
+  copyright = "Licensed under CC BY-NC-SA 4.0"
 }
 
 upperAOne = \relative c' {

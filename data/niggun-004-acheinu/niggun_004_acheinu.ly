@@ -4,17 +4,11 @@
 \header {
   title = "Niggun 004 - Acheinu"
   subtitle = "Jewish Folk Song"
-  % subsubtitle = "Transliteration Style: Tehillat Hashem English"
+  subsubtitle = "Transliteration Style: Tehillat Hashem English"
   % subsubtitle = "Transliteration Style: Modern Israeli"
-  subsubtitle = "Transliteration Style: ArtScroll Ashkenazi"
-  copyright = "© 2025 / 5785 by Amichai Rosenbaum, All Rights Reserved"
-}
-
-\markup {
-  \vspace #1
-  \fill-line {
-  \line { Arranged by Amichai Rosenbaum Sivan 5785 / June 2025 | v03 | BS''D }
-}
+  % subsubtitle = "Transliteration Style: ArtScroll Ashkenazi"
+  arranger = "Arranged by Amichai Andy Rosenbaum | Sivan 5785 / June 2025 | v01 | B''H"
+  copyright = "Licensed under CC BY-NC-SA 4.0"
 }
 
 
@@ -292,9 +286,9 @@ theScore = {
     % \new Staff = upper { \set Staff.midiInstrument = #"trumpet" \new Voice = "singer" \upper }
     % \new Staff = lower { \lower }
     \new Lyrics \lyricsto "singer"  {
-      % \textAll
+      \textAll
       % \textAllMI
-      \textAllAA
+      % \textAllAA
     }
   >>
 }
@@ -372,7 +366,6 @@ theScore = {
   \center-column {
   \line { Hebrew Source: Zemirot Database https://zemirotdatabase.org/view_song.php?id=19 }
   \line { English Translation: Aish https://aish.com/a_prayer_of_the_jewish_people/ }
-  \line { Transliteration based on: https://www.alittlehebrew.com/transliterate/ }
 }
 }
 }

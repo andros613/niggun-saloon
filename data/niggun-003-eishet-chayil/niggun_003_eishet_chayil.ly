@@ -2,21 +2,20 @@
 
 \header {
   title = "Niggun 003 - Eishet Chayil"
-  subtitle = "Jewish Folk Song"
-%   arranger = "Arranged by Amichai Rosenbaum Iyar 5785 / May 2025 | v04 | BS''D"
-  copyright = "Arrangement © 2025 / 5785 by Amichai Rosenbaum, All Rights Reserved"
+  subtitle = "Jewish Folk Song (based on Mayer Davis version)"
+  subsubtitle = "Transliteration Style: Tehillat Hashem English"
+  % subsubtitle = "Transliteration style: Modern Israeli"
+  arranger = "Arranged by Amichai Andy Rosenbaum | Iyar 5785 / May 2025 | v04 | B''H"
+  copyright = "Licensed under CC BY-NC-SA 4.0"
 }
 
 \markup{
   \vspace #1
-  \hspace #10
+  \hspace #15
   \abs-fontsize #10
   \center-column {
-  \line { Arranged by Amichai Rosenbaum (based on Mayer Davis version) Iyar 5785 / May 2025 | v04 | BS''D}
   \line { Hebrew text from https://www.sefaria.org.il/sheets/49238.1 }
   \line { Translation from https://aish.com/eishet-chayil }
-  \line { Transliteration style: Tehillat Hashem English }
-%   \line { Transliteration style: Modern Israeli }
 }
 }
 

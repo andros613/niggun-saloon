@@ -3,11 +3,9 @@
 \header {
   title = "Mishenichnas Adar"
   subtitle = "Jewish Folk Song"
-  % composer = "foo"
-  arranger = "Arranged by Amichai Rosenbaum Adar 5785 / March 2025 | v02 | BS''D"
-  % poet = "foo"
+  arranger = "Arranged by Amichai Andy Rosenbaum | Adar 5785 / March 2025 | v02 | B''H"
   instrument = "Piano and Voice"
-  copyright = "© 2025 / 5785 by Amichai Rosenbaum, All Rights Reserved"
+  copyright = "Licensed under CC BY-NC-SA 4.0"
 }
 
 \markup \vspace #1
