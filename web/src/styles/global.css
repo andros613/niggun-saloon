@@ -1,0 +1,121 @@
+@import url('https://fonts.googleapis.com/css2?family=Frank+Ruhl+Libre:wght@400;700&family=Inter:wght@400;500;600&display=swap');
+
+:root {
+  --color-bg:        #fdf8f0;
+  --color-surface:   #ffffff;
+  --color-border:    #e2d8c8;
+  --color-primary:   #7a1e1e;   /* deep red — traditional Jewish aesthetic */
+  --color-primary-light: #a83232;
+  --color-text:      #2c2012;
+  --color-muted:     #6b5c44;
+  --color-tag-bg:    #f0e8d8;
+  --font-latin:      'Inter', system-ui, sans-serif;
+  --font-hebrew:     'Frank Ruhl Libre', serif;
+  --radius:          6px;
+  --shadow:          0 1px 4px rgba(0,0,0,0.10);
+}
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  font-family: var(--font-latin);
+  background: var(--color-bg);
+  color: var(--color-text);
+  line-height: 1.6;
+}
+
+a { color: var(--color-primary); text-decoration: none; }
+a:hover { text-decoration: underline; }
+
+.he {
+  font-family: var(--font-hebrew);
+  direction: rtl;
+  unicode-bidi: bidi-override;
+}
+
+/* ── Layout ── */
+.site-header {
+  background: var(--color-primary);
+  color: #fff;
+  padding: 0.75rem 1.5rem;
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+.site-header a { color: #fff; font-weight: 600; font-size: 1.1rem; }
+.site-header nav a { font-size: 0.9rem; opacity: 0.85; }
+.site-header nav a:hover { opacity: 1; }
+
+main { max-width: 1100px; margin: 0 auto; padding: 2rem 1.5rem; }
+
+/* ── Niggun cards ── */
+.niggun-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 1rem;
+  margin-top: 1.5rem;
+}
+
+.niggun-card {
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius);
+  padding: 1rem;
+  box-shadow: var(--shadow);
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+  transition: box-shadow 0.15s;
+}
+.niggun-card:hover { box-shadow: 0 3px 10px rgba(0,0,0,0.14); }
+
+.niggun-card h2 { font-size: 1rem; font-weight: 600; }
+.niggun-card .subtitle { font-size: 0.82rem; color: var(--color-muted); }
+.niggun-card .meta { font-size: 0.8rem; color: var(--color-muted); display: flex; gap: 0.75rem; flex-wrap: wrap; }
+.niggun-card .badges { display: flex; gap: 0.35rem; flex-wrap: wrap; margin-top: 0.25rem; }
+.badge {
+  font-size: 0.7rem;
+  padding: 0.1rem 0.45rem;
+  border-radius: 3px;
+  background: var(--color-tag-bg);
+  color: var(--color-muted);
+  border: 1px solid var(--color-border);
+}
+.badge.has-audio { background: #e8f4e8; border-color: #b0d4b0; color: #2e6e2e; }
+.badge.has-pdf   { background: #e8eaf8; border-color: #b0b8d4; color: #2e3e8e; }
+.badge.variant   { background: #fdf0e0; border-color: #d4b88a; color: #7a5820; }
+
+/* ── Detail page ── */
+.niggun-detail { display: flex; flex-direction: column; gap: 1.5rem; }
+.niggun-detail h1 { font-size: 1.75rem; }
+.niggun-detail .sub { color: var(--color-muted); font-size: 1rem; }
+.niggun-detail .meta-row { display: flex; gap: 1.5rem; flex-wrap: wrap; font-size: 0.875rem; color: var(--color-muted); }
+
+.audio-section audio { width: 100%; margin-top: 0.5rem; }
+.download-links { display: flex; gap: 0.75rem; flex-wrap: wrap; }
+.download-links a {
+  display: inline-flex; align-items: center; gap: 0.4rem;
+  padding: 0.4rem 0.9rem;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius);
+  font-size: 0.85rem;
+  background: var(--color-surface);
+}
+.download-links a:hover { background: var(--color-tag-bg); }
+
+.lyrics-pane {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1rem;
+}
+.lyrics-col { background: var(--color-surface); border: 1px solid var(--color-border); border-radius: var(--radius); padding: 1rem; }
+.lyrics-col h3 { font-size: 0.8rem; text-transform: uppercase; letter-spacing: 0.05em; color: var(--color-muted); margin-bottom: 0.5rem; }
+.lyrics-col pre { font-family: inherit; white-space: pre-wrap; font-size: 0.9rem; line-height: 1.8; }
+
+/* ── Browse filters ── */
+.filters { display: flex; gap: 0.75rem; flex-wrap: wrap; margin-top: 0.5rem; }
+.filters label { font-size: 0.85rem; color: var(--color-muted); }
+.filters select { font-size: 0.85rem; padding: 0.25rem 0.5rem; border: 1px solid var(--color-border); border-radius: 4px; background: var(--color-surface); }
+
+.page-title { font-size: 1.5rem; font-weight: 700; }
+.page-subtitle { color: var(--color-muted); font-size: 0.95rem; margin-top: 0.25rem; }

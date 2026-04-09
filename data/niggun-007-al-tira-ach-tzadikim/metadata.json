@@ -1,0 +1,25 @@
+{
+  "id": "007",
+  "dir": "niggun-007-al-tira-ach-tzadikim",
+  "title": "Al Tira & Ach Tzadikim",
+  "subtitle": "Jewish Folk Song (popular in Chabad-Lubavitch after davening)",
+  "arranger": "Amichai Rosenbaum",
+  "date_gregorian": null,
+  "date_hebrew": null,
+  "key": "D minor",
+  "tempo_bpm": 110,
+  "description": "",
+  "variant_of": null,
+  "assets": {
+    "has_ly": true,
+    "has_pdf": true,
+    "has_mp3": true,
+    "has_midi": true,
+    "has_words_he": false,
+    "has_words_en": false,
+    "has_words_th_en": false,
+    "has_words_as_ashk": true,
+    "has_versions_dir": true
+  },
+  "tags": []
+}

@@ -1,0 +1,21 @@
+# Node
+web/node_modules/
+web/dist/
+web/.astro/
+
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+
+# Large binary renders — tracked in GitHub Releases, not git
+# Remove these lines if you intentionally want to keep them in git.
+# data/**/*.mp3
+# data/**/*.pdf
+# data/**/*.midi
+# data/**/*.mid
+
+# IDE
+.idea/
+.vscode/
+*.swp

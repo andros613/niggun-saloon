@@ -1,0 +1,25 @@
+{
+  "id": "022",
+  "dir": "niggun-022-beinoni",
+  "title": "Beinoni",
+  "subtitle": "Jewish Folk Song - Chabad-Lubavitch Melody",
+  "arranger": "Amichai Rosenbaum",
+  "date_gregorian": "March 2026",
+  "date_hebrew": "Adar 5786",
+  "key": "C minor",
+  "tempo_bpm": 60,
+  "description": "",
+  "variant_of": null,
+  "assets": {
+    "has_ly": true,
+    "has_pdf": true,
+    "has_mp3": true,
+    "has_midi": true,
+    "has_words_he": false,
+    "has_words_en": false,
+    "has_words_th_en": false,
+    "has_words_as_ashk": false,
+    "has_versions_dir": true
+  },
+  "tags": []
+}

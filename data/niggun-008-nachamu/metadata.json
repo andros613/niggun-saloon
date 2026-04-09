@@ -1,0 +1,25 @@
+{
+  "id": "008",
+  "dir": "niggun-008-nachamu",
+  "title": "Nachamu",
+  "subtitle": "Jewish Folk Song (Shabbat Nachamu, from Isaiah 40:1-2)",
+  "arranger": "Amichai Rosenbaum",
+  "date_gregorian": null,
+  "date_hebrew": null,
+  "key": "E minor",
+  "tempo_bpm": 50,
+  "description": "",
+  "variant_of": null,
+  "assets": {
+    "has_ly": true,
+    "has_pdf": true,
+    "has_mp3": true,
+    "has_midi": true,
+    "has_words_he": true,
+    "has_words_en": true,
+    "has_words_th_en": true,
+    "has_words_as_ashk": true,
+    "has_versions_dir": true
+  },
+  "tags": []
+}

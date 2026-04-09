@@ -1,0 +1,25 @@
+{
+  "id": "004b",
+  "dir": "niggun-004b-acheinu-piano-02",
+  "title": "Acheinu (Piano 02)",
+  "subtitle": "Jewish Folk Song",
+  "arranger": "Amichai Rosenbaum",
+  "date_gregorian": null,
+  "date_hebrew": null,
+  "key": "A minor",
+  "tempo_bpm": 70,
+  "description": "",
+  "variant_of": "004",
+  "assets": {
+    "has_ly": true,
+    "has_pdf": true,
+    "has_mp3": true,
+    "has_midi": true,
+    "has_words_he": false,
+    "has_words_en": false,
+    "has_words_th_en": false,
+    "has_words_as_ashk": false,
+    "has_versions_dir": true
+  },
+  "tags": []
+}

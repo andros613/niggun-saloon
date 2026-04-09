@@ -1,0 +1,25 @@
+{
+  "id": "mishenichnas-adar-01",
+  "dir": "mishenichnas-adar-01",
+  "title": "Mishenichnas Adar",
+  "subtitle": "Jewish Folk Song",
+  "arranger": "Amichai Rosenbaum",
+  "date_gregorian": "March 2025",
+  "date_hebrew": "Adar 5785",
+  "key": "C major",
+  "tempo_bpm": null,
+  "description": "Jewish Folk Song for Purim.\n\nArranged by Amichai Rosenbaum, Adar 5785 / March 2025.",
+  "variant_of": null,
+  "assets": {
+    "has_ly": true,
+    "has_pdf": true,
+    "has_mp3": false,
+    "has_midi": true,
+    "has_words_he": false,
+    "has_words_en": false,
+    "has_words_th_en": false,
+    "has_words_as_ashk": false,
+    "has_versions_dir": false
+  },
+  "tags": []
+}

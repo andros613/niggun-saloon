@@ -1,0 +1,119 @@
+---
+import fs from 'node:fs';
+import path from 'node:path';
+import Layout from '../../layouts/Layout.astro';
+import { loadCatalog } from '../../lib/catalog';
+import type { Niggun } from '../../lib/catalog';
+
+export async function getStaticPaths() {
+  const catalog = loadCatalog();
+  return catalog.nigguns.map(n => ({ params: { dir: n.dir }, props: { niggun: n } }));
+}
+
+interface Props { niggun: Niggun }
+const { niggun: n } = Astro.props;
+
+// Load lyrics files from disk at build time
+const dataRoot = path.resolve(process.cwd(), '..', 'data', n.dir);
+
+function readLyrics(filename: string): string | null {
+  const p = path.join(dataRoot, filename);
+  return fs.existsSync(p) ? fs.readFileSync(p, 'utf-8').trim() : null;
+}
+
+const wordsHe    = n.assets.has_words_he      ? readLyrics('words_he.txt')      : null;
+const wordsEn    = n.assets.has_words_en      ? readLyrics('words_en.txt')      : null;
+const wordsTh    = n.assets.has_words_th_en   ? readLyrics('words_th_en.txt')   : null;
+const wordsAshk  = n.assets.has_words_as_ashk ? readLyrics('words_as_ashk.txt') : null;
+
+// GitHub Releases asset URLs (placeholder — CI will populate these)
+// For now: look for the files locally and reference them via public copy
+// In production these will be Release CDN URLs stored in metadata.json asset_urls
+const base = import.meta.env.BASE_URL;
+
+// Stem detection — find the .ly filename stem for building asset names
+const dataDir = path.resolve(process.cwd(), '..', 'data', n.dir);
+const lyFile = fs.readdirSync(dataDir).find(f => f.endsWith('.ly')) ?? '';
+const stem = lyFile.replace('.ly', '');
+
+// Asset URLs: served from public/ for now; will be Release CDN URLs in CI
+// The CI workflow will copy/symlink assets into web/public/assets/<dir>/
+function assetUrl(ext: string): string | null {
+  const filename = stem ? `${stem}.${ext}` : null;
+  if (!filename) return null;
+  const localPath = path.join(dataDir, filename);
+  return fs.existsSync(localPath) ? `${base}assets/${n.dir}/${filename}` : null;
+}
+
+const mp3Url  = n.assets.has_mp3  ? assetUrl('mp3')  : null;
+const pdfUrl  = n.assets.has_pdf  ? assetUrl('pdf')  : null;
+const midiUrl = n.assets.has_midi ? assetUrl('midi') : null;
+---
+
+<Layout
+  title={n.title}
+  description={n.subtitle || `${n.title} — arranged by ${n.arranger}`}
+>
+  <div class="niggun-detail">
+    <div>
+      <h1>{n.title}</h1>
+      {n.subtitle && <p class="sub">{n.subtitle}</p>}
+    </div>
+
+    <div class="meta-row">
+      {n.key         && <span>🎼 {n.key}</span>}
+      {n.tempo_bpm   && <span>♩= {n.tempo_bpm} bpm</span>}
+      {n.arranger    && <span>✍️ {n.arranger}</span>}
+      {n.date_gregorian && <span>📅 {n.date_gregorian}{n.date_hebrew ? ` / ${n.date_hebrew}` : ''}</span>}
+      {n.variant_of  && <span>↳ variant of <a href={`${base}niggun/niggun-${n.variant_of}-*/`}>#{n.variant_of}</a></span>}
+    </div>
+
+    {n.description && (
+      <p>{n.description}</p>
+    )}
+
+    {mp3Url && (
+      <div class="audio-section">
+        <h2>Listen</h2>
+        <audio controls src={mp3Url} />
+      </div>
+    )}
+
+    <div class="download-links">
+      {pdfUrl  && <a href={pdfUrl}  download>📄 Download PDF</a>}
+      {midiUrl && <a href={midiUrl} download>🎹 Download MIDI</a>}
+    </div>
+
+    {(wordsHe || wordsEn || wordsTh || wordsAshk) && (
+      <div>
+        <h2>Lyrics</h2>
+        <div class="lyrics-pane">
+          {wordsHe && (
+            <div class="lyrics-col">
+              <h3>Hebrew</h3>
+              <pre class="he">{wordsHe}</pre>
+            </div>
+          )}
+          {wordsTh && (
+            <div class="lyrics-col">
+              <h3>Transliteration (TH)</h3>
+              <pre>{wordsTh}</pre>
+            </div>
+          )}
+          {wordsAshk && (
+            <div class="lyrics-col">
+              <h3>Transliteration (ArtScroll)</h3>
+              <pre>{wordsAshk}</pre>
+            </div>
+          )}
+          {wordsEn && (
+            <div class="lyrics-col">
+              <h3>English</h3>
+              <pre>{wordsEn}</pre>
+            </div>
+          )}
+        </div>
+      </div>
+    )}
+  </div>
+</Layout>

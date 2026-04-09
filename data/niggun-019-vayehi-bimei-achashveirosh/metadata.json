@@ -1,0 +1,25 @@
+{
+  "id": "019",
+  "dir": "niggun-019-vayehi-bimei-achashveirosh",
+  "title": "Vayehi Bimei Achashveirosh",
+  "subtitle": "Jewish Folk Song (for Purim) - Chabad-Lubavitch Melody",
+  "arranger": "Amichai Rosenbaum",
+  "date_gregorian": "February 2026",
+  "date_hebrew": "Adar 5786",
+  "key": "D minor",
+  "tempo_bpm": 120,
+  "description": "",
+  "variant_of": null,
+  "assets": {
+    "has_ly": true,
+    "has_pdf": true,
+    "has_mp3": true,
+    "has_midi": true,
+    "has_words_he": true,
+    "has_words_en": true,
+    "has_words_th_en": true,
+    "has_words_as_ashk": true,
+    "has_versions_dir": true
+  },
+  "tags": []
+}

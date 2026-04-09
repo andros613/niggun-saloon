@@ -1,0 +1,25 @@
+{
+  "id": "010",
+  "dir": "niggun-010-ratzisa-hashem",
+  "title": "Ratzisa Hashem",
+  "subtitle": "Jewish Folk Song (Tehillim 85: Chabad-Lubavitch melody)",
+  "arranger": "Amichai Rosenbaum",
+  "date_gregorian": "August 2025",
+  "date_hebrew": "Elul 5785",
+  "key": "D minor",
+  "tempo_bpm": 100,
+  "description": "",
+  "variant_of": null,
+  "assets": {
+    "has_ly": true,
+    "has_pdf": true,
+    "has_mp3": true,
+    "has_midi": true,
+    "has_words_he": true,
+    "has_words_en": true,
+    "has_words_th_en": true,
+    "has_words_as_ashk": true,
+    "has_versions_dir": true
+  },
+  "tags": []
+}

@@ -1,0 +1,25 @@
+{
+  "id": "016",
+  "dir": "niggun-016-al-hanissim",
+  "title": "Al Hanissim",
+  "subtitle": "Jewish Folk Song (part of Chanukah davening)",
+  "arranger": "Amichai Rosenbaum",
+  "date_gregorian": "December 2025",
+  "date_hebrew": "Tevet 5786",
+  "key": "D minor",
+  "tempo_bpm": 120,
+  "description": "",
+  "variant_of": null,
+  "assets": {
+    "has_ly": true,
+    "has_pdf": true,
+    "has_mp3": true,
+    "has_midi": true,
+    "has_words_he": true,
+    "has_words_en": true,
+    "has_words_th_en": true,
+    "has_words_as_ashk": true,
+    "has_versions_dir": true
+  },
+  "tags": []
+}

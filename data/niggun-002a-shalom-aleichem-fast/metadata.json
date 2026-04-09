@@ -1,0 +1,25 @@
+{
+  "id": "002a",
+  "dir": "niggun-002a-shalom-aleichem-fast",
+  "title": "Shalom Aleichem Melody 2",
+  "subtitle": "Jewish Folk Song",
+  "arranger": "Amichai Rosenbaum",
+  "date_gregorian": "May 2025",
+  "date_hebrew": "Iyar 5785",
+  "key": "D minor",
+  "tempo_bpm": 110,
+  "description": "",
+  "variant_of": "002",
+  "assets": {
+    "has_ly": true,
+    "has_pdf": true,
+    "has_mp3": false,
+    "has_midi": true,
+    "has_words_he": false,
+    "has_words_en": false,
+    "has_words_th_en": false,
+    "has_words_as_ashk": false,
+    "has_versions_dir": true
+  },
+  "tags": []
+}

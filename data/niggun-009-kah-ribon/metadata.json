@@ -1,0 +1,25 @@
+{
+  "id": "009",
+  "dir": "niggun-009-kah-ribon",
+  "title": "Kah Ribon",
+  "subtitle": "Jewish Folk Song for Shabbat",
+  "arranger": "Amichai Rosenbaum",
+  "date_gregorian": null,
+  "date_hebrew": null,
+  "key": "A minor",
+  "tempo_bpm": 40,
+  "description": "Jewish Folk Song for Shabbat.\n\nArranged by Amichai Rosenbaum, Nissan 5785 / April 2025.",
+  "variant_of": null,
+  "assets": {
+    "has_ly": true,
+    "has_pdf": true,
+    "has_mp3": true,
+    "has_midi": true,
+    "has_words_he": false,
+    "has_words_en": true,
+    "has_words_th_en": true,
+    "has_words_as_ashk": true,
+    "has_versions_dir": true
+  },
+  "tags": []
+}

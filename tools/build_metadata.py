@@ -1,0 +1,271 @@
+#!/usr/bin/env python3
+"""
+Generate metadata.json for each niggun directory in data/.
+
+Usage:
+    python tools/build_metadata.py [--data-dir DATA_DIR] [--dry-run]
+
+Parses LilyPond headers, key/tempo directives, README files, and
+detects which asset files exist. Writes metadata.json into each directory.
+Skips directories with no .ly file (stubs).
+"""
+
+import argparse
+import json
+import logging
+import re
+import time
+from pathlib import Path
+
+logging.basicConfig(level=logging.INFO, format="%(levelname)s: %(message)s")
+logger = logging.getLogger(__name__)
+
+
+# ---------------------------------------------------------------------------
+# LilyPond parsing
+# ---------------------------------------------------------------------------
+
+def parse_ly_header(text: str) -> dict:
+    """Extract fields from the \\header { ... } block."""
+    m = re.search(r'\\header\s*\{([^}]*)\}', text, re.DOTALL)
+    if not m:
+        return {}
+    block = m.group(1)
+    fields = {}
+    for key in ("title", "subtitle", "arranger", "copyright", "composer", "instrument"):
+        km = re.search(rf'{key}\s*=\s*"([^"]*)"', block)
+        if km:
+            fields[key] = km.group(1).strip()
+    return fields
+
+
+def parse_key(text: str) -> str | None:
+    """Extract the first \\key tonic \\mode directive."""
+    m = re.search(r'\\key\s+([a-g](?:is|es)?)\s+\\(major|minor|dorian|phrygian|lydian|mixolydian|locrian)', text)
+    if not m:
+        return None
+    tonic_map = {
+        "c": "C", "cis": "C#", "ces": "Cb",
+        "d": "D", "dis": "D#", "des": "Db",
+        "e": "E", "eis": "E#", "ees": "Eb",
+        "f": "F", "fis": "F#", "fes": "Fb",
+        "g": "G", "gis": "G#", "ges": "Gb",
+        "a": "A", "ais": "A#", "aes": "Ab",
+        "b": "B", "bis": "B#", "bes": "Bb",
+    }
+    tonic = tonic_map.get(m.group(1), m.group(1).capitalize())
+    mode = m.group(2)
+    return f"{tonic} {mode}"
+
+
+def parse_tempo(text: str) -> int | None:
+    """Extract the first \\tempo N = BPM directive.
+
+    Prefers inline tempo (e.g. inside a music block) over variable assignments
+    (myTempo = \\tempo 4 = 120), but falls back to the latter if nothing else found.
+    """
+    inline_bpm = None
+    variable_bpm = None
+
+    for m in re.finditer(r'\\tempo\s+\d+\.?\s*=\s*(\d+)', text):
+        start = m.start()
+        line_start = text.rfind('\n', 0, start) + 1
+        prefix = text[line_start:start].strip()
+        bpm = int(m.group(1))
+        if prefix.endswith('='):
+            # Variable assignment: myTempo = \tempo 4 = 120
+            if variable_bpm is None:
+                variable_bpm = bpm
+        else:
+            if inline_bpm is None:
+                inline_bpm = bpm
+
+    return inline_bpm if inline_bpm is not None else variable_bpm
+
+
+def parse_date_from_arranger(arranger: str) -> tuple[str | None, str | None]:
+    """Extract Gregorian and Hebrew dates from arranger/copyright string."""
+    # e.g. "Arranged by Amichai Rosenbaum Nissan 5785 / April 2025 | v02 | BS''D"
+    # or   "Arrangement © October 2025 / Tishrei 5786 by ..."
+    gregorian = None
+    hebrew = None
+
+    months = (
+        "January|February|March|April|May|June|July|August|"
+        "September|October|November|December"
+    )
+    heb_months = (
+        "Nissan|Nisan|Iyar|Sivan|Tammuz|Av|Elul|"
+        "Tishrei|Cheshvan|Kislev|Teves|Tevet|Shevat|Adar"
+    )
+
+    gm = re.search(rf'({months})\s+(\d{{4}})', arranger)
+    if gm:
+        gregorian = f"{gm.group(1)} {gm.group(2)}"
+
+    hm = re.search(rf'({heb_months})\s+(\d{{4}})', arranger)
+    if hm:
+        hebrew = f"{hm.group(1)} {hm.group(2)}"
+
+    return gregorian, hebrew
+
+
+def parse_arranger_name(arranger: str) -> str:
+    """Strip boilerplate from arranger field to get just the name."""
+    # Pattern: "Arranged by Name ..."  or  "Arrangement © date by Name ..."
+    # Match "by Firstname Lastname" (exactly two capitalized words)
+    m = re.search(r'\bby\s+([A-Z][a-z]+\s+[A-Z][a-z]+)', arranger)
+    if m:
+        return m.group(1).strip()
+    # Fallback: strip leading boilerplate then take first two capitalized words
+    name = re.sub(r'^Arranged\s+by\s+', '', arranger, flags=re.IGNORECASE)
+    name = re.split(r'\s+(?:Nissan|Nisan|Iyar|Sivan|Tammuz|Av|Elul|Tishrei|Cheshvan|Kislev|Teves|Tevet|Shevat|Adar|January|February|March|April|May|June|July|August|September|October|November|December|\|)', name)[0]
+    return name.strip()
+
+
+# ---------------------------------------------------------------------------
+# Directory / variant parsing
+# ---------------------------------------------------------------------------
+
+def parse_dir_name(dir_name: str) -> dict:
+    """
+    Parse a directory name into id, slug, and variant info.
+
+    Examples:
+      niggun-001-r-eade          → id=001, slug=r-eade, variant_of=None
+      niggun-002a-shalom-aleichem-fast → id=002a, slug=shalom-aleichem-fast, variant_of=002
+      niggun-004b-acheinu-piano-02 → id=004b, slug=acheinu-piano-02, variant_of=004
+      mishenichnas-adar-01       → id=mishenichnas-adar-01, slug=None, variant_of=None
+    """
+    m = re.match(r'^niggun-(\d+)([a-z]?)-(.+)$', dir_name)
+    if m:
+        num = m.group(1)
+        suffix = m.group(2)
+        slug = m.group(3)
+        nid = f"{num}{suffix}"
+        variant_of = num if suffix else None
+        return {"id": nid, "slug": slug, "variant_of": variant_of}
+    # Non-standard dir (mishenichnas-adar-01, etc.)
+    return {"id": dir_name, "slug": None, "variant_of": None}
+
+
+def detect_assets(dir_path: Path) -> dict:
+    files = {f.name for f in dir_path.iterdir() if f.is_file()}
+    return {
+        "has_ly":           any(f.endswith('.ly')          for f in files),
+        "has_pdf":          any(f.endswith('.pdf')         for f in files),
+        "has_mp3":          any(f.endswith('.mp3')         for f in files),
+        "has_midi":         any(f.endswith(('.midi','.mid')) for f in files),
+        "has_words_he":     "words_he.txt"     in files,
+        "has_words_en":     "words_en.txt"     in files,
+        "has_words_th_en":  "words_th_en.txt"  in files,
+        "has_words_as_ashk":"words_as_ashk.txt" in files,
+        "has_versions_dir": (dir_path / "versions").is_dir(),
+    }
+
+
+# ---------------------------------------------------------------------------
+# Main logic
+# ---------------------------------------------------------------------------
+
+def build_metadata(dir_path: Path) -> dict | None:
+    """Build metadata dict for one niggun directory. Returns None if no .ly found."""
+    ly_files = list(dir_path.glob("*.ly"))
+    if not ly_files:
+        return None
+
+    # Use the first .ly file found (usually exactly one)
+    ly_path = ly_files[0]
+    ly_text = ly_path.read_text(encoding="utf-8")
+
+    header = parse_ly_header(ly_text)
+    raw_title = header.get("title", "")
+    # Strip leading "Niggun NNN - " prefix from title
+    title = re.sub(r'^Niggun\s+\d+\w*\s*[-–]\s*', '', raw_title).strip()
+    if not title:
+        title = raw_title
+
+    subtitle = header.get("subtitle", "")
+
+    # Arranger: prefer \header arranger, fall back to copyright
+    arranger_raw = header.get("arranger") or header.get("copyright") or ""
+    arranger = parse_arranger_name(arranger_raw) if arranger_raw else "Amichai Rosenbaum"
+
+    date_gregorian, date_hebrew = parse_date_from_arranger(arranger_raw)
+
+    key = parse_key(ly_text)
+    tempo_bpm = parse_tempo(ly_text)
+
+    # README description
+    readme_path = dir_path / "README.md"
+    description = ""
+    if readme_path.exists():
+        readme_text = readme_path.read_text(encoding="utf-8").strip()
+        # Strip the H1 title line
+        lines = [l for l in readme_text.splitlines() if not l.startswith("# ")]
+        description = "\n".join(lines).strip()
+
+    dir_info = parse_dir_name(dir_path.name)
+    assets = detect_assets(dir_path)
+
+    return {
+        "id": dir_info["id"],
+        "dir": dir_path.name,
+        "title": title,
+        "subtitle": subtitle,
+        "arranger": arranger,
+        "date_gregorian": date_gregorian,
+        "date_hebrew": date_hebrew,
+        "key": key,
+        "tempo_bpm": tempo_bpm,
+        "description": description,
+        "variant_of": dir_info["variant_of"],
+        "assets": assets,
+        "tags": [],
+    }
+
+
+def parse_args():
+    p = argparse.ArgumentParser(description="Generate metadata.json for each niggun directory.")
+    p.add_argument("--data-dir", default="data", help="Path to the data/ directory")
+    p.add_argument("--dry-run", action="store_true", help="Print metadata but don't write files")
+    return p.parse_args()
+
+
+def main():
+    start = time.time()
+    args = parse_args()
+
+    data_dir = Path(args.data_dir)
+    if not data_dir.is_dir():
+        raise ValueError(f"Data directory not found: {data_dir}")
+
+    dirs = sorted(p for p in data_dir.iterdir() if p.is_dir())
+    processed = skipped = 0
+
+    for dir_path in dirs:
+        metadata = build_metadata(dir_path)
+        if metadata is None:
+            logger.info(f"SKIP {dir_path.name} (no .ly file)")
+            skipped += 1
+            continue
+
+        out_path = dir_path / "metadata.json"
+        json_str = json.dumps(metadata, indent=2, ensure_ascii=False)
+
+        if args.dry_run:
+            print(f"\n=== {dir_path.name}/metadata.json ===")
+            print(json_str)
+        else:
+            out_path.write_text(json_str + "\n", encoding="utf-8")
+            logger.info(f"WROTE {out_path.relative_to(data_dir.parent)}")
+
+        processed += 1
+
+    elapsed = time.time() - start
+    mins, secs = divmod(elapsed, 60)
+    logger.info(f"Done: {processed} written, {skipped} skipped in {int(mins)}m {secs:.1f}s")
+
+
+if __name__ == "__main__":
+    main()

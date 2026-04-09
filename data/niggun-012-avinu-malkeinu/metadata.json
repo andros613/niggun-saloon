@@ -1,0 +1,25 @@
+{
+  "id": "012",
+  "dir": "niggun-012-avinu-malkeinu",
+  "title": "Avinu Malkeinu",
+  "subtitle": "Jewish Folk Song (Chabad-Lubavitch melody)",
+  "arranger": "Amichai Rosenbaum",
+  "date_gregorian": "October 2025",
+  "date_hebrew": "Tishrei 5786",
+  "key": "A minor",
+  "tempo_bpm": 60,
+  "description": "",
+  "variant_of": null,
+  "assets": {
+    "has_ly": true,
+    "has_pdf": true,
+    "has_mp3": true,
+    "has_midi": true,
+    "has_words_he": true,
+    "has_words_en": true,
+    "has_words_th_en": true,
+    "has_words_as_ashk": true,
+    "has_versions_dir": true
+  },
+  "tags": []
+}

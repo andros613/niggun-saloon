@@ -1,0 +1,25 @@
+{
+  "id": "018",
+  "dir": "niggun-018-keli-ata",
+  "title": "Keli Ata",
+  "subtitle": "Jewish Folk Song (part of Hallel davening) - Chabad-Lubavitch Melody",
+  "arranger": "Amichai Rosenbaum",
+  "date_gregorian": "January 2026",
+  "date_hebrew": "Shevat 5786",
+  "key": "G minor",
+  "tempo_bpm": 60,
+  "description": "",
+  "variant_of": null,
+  "assets": {
+    "has_ly": true,
+    "has_pdf": true,
+    "has_mp3": true,
+    "has_midi": true,
+    "has_words_he": true,
+    "has_words_en": true,
+    "has_words_th_en": true,
+    "has_words_as_ashk": true,
+    "has_versions_dir": true
+  },
+  "tags": []
+}

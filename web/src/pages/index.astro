@@ -1,0 +1,83 @@
+---
+import Layout from '../layouts/Layout.astro';
+import { loadCatalog } from '../lib/catalog';
+import type { Niggun } from '../lib/catalog';
+
+const catalog = loadCatalog();
+const nigguns = catalog.nigguns;
+
+// Unique keys for the filter dropdown
+const allKeys = [...new Set(nigguns.map(n => n.key).filter(Boolean))].sort() as string[];
+
+const base = import.meta.env.BASE_URL;
+
+function assetBadges(n: Niggun): { label: string; cls: string }[] {
+  const badges = [];
+  if (n.assets.has_mp3)  badges.push({ label: '🎵 Audio', cls: 'has-audio' });
+  if (n.assets.has_pdf)  badges.push({ label: '📄 PDF', cls: 'has-pdf' });
+  if (n.assets.has_midi) badges.push({ label: 'MIDI', cls: '' });
+  if (n.variant_of)      badges.push({ label: 'variant', cls: 'variant' });
+  return badges;
+}
+---
+<Layout title="Browse">
+  <h1 class="page-title">Niggun Saloon</h1>
+  <p class="page-subtitle">
+    {nigguns.length} Jewish liturgical music arrangements by Amichai Rosenbaum
+  </p>
+
+  <div class="filters">
+    <label>
+      Key:
+      <select id="filter-key">
+        <option value="">All keys</option>
+        {allKeys.map(k => <option value={k}>{k}</option>)}
+      </select>
+    </label>
+    <label>
+      <input type="checkbox" id="filter-has-audio" />
+      Audio only
+    </label>
+  </div>
+
+  <div class="niggun-grid" id="niggun-grid">
+    {nigguns.map(n => (
+      <a href={`${base}niggun/${n.dir}/`} class="niggun-card"
+         data-key={n.key ?? ''}
+         data-has-audio={n.assets.has_mp3 ? 'true' : 'false'}>
+        <h2>{n.title}</h2>
+        {n.subtitle && <p class="subtitle">{n.subtitle}</p>}
+        <div class="meta">
+          {n.key     && <span>{n.key}</span>}
+          {n.tempo_bpm && <span>♩= {n.tempo_bpm}</span>}
+          {n.date_gregorian && <span>{n.date_gregorian}</span>}
+        </div>
+        <div class="badges">
+          {assetBadges(n).map(b => (
+            <span class={`badge ${b.cls}`}>{b.label}</span>
+          ))}
+        </div>
+      </a>
+    ))}
+  </div>
+</Layout>
+
+<script>
+  // Client-side filtering — no framework needed
+  const keySelect = document.getElementById('filter-key') as HTMLSelectElement;
+  const audioCheck = document.getElementById('filter-has-audio') as HTMLInputElement;
+  const cards = document.querySelectorAll<HTMLElement>('#niggun-grid .niggun-card');
+
+  function applyFilters() {
+    const key = keySelect.value;
+    const audioOnly = audioCheck.checked;
+    for (const card of cards) {
+      const matchKey   = !key || card.dataset.key === key;
+      const matchAudio = !audioOnly || card.dataset.hasAudio === 'true';
+      card.style.display = matchKey && matchAudio ? '' : 'none';
+    }
+  }
+
+  keySelect.addEventListener('change', applyFilters);
+  audioCheck.addEventListener('change', applyFilters);
+</script>

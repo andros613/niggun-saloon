@@ -1,0 +1,25 @@
+{
+  "id": "003",
+  "dir": "niggun-003-eishet-chayil",
+  "title": "Eishet Chayil",
+  "subtitle": "Jewish Folk Song",
+  "arranger": "Amichai Rosenbaum",
+  "date_gregorian": "May 2025",
+  "date_hebrew": "Iyar 5785",
+  "key": "G minor",
+  "tempo_bpm": 30,
+  "description": "",
+  "variant_of": null,
+  "assets": {
+    "has_ly": true,
+    "has_pdf": true,
+    "has_mp3": true,
+    "has_midi": true,
+    "has_words_he": false,
+    "has_words_en": false,
+    "has_words_th_en": true,
+    "has_words_as_ashk": true,
+    "has_versions_dir": true
+  },
+  "tags": []
+}

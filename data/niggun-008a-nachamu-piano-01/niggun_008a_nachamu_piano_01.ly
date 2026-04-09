@@ -1,0 +1,221 @@
+\version "2.24.4"
+
+
+\header {
+  title = "Niggun 008 - Nachamu"
+  subtitle = "Jewish Folk Song (Shabbat Nachamu, from Isaiah 40:1-2)"
+%   subsubtitle = "Transliteration Style: Tehillat Hashem English"
+  % subsubtitle = "Transliteration Style: Modern Israeli"
+  % subsubtitle = "Transliteration Style: ArtScroll Ashkenazi"
+  copyright = "© 2025 / 5785 by Amichai Rosenbaum, All Rights Reserved"
+}
+
+\markup {
+  \vspace #1
+  \fill-line {
+  \line { Arranged by Amichai Rosenbaum Av 5785 / August 2025 | v02 | BS''D }
+}
+}
+
+
+
+upperAOne = \relative c'' {
+  \mark \markup { "A1" }
+  g8.-5 fis16-4 e8-3 g8. fis16 e8
+  | fis4.-4 d-2
+  | fis8-4 e-3 d-2 fis-4 g-5 fis-4
+  | e4.-3 b-1
+}
+
+upperATwo = \relative c'' {
+  \mark \markup { "A2" }
+  g8.-5 fis16 e8 g8. fis16 e8
+  | fis4.-4 d-2
+  | fis8-4 e-3 d-2 fis-4 g-5 fis-4
+  | e2.-3
+}
+
+upperBOne = \relative c'' {
+  \mark \markup { "B1" }
+  b8.-5 a16-4 g8-3 b8.-5 a16-4 g-3 a-4
+  | a4.-4 fis-2
+  | a8-4 g-3 fis-2 a-4 b-5 a-4
+  | g4.-3 e-1
+}
+
+upperBTwo = \relative c'' {
+  \mark \markup { "B2" }
+  b8.-5 a16 g8 b8.-5 a16 g a-4
+  | a4.-4 fis4.
+  | a8-4 g fis a g fis
+  | e2.-1
+}
+
+upper = \relative c' {
+  \clef treble
+  \key a \minor
+  \time 6/8
+  \tempo 4. = 50
+  
+  \repeat volta 2 {
+
+  \transpose e a {
+	  
+  \upperAOne
+  \upperATwo
+  \upperBOne
+  \upperBTwo
+
+  }
+  }
+}
+
+lowerANames = \chordmode {
+	a,,2.:m
+	| g,,
+	| g,,
+	| a,,:m
+}
+
+lowerANotes = \relative c {
+	<a c e>2.
+	| <g b d>
+	| <g b d>
+	| <a c e>
+}
+
+lower = {
+  \clef bass
+  \key a \minor
+  \repeat volta 2 {
+  \lowerANotes
+  \lowerANotes
+  \lowerANotes
+  \lowerANotes
+}
+
+}
+
+lowerNames = {
+	\lowerANames
+	\lowerANames
+	\lowerANames
+	\lowerANames
+}
+
+textAOne = \lyricmode {
+  na- cha- mu na- cha- mu a- mi, yo- __ _ _ mar e- lo- kei- chem:
+}
+
+textATwo = \lyricmode {
+  na- cha- mu na- cha- mu a- mi, yo- mar e- lo- __ _ kei- chem:
+}
+
+textBOne = \lyricmode {
+  dab'- ru al- leiv y'- ru- sho̞- la- yim v'- __ _ kir- u __ _ ei- le- ho̞
+}
+
+textBTwo = \lyricmode {
+  dab'- ru al- leiv y'- ru- sho̞- la- yim v'- __ _ kir- u ei- le- ho̞
+}
+
+
+textAll = {
+  \textAOne
+  \textATwo
+  \textBOne
+  \textBTwo
+}
+
+theScore = {
+  \new PianoStaff <<
+%     \new Staff = upper { \set Staff.midiInstrument = #"trombone" \new Voice = "singer" \upper }
+    \new Staff = upper { \set Staff.midiInstrument = #"acoustic grand" \new Voice = "singer" \upper }
+    % \new Staff = upper { \set Staff.midiInstrument = #"trumpet" \new Voice = "singer" \upper }
+    \new Lyrics \lyricsto "singer"  {
+      \textAll
+    }
+    \new ChordNames { \lowerNames }
+    \new Staff = lower { \set Staff.midiInstrument = #"acoustic grand" \new Voice = "singer" \lower }
+  >>
+}
+
+\score {
+    \theScore
+  \layout {
+    \context {
+      \Lyrics
+      \override LyricText.font-name = #"Garamond"
+%       \override LyricText.font-name = #"Times New Roman,"
+    }
+ }
+  % \midi { \context { \Score midiRepeatTypes #onlyRepeats } }
+}
+
+\score {
+\unfoldRepeats {
+%   \transpose c' c  {
+  \theScore
+%   }
+}
+  \midi { 
+	}
+}
+
+
+\markup {
+  \vspace #2
+}
+
+\markup {
+  \line {
+    \hspace #25
+    \column {
+      \line { "Console, console My people," }
+      \vspace #0.5
+      \line { says your G-D. }
+      \vspace #0.5
+      \line { Speak to the heart of Jerusalem }
+      \vspace #0.5
+      \line { and call to her... }
+      \vspace #0.5
+    }
+    \hspace #2
+    \column {
+      \right-align {
+        \fontsize #1.5 {
+          \line { עַמִּי, נַחֲמוּ נַחֲמוּ }
+          \vspace #0.5
+          \line { אֱלֹהֵיכֶם: יֹאמַר }
+          \vspace #0.5
+          \line { יְרוּשָׁלַם עַל־לֵב דַּבְּרוּ }
+          \vspace #0.5
+          \line { אֵלֶיהָ וְקִרְאוּ }
+          \vspace #0.5
+        }
+      }
+    }
+  }
+}
+
+
+% \markup {
+%   \vspace #3
+%   \fill-line {
+% 	\line { Hebrew text and melody setting: }
+% }
+% }
+%
+% \markup {
+%   \vspace #1
+%   \fill-line {
+% 	\line { "https://www.zemirotdatabase.org/view_song.php?id=35#rec" }
+% }
+% }
+%
+% \markup {
+%   \vspace #1
+%   \fill-line {
+% 	\line { "Translation: https://www.chabad.org/library/bible_cdo/aid/15971/jewish/Chapter-40.htm#v1" }
+% }
+% }

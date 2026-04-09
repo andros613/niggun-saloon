@@ -1,0 +1,25 @@
+{
+  "id": "001",
+  "dir": "niggun-001-r-eade",
+  "title": "Rabbi Eade",
+  "subtitle": "Jewish Chassidich Niggun heard from Rabbi Moshe Chaim Eade at Aish HaTorah",
+  "arranger": "Amichai Rosenbaum",
+  "date_gregorian": "April 2025",
+  "date_hebrew": "Nissan 5785",
+  "key": "D minor",
+  "tempo_bpm": 110,
+  "description": "Jewish Chassidic Niggun (wordless melody) often sung by Rabbi Mosh Chaim Eade at Aish HaTorah.\n\nArranged by Amichai Rosenbaum, Nissan 5785 / April 2025.",
+  "variant_of": null,
+  "assets": {
+    "has_ly": true,
+    "has_pdf": true,
+    "has_mp3": false,
+    "has_midi": true,
+    "has_words_he": false,
+    "has_words_en": false,
+    "has_words_th_en": false,
+    "has_words_as_ashk": false,
+    "has_versions_dir": true
+  },
+  "tags": []
+}
