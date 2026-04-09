@@ -259,14 +259,20 @@ const lyUrl   = n.assets.has_ly   ? assetUrl('ly')   : null;
     if (audio) audio.playbackRate = parseFloat(select.value);
   });
 
-  // Spacebar play/pause (skip if focus is on an input/button)
+  // Spacebar play/pause; arrow keys seek ±5s (skip if focus is on an input/button)
   document.addEventListener('keydown', (e: KeyboardEvent) => {
-    if (e.code !== 'Space') return;
+    if (e.code !== 'Space' && e.code !== 'ArrowLeft' && e.code !== 'ArrowRight') return;
     const tag = (e.target as HTMLElement).tagName;
     if (tag === 'INPUT' || tag === 'SELECT' || tag === 'TEXTAREA' || tag === 'BUTTON') return;
     if (!audio) return;
     e.preventDefault();
-    audio.paused ? audio.play() : audio.pause();
+    if (e.code === 'Space') {
+      audio.paused ? audio.play() : audio.pause();
+    } else if (e.code === 'ArrowLeft') {
+      audio.currentTime = Math.max(0, audio.currentTime - 5);
+    } else if (e.code === 'ArrowRight') {
+      audio.currentTime = Math.min(audio.duration, audio.currentTime + 5);
+    }
   });
 
   // PDF zoom
