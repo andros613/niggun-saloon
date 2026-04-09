@@ -14,6 +14,7 @@ permissions:
   contents: read
   pages: write
   id-token: write
+  packages: read
 
 # Only one deployment at a time; cancel in-progress if a new push arrives
 concurrency:
@@ -48,6 +49,8 @@ jobs:
       - name: Install web dependencies
         run: npm ci
         working-directory: web
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Copy audio/PDF/MIDI assets into public/
         # Assets will eventually come from GitHub Releases CDN.
