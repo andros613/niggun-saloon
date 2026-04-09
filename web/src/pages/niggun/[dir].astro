@@ -48,6 +48,7 @@ function assetUrl(ext: string): string | null {
 const mp3Url  = n.assets.has_mp3  ? assetUrl('mp3')  : null;
 const pdfUrl  = n.assets.has_pdf  ? assetUrl('pdf')  : null;
 const midiUrl = n.assets.has_midi ? assetUrl('midi') : null;
+const lyUrl   = n.assets.has_ly   ? assetUrl('ly')   : null;
 ---
 
 <Layout
@@ -91,7 +92,15 @@ const midiUrl = n.assets.has_midi ? assetUrl('midi') : null;
       {mp3Url  && <a href={mp3Url}  download>🎵 Download MP3</a>}
       {pdfUrl  && <a href={pdfUrl}  download>📄 Download PDF</a>}
       {midiUrl && <a href={midiUrl} download>🎹 Download MIDI</a>}
+      {lyUrl   && <a href={lyUrl}   download>🎼 Download LilyPond</a>}
     </div>
+
+    {pdfUrl && (
+      <div class="pdf-viewer">
+        <h2>Sheet Music</h2>
+        <iframe src={pdfUrl} title={`${n.title} sheet music`} />
+      </div>
+    )}
 
     {(wordsHe || wordsEn || wordsTh || wordsAshk) && (
       <div>

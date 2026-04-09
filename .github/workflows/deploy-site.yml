@@ -59,7 +59,7 @@ jobs:
             name=$(basename "$dir")
             dest="web/public/assets/$name"
             mkdir -p "$dest"
-            find "$dir" -maxdepth 1 \( -name "*.mp3" -o -name "*.pdf" -o -name "*.midi" -o -name "*.mid" \) \
+            find "$dir" -maxdepth 1 \( -name "*.mp3" -o -name "*.pdf" -o -name "*.midi" -o -name "*.mid" -o -name "*.ly" \) \
               -exec cp {} "$dest/" \;
           done
 
