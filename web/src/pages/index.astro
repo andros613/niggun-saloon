@@ -19,8 +19,26 @@ const base = import.meta.env.BASE_URL;
 <Layout title="Browse">
   <h1 class="page-title">Niggun Saloon</h1>
   <p class="page-subtitle">
-    {nigguns.length} Jewish liturgical music arrangements by Amichai Rosenbaum
+    {nigguns.length} Jewish music arrangements by Amichai Andy Rosenbaum
   </p>
+
+  <div class="search-bar-wrap">
+    <span class="search-icon" aria-hidden="true">
+      <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <circle cx="6.5" cy="6.5" r="5" stroke="currentColor" stroke-width="1.5"/>
+        <path d="M10.5 10.5L14 14" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+      </svg>
+    </span>
+    <input
+      id="search-input"
+      class="search-input"
+      type="search"
+      placeholder="Search by title…"
+      autocomplete="off"
+      spellcheck="false"
+    />
+    <button id="search-clear" class="search-clear" aria-label="Clear search" hidden>✕</button>
+  </div>
 
   <div class="tag-filter" id="tag-filter">
     {allTags.map(t => (
@@ -29,6 +47,8 @@ const base = import.meta.env.BASE_URL;
     {hasPianoNigguns  && <button class="tag-chip tag-has-piano"  data-tag="has-piano">🎹 Piano arr.</button>}
     {hasChoralNigguns && <button class="tag-chip tag-has-choral" data-tag="has-choral">🎼 Choral arr.</button>}
   </div>
+
+  <p class="result-count" id="result-count" aria-live="polite"></p>
 
   <div class="niggun-grid" id="niggun-grid">
     {nigguns.map(n => {
@@ -39,7 +59,8 @@ const base = import.meta.env.BASE_URL;
       ];
       return (
         <a href={`${base}niggun/${n.dir}/`} class="niggun-card"
-           data-tags={syntheticTags.join(',')}>
+           data-tags={syntheticTags.join(',')}
+           data-title={`${n.title} ${n.subtitle ?? ''}`.toLowerCase()}>
           <h2>{n.title}</h2>
           {n.subtitle && <p class="subtitle">{n.subtitle}</p>}
           <div class="meta">
@@ -58,20 +79,46 @@ const base = import.meta.env.BASE_URL;
       );
     })}
   </div>
+
+  <div class="empty-state" id="empty-state" hidden>
+    <span class="empty-icon">𝄞</span>
+    <p>No nigguns match your search.</p>
+    <button id="empty-reset">Clear filters</button>
+  </div>
 </Layout>
 
 <script>
-  const tagChips = document.querySelectorAll<HTMLButtonElement>('.tag-chip');
-  const cards    = document.querySelectorAll<HTMLElement>('#niggun-grid .niggun-card');
+  const searchInput  = document.getElementById('search-input')  as HTMLInputElement;
+  const searchClear  = document.getElementById('search-clear')  as HTMLButtonElement;
+  const tagChips     = document.querySelectorAll<HTMLButtonElement>('.tag-chip');
+  const cards        = document.querySelectorAll<HTMLElement>('#niggun-grid .niggun-card');
+  const resultCount  = document.getElementById('result-count')!;
+  const emptyState   = document.getElementById('empty-state')!;
+  const emptyReset   = document.getElementById('empty-reset')!;
 
   const activeTags = new Set<string>();
 
   function applyFilters() {
+    const query = searchInput.value.trim().toLowerCase();
+    searchClear.hidden = query.length === 0;
+
+    let visible = 0;
     for (const card of cards) {
-      const cardTags = card.dataset.tags ? card.dataset.tags.split(',').filter(Boolean) : [];
-      const matchTags = activeTags.size === 0 || [...activeTags].every(t => cardTags.includes(t));
-      card.style.display = matchTags ? '' : 'none';
+      const cardTags  = card.dataset.tags ? card.dataset.tags.split(',').filter(Boolean) : [];
+      const cardTitle = card.dataset.title ?? '';
+      const matchTags  = activeTags.size === 0 || [...activeTags].every(t => cardTags.includes(t));
+      const matchQuery = query === '' || cardTitle.includes(query);
+      const show = matchTags && matchQuery;
+      card.style.display = show ? '' : 'none';
+      if (show) visible++;
     }
+
+    const total = cards.length;
+    resultCount.textContent = visible === total
+      ? ''
+      : `${visible} of ${total} nigguns`;
+
+    emptyState.hidden = visible > 0;
   }
 
   tagChips.forEach(chip => {
@@ -87,4 +134,21 @@ const base = import.meta.env.BASE_URL;
       applyFilters();
     });
   });
+
+  searchInput.addEventListener('input', applyFilters);
+
+  searchClear.addEventListener('click', () => {
+    searchInput.value = '';
+    applyFilters();
+    searchInput.focus();
+  });
+
+  function resetAll() {
+    searchInput.value = '';
+    activeTags.clear();
+    tagChips.forEach(c => c.classList.remove('active'));
+    applyFilters();
+  }
+
+  emptyReset.addEventListener('click', resetAll);
 </script>
