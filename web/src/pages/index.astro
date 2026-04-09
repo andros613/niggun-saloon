@@ -83,6 +83,8 @@ const base = import.meta.env.BASE_URL;
 </Layout>
 
 <script>
+  import { fuzzyMatch } from '../lib/fuzzy-match';
+
   const searchInput  = document.getElementById('search-input')  as HTMLInputElement;
   const searchClear  = document.getElementById('search-clear')  as HTMLButtonElement;
   const tagChips     = document.querySelectorAll<HTMLButtonElement>('.tag-chip');
@@ -102,7 +104,7 @@ const base = import.meta.env.BASE_URL;
       const cardTags  = card.dataset.tags ? card.dataset.tags.split(',').filter(Boolean) : [];
       const cardTitle = card.dataset.title ?? '';
       const matchTags  = activeTags.size === 0 || [...activeTags].every(t => cardTags.includes(t));
-      const matchQuery = query === '' || cardTitle.includes(query);
+      const matchQuery = query === '' || fuzzyMatch(query, cardTitle);
       const show = matchTags && matchQuery;
       card.style.display = show ? '' : 'none';
       if (show) visible++;
