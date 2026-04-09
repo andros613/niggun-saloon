@@ -75,17 +75,6 @@ main { max-width: 1100px; margin: 0 auto; padding: 2rem 1.5rem; }
 .niggun-card .subtitle { font-size: 0.82rem; color: var(--color-muted); }
 .niggun-card .meta { font-size: 0.8rem; color: var(--color-muted); display: flex; gap: 0.75rem; flex-wrap: wrap; }
 .niggun-card .badges { display: flex; gap: 0.35rem; flex-wrap: wrap; margin-top: 0.25rem; }
-.badge {
-  font-size: 0.7rem;
-  padding: 0.1rem 0.45rem;
-  border-radius: 3px;
-  background: var(--color-tag-bg);
-  color: var(--color-muted);
-  border: 1px solid var(--color-border);
-}
-.badge.has-audio { background: #e8f4e8; border-color: #b0d4b0; color: #2e6e2e; }
-.badge.has-pdf   { background: #e8eef8; border-color: #a0b8d8; color: #1a4a8a; }
-.badge.variant   { background: #fffbe6; border-color: #f5c000; color: #7a6000; }
 
 /* ── Detail page ── */
 .niggun-detail { display: flex; flex-direction: column; gap: 1.5rem; }
@@ -202,12 +191,11 @@ main { max-width: 1100px; margin: 0 auto; padding: 2rem 1.5rem; }
   border: 1px solid var(--color-border);
   font-size: 0.8rem;
   font-weight: 500;
-  background: var(--color-surface);
-  color: var(--color-muted);
   transition: all 0.1s;
+  opacity: 0.75;
 }
-.tag-chip:hover   { border-color: var(--color-primary); color: var(--color-primary); }
-.tag-chip.active  { background: var(--color-primary); color: #fff; border-color: var(--color-primary); }
+.tag-chip:hover  { opacity: 1; border-color: var(--color-primary); }
+.tag-chip.active { opacity: 1; background: var(--color-primary); color: #fff; border-color: var(--color-primary); }
 
 /* ── Browse filters ── */
 .filters { display: flex; gap: 0.75rem; flex-wrap: wrap; margin-top: 0.5rem; }
