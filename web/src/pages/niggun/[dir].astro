@@ -88,6 +88,7 @@ const midiUrl = n.assets.has_midi ? assetUrl('midi') : null;
     )}
 
     <div class="download-links">
+      {mp3Url  && <a href={mp3Url}  download>🎵 Download MP3</a>}
       {pdfUrl  && <a href={pdfUrl}  download>📄 Download PDF</a>}
       {midiUrl && <a href={midiUrl} download>🎹 Download MIDI</a>}
     </div>

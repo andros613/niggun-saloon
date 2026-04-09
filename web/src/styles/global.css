@@ -1,14 +1,15 @@
 @import url('https://fonts.googleapis.com/css2?family=Frank+Ruhl+Libre:wght@400;700&family=Inter:wght@400;500;600&display=swap');
 
 :root {
-  --color-bg:        #fdf8f0;
+  --color-bg:        #f0f4fa;
   --color-surface:   #ffffff;
-  --color-border:    #e2d8c8;
-  --color-primary:   #7a1e1e;   /* deep red — traditional Jewish aesthetic */
-  --color-primary-light: #a83232;
-  --color-text:      #2c2012;
-  --color-muted:     #6b5c44;
-  --color-tag-bg:    #f0e8d8;
+  --color-border:    #c5d3e8;
+  --color-primary:   #1a4a8a;   /* deep blue */
+  --color-primary-light: #2563b0;
+  --color-text:      #0f1f3d;
+  --color-muted:     #4a6080;
+  --color-tag-bg:    #e8eef8;
+  --color-accent:    #f5c000;   /* yellow accent */
   --font-latin:      'Inter', system-ui, sans-serif;
   --font-hebrew:     'Frank Ruhl Libre', serif;
   --radius:          6px;
@@ -41,10 +42,11 @@ a:hover { text-decoration: underline; }
   display: flex;
   align-items: center;
   gap: 1.5rem;
+  border-bottom: 3px solid var(--color-accent);
 }
 .site-header a { color: #fff; font-weight: 600; font-size: 1.1rem; }
 .site-header nav a { font-size: 0.9rem; opacity: 0.85; }
-.site-header nav a:hover { opacity: 1; }
+.site-header nav a:hover { opacity: 1; color: var(--color-accent); }
 
 main { max-width: 1100px; margin: 0 auto; padding: 2rem 1.5rem; }
 
@@ -82,8 +84,8 @@ main { max-width: 1100px; margin: 0 auto; padding: 2rem 1.5rem; }
   border: 1px solid var(--color-border);
 }
 .badge.has-audio { background: #e8f4e8; border-color: #b0d4b0; color: #2e6e2e; }
-.badge.has-pdf   { background: #e8eaf8; border-color: #b0b8d4; color: #2e3e8e; }
-.badge.variant   { background: #fdf0e0; border-color: #d4b88a; color: #7a5820; }
+.badge.has-pdf   { background: #e8eef8; border-color: #a0b8d8; color: #1a4a8a; }
+.badge.variant   { background: #fffbe6; border-color: #f5c000; color: #7a6000; }
 
 /* ── Detail page ── */
 .niggun-detail { display: flex; flex-direction: column; gap: 1.5rem; }
