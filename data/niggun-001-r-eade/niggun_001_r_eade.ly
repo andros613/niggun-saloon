@@ -140,7 +140,9 @@ theScore = {
 
 \score {
 \unfoldRepeats {
+  \transpose c' c  {
   \theScore
+}
 }
   \midi { }
 }

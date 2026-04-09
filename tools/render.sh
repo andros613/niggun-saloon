@@ -5,7 +5,7 @@
 set -euo pipefail
 
 n="${1:?Usage: render.sh <stem> [q]}"
-sf="${NIGGUN_SF:-/Users/amiros/src/personal/lilypond/soundfont/MuseScore/MuseScore_General.sf3}"
+sf="${NIGGUN_SF:-/Users/amiros/src/andros613/lilypond/soundfont/MuseScore/MuseScore_General.sf3}"
 
 # 1) compile MIDI + PDF
 lilypond "$n.ly"

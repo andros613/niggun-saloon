@@ -101,3 +101,11 @@
 **Effort:** ~2–3 days (build script + UI wiring)
 
 ---
+
+## Search Bar
+
+* Phonetically aware to different spellings, even takes Hebrew letters - unit test it
+
+## e-mail subscription
+
+## WhatsApp notification integration

@@ -142,7 +142,7 @@ textBZ = \lyricmode {
 
 theScore = {
   \new PianoStaff <<
-    \new Staff = upper { \set Staff.midiInstrument = #"alto sax" \new Voice = "singer" \upper }
+    \new Staff = upper { \set Staff.midiInstrument = #"trumpet" \new Voice = "singer" \upper }
     % \new Staff = lower { \lower }
     \new Lyrics \lyricsto "singer"  { \textAOne \textAX \textAY \textAZ \textAZAy \textBOne \textBX \textBY \textBZ }
     \new Lyrics \lyricsto "singer"  { \textATwo \textAX \textAY \textAZ \textAZAy \textBTwo \textBX \textBY \textBZ }
@@ -159,7 +159,9 @@ theScore = {
 
 \score {
 \unfoldRepeats {
+  \transpose c' c  {
   \theScore
+}
 }
   \midi { }
 }
