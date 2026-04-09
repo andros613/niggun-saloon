@@ -13,6 +13,13 @@ export interface NiggunAssets {
   has_versions_dir: boolean;
 }
 
+export interface Reference {
+  url: string;
+  label: string | null;
+  type: 'youtube' | 'chabad_media' | 'link';
+  embed_id?: string;  // YouTube video ID
+}
+
 export interface Niggun {
   id: string;
   dir: string;
@@ -26,6 +33,7 @@ export interface Niggun {
   description: string;
   variant_of: string | null;
   assets: NiggunAssets;
+  references: Reference[];
   tags: string[];
 }
 

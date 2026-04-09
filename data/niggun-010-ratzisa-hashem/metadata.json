@@ -21,5 +21,17 @@
     "has_words_as_ashk": true,
     "has_versions_dir": true
   },
+  "references": [
+    {
+      "url": "https://www.sefaria.org/Psalms.85",
+      "label": "Hebrew text",
+      "type": "link"
+    },
+    {
+      "url": "https://www.chabad.org/library/bible_cdo/aid/16306/jewish/Chapter-85.htm",
+      "label": "Translation",
+      "type": "link"
+    }
+  ],
   "tags": []
 }

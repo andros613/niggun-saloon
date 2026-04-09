@@ -21,5 +21,23 @@
     "has_words_as_ashk": false,
     "has_versions_dir": true
   },
+  "references": [
+    {
+      "url": "https://www.youtube.com/watch?v=d7awxGWmIV0",
+      "label": "Melody ft. Eli Marcus",
+      "type": "youtube",
+      "embed_id": "d7awxGWmIV0"
+    },
+    {
+      "url": "https://www.chabad.org/multimedia/music_cdo/aid/140814/jewish/Beinoni.htm",
+      "label": "Melody (Eli Lipsker and Velvel Pasternak)",
+      "type": "chabad_media"
+    },
+    {
+      "url": "https://www.chabad.org/multimedia/music_cdo/aid/1415368/jewish/Singing-the-Beinoni.htm",
+      "label": "Melody (Yacov Young)",
+      "type": "chabad_media"
+    }
+  ],
   "tags": []
 }

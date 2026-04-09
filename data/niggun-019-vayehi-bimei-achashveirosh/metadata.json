@@ -21,5 +21,17 @@
     "has_words_as_ashk": true,
     "has_versions_dir": true
   },
+  "references": [
+    {
+      "url": "https://www.sefaria.org/Esther.1.1",
+      "label": "Hebrew text (Esther 1:1)",
+      "type": "link"
+    },
+    {
+      "url": "https://www.chabad.org/multimedia/media_cdo/aid/1518/jewish/Vayehi-Bimei-Achashveirosh.htm",
+      "label": "Melody",
+      "type": "chabad_media"
+    }
+  ],
   "tags": []
 }

@@ -124,6 +124,54 @@ def parse_arranger_name(arranger: str) -> str:
 
 
 # ---------------------------------------------------------------------------
+# Reference / URL extraction
+# ---------------------------------------------------------------------------
+
+def classify_url(url: str) -> dict:
+    """Return type + embed info for a URL."""
+    # YouTube
+    yt = re.search(r'(?:youtube\.com/watch\?v=|youtu\.be/)([A-Za-z0-9_-]{11})', url)
+    if yt:
+        return {"type": "youtube", "embed_id": yt.group(1)}
+    # Chabad multimedia (audio/video pages)
+    if re.search(r'chabad\.org/multimedia/', url):
+        return {"type": "chabad_media"}
+    # Everything else
+    return {"type": "link"}
+
+
+def extract_references(ly_text: str) -> list[dict]:
+    """Extract URLs from non-commented \\line blocks, with their labels."""
+    refs = []
+    seen = set()
+
+    for line in ly_text.splitlines():
+        stripped = line.strip()
+        # Skip pure comment lines
+        if stripped.startswith('%'):
+            continue
+        # Find URLs
+        url_m = re.search(r'https?://\S+', stripped)
+        if not url_m:
+            continue
+        url = url_m.group(0).rstrip('}"')   # strip trailing punctuation
+        if url in seen:
+            continue
+        seen.add(url)
+
+        # Extract label: everything before the URL, stripped of LilyPond markup
+        before = stripped[:url_m.start()]
+        # Remove LilyPond tokens: \line, \small, \tiny, \large, \markup, braces, quotes
+        label = re.sub(r'\\(?:line|small|tiny|large|markup|bold|italic)\b', '', before)
+        label = re.sub(r'[{}"\\]', '', label).strip().rstrip(':').strip()
+
+        info = classify_url(url)
+        refs.append({"url": url, "label": label or None, **info})
+
+    return refs
+
+
+# ---------------------------------------------------------------------------
 # Directory / variant parsing
 # ---------------------------------------------------------------------------
 
@@ -195,6 +243,7 @@ def build_metadata(dir_path: Path) -> dict | None:
 
     key = parse_key(ly_text)
     tempo_bpm = parse_tempo(ly_text)
+    references = extract_references(ly_text)
 
     # README description
     readme_path = dir_path / "README.md"
@@ -221,6 +270,7 @@ def build_metadata(dir_path: Path) -> dict | None:
         "description": description,
         "variant_of": dir_info["variant_of"],
         "assets": assets,
+        "references": references,
         "tags": [],
     }
 

@@ -21,5 +21,22 @@
     "has_words_as_ashk": true,
     "has_versions_dir": false
   },
+  "references": [
+    {
+      "url": "https://www.chabad.org/multimedia/music_cdo/aid/140676/jewish/Rachamono.htm",
+      "label": "Melody",
+      "type": "chabad_media"
+    },
+    {
+      "url": "https://www.chabad.org/therebbe/livingtorah/player_cdo/aid/1264771/jewish/Niggun-Rachamana.htm",
+      "label": "Melody",
+      "type": "link"
+    },
+    {
+      "url": "https://www.chabad.org/multimedia/music_cdo/aid/3514695/jewish/Singing-Rachamana.htm",
+      "label": "Melody",
+      "type": "chabad_media"
+    }
+  ],
   "tags": []
 }

@@ -21,5 +21,17 @@
     "has_words_as_ashk": false,
     "has_versions_dir": true
   },
+  "references": [
+    {
+      "url": "https://www.chabad.org/multimedia/music_cdo/aid/3848160/jewish/Singing-the-Rosh-Chodesh-Kislev-Nigun.htm",
+      "label": "Melody",
+      "type": "chabad_media"
+    },
+    {
+      "url": "https://anash.org/avraham-fried-sings-rosh-chodesh-kislev-nigun/",
+      "label": "Another version",
+      "type": "link"
+    }
+  ],
   "tags": []
 }

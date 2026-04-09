@@ -21,5 +21,12 @@
     "has_words_as_ashk": true,
     "has_versions_dir": true
   },
+  "references": [
+    {
+      "url": "https://www.chabad.org/multimedia/music_cdo/aid/140746/jewish/Vesomachto.htm",
+      "label": "Melody",
+      "type": "chabad_media"
+    }
+  ],
   "tags": []
 }

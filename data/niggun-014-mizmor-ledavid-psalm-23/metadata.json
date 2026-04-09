@@ -21,5 +21,12 @@
     "has_words_as_ashk": true,
     "has_versions_dir": true
   },
+  "references": [
+    {
+      "url": "https://www.sefaria.org/Psalms.23",
+      "label": "Hebrew Text from Tehillim (Psalms) 23",
+      "type": "link"
+    }
+  ],
   "tags": []
 }

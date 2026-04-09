@@ -21,5 +21,17 @@
     "has_words_as_ashk": true,
     "has_versions_dir": true
   },
+  "references": [
+    {
+      "url": "https://www.sefaria.org.il/sheets/49238.1",
+      "label": "Hebrew text from",
+      "type": "link"
+    },
+    {
+      "url": "https://aish.com/eishet-chayil",
+      "label": "Translation from",
+      "type": "link"
+    }
+  ],
   "tags": []
 }

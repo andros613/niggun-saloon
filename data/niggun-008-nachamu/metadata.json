@@ -21,5 +21,17 @@
     "has_words_as_ashk": true,
     "has_versions_dir": true
   },
+  "references": [
+    {
+      "url": "https://www.zemirotdatabase.org/view_song.php?id=35#rec",
+      "label": null,
+      "type": "link"
+    },
+    {
+      "url": "https://www.chabad.org/library/bible_cdo/aid/15971/jewish/Chapter-40.htm#v1",
+      "label": "Translation",
+      "type": "link"
+    }
+  ],
   "tags": []
 }

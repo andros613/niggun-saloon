@@ -21,5 +21,17 @@
     "has_words_as_ashk": true,
     "has_versions_dir": true
   },
+  "references": [
+    {
+      "url": "https://www.chabad.org/torah-texts/1666781/Online-Siddur-with-Commentary/Conclusion-of-Shachrit/Al-Tira",
+      "label": null,
+      "type": "link"
+    },
+    {
+      "url": "https://www.chabad.org/multimedia/media_cdo/aid/265780/jewish/Al-Tiro-Ach-Tzadikim.htm",
+      "label": "Melody",
+      "type": "chabad_media"
+    }
+  ],
   "tags": []
 }

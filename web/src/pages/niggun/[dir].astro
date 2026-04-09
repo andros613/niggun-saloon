@@ -109,6 +109,36 @@ const lyUrl   = n.assets.has_ly   ? assetUrl('ly')   : null;
       </div>
     )}
 
+    {n.references.length > 0 && (
+      <div class="references">
+        <h2>Sources &amp; References</h2>
+        <div class="ref-list">
+          {n.references.map(ref => (
+            <div class="ref-item">
+              {ref.type === 'youtube' && ref.embed_id ? (
+                <div class="ref-embed">
+                  {ref.label && <p class="ref-label">{ref.label}</p>}
+                  <iframe
+                    src={`https://www.youtube.com/embed/${ref.embed_id}`}
+                    title={ref.label ?? 'YouTube video'}
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen
+                  />
+                </div>
+              ) : (
+                <a href={ref.url} target="_blank" rel="noopener noreferrer" class="ref-link">
+                  <span class="ref-icon">
+                    {ref.type === 'chabad_media' ? '🎵' : '🔗'}
+                  </span>
+                  <span>{ref.label ?? ref.url}</span>
+                </a>
+              )}
+            </div>
+          ))}
+        </div>
+      </div>
+    )}
+
     {(wordsHe || wordsEn || wordsTh || wordsAshk) && (
       <div>
         <h2>Lyrics</h2>

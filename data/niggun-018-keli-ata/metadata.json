@@ -21,5 +21,17 @@
     "has_words_as_ashk": true,
     "has_versions_dir": true
   },
+  "references": [
+    {
+      "url": "https://www.chabad.org/library/bible_cdo/aid/16339/jewish/Chapter-118.htm",
+      "label": "Hebrew text and translation",
+      "type": "link"
+    },
+    {
+      "url": "https://www.chabad.org/multimedia/music_cdo/aid/254255/jewish/Keli-Ata.htm",
+      "label": "Melody",
+      "type": "chabad_media"
+    }
+  ],
   "tags": []
 }

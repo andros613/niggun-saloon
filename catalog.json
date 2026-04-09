@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-04-09T02:10:34.264877+00:00",
+  "generated_at": "2026-04-09T03:11:10.472396+00:00",
   "count": 28,
   "nigguns": [
     {
@@ -25,6 +25,7 @@
         "has_words_as_ashk": false,
         "has_versions_dir": true
       },
+      "references": [],
       "tags": []
     },
     {
@@ -50,6 +51,7 @@
         "has_words_as_ashk": false,
         "has_versions_dir": true
       },
+      "references": [],
       "tags": []
     },
     {
@@ -75,6 +77,7 @@
         "has_words_as_ashk": false,
         "has_versions_dir": true
       },
+      "references": [],
       "tags": []
     },
     {
@@ -100,6 +103,18 @@
         "has_words_as_ashk": true,
         "has_versions_dir": true
       },
+      "references": [
+        {
+          "url": "https://www.sefaria.org.il/sheets/49238.1",
+          "label": "Hebrew text from",
+          "type": "link"
+        },
+        {
+          "url": "https://aish.com/eishet-chayil",
+          "label": "Translation from",
+          "type": "link"
+        }
+      ],
       "tags": []
     },
     {
@@ -125,6 +140,23 @@
         "has_words_as_ashk": true,
         "has_versions_dir": true
       },
+      "references": [
+        {
+          "url": "https://zemirotdatabase.org/view_song.php?id=19",
+          "label": "Hebrew Source: Zemirot Database",
+          "type": "link"
+        },
+        {
+          "url": "https://aish.com/a_prayer_of_the_jewish_people/",
+          "label": "English Translation: Aish",
+          "type": "link"
+        },
+        {
+          "url": "https://www.alittlehebrew.com/transliterate/",
+          "label": "Transliteration based on",
+          "type": "link"
+        }
+      ],
       "tags": []
     },
     {
@@ -150,6 +182,23 @@
         "has_words_as_ashk": false,
         "has_versions_dir": true
       },
+      "references": [
+        {
+          "url": "https://zemirotdatabase.org/view_song.php?id=19",
+          "label": "Hebrew Source: Zemirot Database",
+          "type": "link"
+        },
+        {
+          "url": "https://aish.com/a_prayer_of_the_jewish_people/",
+          "label": "English Translation: Aish",
+          "type": "link"
+        },
+        {
+          "url": "https://www.alittlehebrew.com/transliterate/",
+          "label": "Transliteration based on",
+          "type": "link"
+        }
+      ],
       "tags": []
     },
     {
@@ -175,6 +224,23 @@
         "has_words_as_ashk": false,
         "has_versions_dir": true
       },
+      "references": [
+        {
+          "url": "https://zemirotdatabase.org/view_song.php?id=19",
+          "label": "Hebrew Source: Zemirot Database",
+          "type": "link"
+        },
+        {
+          "url": "https://aish.com/a_prayer_of_the_jewish_people/",
+          "label": "English Translation: Aish",
+          "type": "link"
+        },
+        {
+          "url": "https://www.alittlehebrew.com/transliterate/",
+          "label": "Transliteration based on",
+          "type": "link"
+        }
+      ],
       "tags": []
     },
     {
@@ -200,6 +266,18 @@
         "has_words_as_ashk": true,
         "has_versions_dir": true
       },
+      "references": [
+        {
+          "url": "https://www.chabad.org/multimedia/music_cdo/aid/476629/jewish/Sheyiboneh.htm",
+          "label": "Source",
+          "type": "chabad_media"
+        },
+        {
+          "url": "https://www.alittlehebrew.com/transliterate/",
+          "label": "Transliteration based on",
+          "type": "link"
+        }
+      ],
       "tags": []
     },
     {
@@ -225,6 +303,7 @@
         "has_words_as_ashk": false,
         "has_versions_dir": true
       },
+      "references": [],
       "tags": []
     },
     {
@@ -250,6 +329,18 @@
         "has_words_as_ashk": true,
         "has_versions_dir": true
       },
+      "references": [
+        {
+          "url": "https://www.chabad.org/torah-texts/1666781/Online-Siddur-with-Commentary/Conclusion-of-Shachrit/Al-Tira",
+          "label": null,
+          "type": "link"
+        },
+        {
+          "url": "https://www.chabad.org/multimedia/media_cdo/aid/265780/jewish/Al-Tiro-Ach-Tzadikim.htm",
+          "label": "Melody",
+          "type": "chabad_media"
+        }
+      ],
       "tags": []
     },
     {
@@ -275,6 +366,18 @@
         "has_words_as_ashk": true,
         "has_versions_dir": true
       },
+      "references": [
+        {
+          "url": "https://www.zemirotdatabase.org/view_song.php?id=35#rec",
+          "label": null,
+          "type": "link"
+        },
+        {
+          "url": "https://www.chabad.org/library/bible_cdo/aid/15971/jewish/Chapter-40.htm#v1",
+          "label": "Translation",
+          "type": "link"
+        }
+      ],
       "tags": []
     },
     {
@@ -300,6 +403,7 @@
         "has_words_as_ashk": false,
         "has_versions_dir": true
       },
+      "references": [],
       "tags": []
     },
     {
@@ -325,6 +429,19 @@
         "has_words_as_ashk": true,
         "has_versions_dir": true
       },
+      "references": [
+        {
+          "url": "https://www.zemirotdatabase.org/view_song.php?id=56#rec",
+          "label": null,
+          "type": "link"
+        },
+        {
+          "url": "https://www.youtube.com/watch?v=L16bkB7BDYQ",
+          "label": "Melody setting by Ari Goldwag",
+          "type": "youtube",
+          "embed_id": "L16bkB7BDYQ"
+        }
+      ],
       "tags": []
     },
     {
@@ -350,6 +467,18 @@
         "has_words_as_ashk": true,
         "has_versions_dir": true
       },
+      "references": [
+        {
+          "url": "https://www.sefaria.org/Psalms.85",
+          "label": "Hebrew text",
+          "type": "link"
+        },
+        {
+          "url": "https://www.chabad.org/library/bible_cdo/aid/16306/jewish/Chapter-85.htm",
+          "label": "Translation",
+          "type": "link"
+        }
+      ],
       "tags": []
     },
     {
@@ -375,6 +504,18 @@
         "has_words_as_ashk": false,
         "has_versions_dir": true
       },
+      "references": [
+        {
+          "url": "https://crownheights.info/chabad-news/902912/nyet-nyet-nikavo-the-full-song-and-its-history/",
+          "label": "Melody",
+          "type": "link"
+        },
+        {
+          "url": "https://www.zemirotdatabase.org/view_song.php?id=1030",
+          "label": "Translation",
+          "type": "link"
+        }
+      ],
       "tags": []
     },
     {
@@ -400,6 +541,18 @@
         "has_words_as_ashk": true,
         "has_versions_dir": true
       },
+      "references": [
+        {
+          "url": "https://www.chabad.org/multimedia/music_cdo/aid/140681/jewish/Ovinu-Malkeinu.htm",
+          "label": "Melody",
+          "type": "chabad_media"
+        },
+        {
+          "url": "https://www.chabad.org/torah-texts/1627771/Online-Siddur-with-Commentary/Viduy-And-Tachnun/Avinu-Malkeinu",
+          "label": "Text",
+          "type": "link"
+        }
+      ],
       "tags": []
     },
     {
@@ -425,6 +578,13 @@
         "has_words_as_ashk": true,
         "has_versions_dir": true
       },
+      "references": [
+        {
+          "url": "https://www.chabad.org/multimedia/music_cdo/aid/140746/jewish/Vesomachto.htm",
+          "label": "Melody",
+          "type": "chabad_media"
+        }
+      ],
       "tags": []
     },
     {
@@ -450,6 +610,13 @@
         "has_words_as_ashk": true,
         "has_versions_dir": true
       },
+      "references": [
+        {
+          "url": "https://www.sefaria.org/Psalms.23",
+          "label": "Hebrew Text from Tehillim (Psalms) 23",
+          "type": "link"
+        }
+      ],
       "tags": []
     },
     {
@@ -475,6 +642,18 @@
         "has_words_as_ashk": false,
         "has_versions_dir": true
       },
+      "references": [
+        {
+          "url": "https://www.chabad.org/multimedia/music_cdo/aid/3848160/jewish/Singing-the-Rosh-Chodesh-Kislev-Nigun.htm",
+          "label": "Melody",
+          "type": "chabad_media"
+        },
+        {
+          "url": "https://anash.org/avraham-fried-sings-rosh-chodesh-kislev-nigun/",
+          "label": "Another version",
+          "type": "link"
+        }
+      ],
       "tags": []
     },
     {
@@ -500,6 +679,13 @@
         "has_words_as_ashk": true,
         "has_versions_dir": true
       },
+      "references": [
+        {
+          "url": "https://www.chabad.org/multimedia/music_cdo/aid/797126/jewish/Al-Hanissim.htm",
+          "label": "Hebrew text and translation",
+          "type": "chabad_media"
+        }
+      ],
       "tags": []
     },
     {
@@ -525,6 +711,18 @@
         "has_words_as_ashk": true,
         "has_versions_dir": true
       },
+      "references": [
+        {
+          "url": "https://www.zemirotdatabase.org/view_song.php?id=867",
+          "label": "Hebrew text",
+          "type": "link"
+        },
+        {
+          "url": "https://www.chabad.org/multimedia/music_cdo/aid/140774/jewish/Halelu.htm",
+          "label": "Melody and English translation",
+          "type": "chabad_media"
+        }
+      ],
       "tags": []
     },
     {
@@ -550,6 +748,18 @@
         "has_words_as_ashk": true,
         "has_versions_dir": true
       },
+      "references": [
+        {
+          "url": "https://www.chabad.org/library/bible_cdo/aid/16339/jewish/Chapter-118.htm",
+          "label": "Hebrew text and translation",
+          "type": "link"
+        },
+        {
+          "url": "https://www.chabad.org/multimedia/music_cdo/aid/254255/jewish/Keli-Ata.htm",
+          "label": "Melody",
+          "type": "chabad_media"
+        }
+      ],
       "tags": []
     },
     {
@@ -575,6 +785,18 @@
         "has_words_as_ashk": true,
         "has_versions_dir": true
       },
+      "references": [
+        {
+          "url": "https://www.sefaria.org/Esther.1.1",
+          "label": "Hebrew text (Esther 1:1)",
+          "type": "link"
+        },
+        {
+          "url": "https://www.chabad.org/multimedia/media_cdo/aid/1518/jewish/Vayehi-Bimei-Achashveirosh.htm",
+          "label": "Melody",
+          "type": "chabad_media"
+        }
+      ],
       "tags": []
     },
     {
@@ -600,6 +822,7 @@
         "has_words_as_ashk": false,
         "has_versions_dir": false
       },
+      "references": [],
       "tags": []
     },
     {
@@ -625,6 +848,23 @@
         "has_words_as_ashk": true,
         "has_versions_dir": false
       },
+      "references": [
+        {
+          "url": "https://www.chabad.org/multimedia/music_cdo/aid/140676/jewish/Rachamono.htm",
+          "label": "Melody",
+          "type": "chabad_media"
+        },
+        {
+          "url": "https://www.chabad.org/therebbe/livingtorah/player_cdo/aid/1264771/jewish/Niggun-Rachamana.htm",
+          "label": "Melody",
+          "type": "link"
+        },
+        {
+          "url": "https://www.chabad.org/multimedia/music_cdo/aid/3514695/jewish/Singing-Rachamana.htm",
+          "label": "Melody",
+          "type": "chabad_media"
+        }
+      ],
       "tags": []
     },
     {
@@ -650,6 +890,24 @@
         "has_words_as_ashk": false,
         "has_versions_dir": true
       },
+      "references": [
+        {
+          "url": "https://www.youtube.com/watch?v=d7awxGWmIV0",
+          "label": "Melody ft. Eli Marcus",
+          "type": "youtube",
+          "embed_id": "d7awxGWmIV0"
+        },
+        {
+          "url": "https://www.chabad.org/multimedia/music_cdo/aid/140814/jewish/Beinoni.htm",
+          "label": "Melody (Eli Lipsker and Velvel Pasternak)",
+          "type": "chabad_media"
+        },
+        {
+          "url": "https://www.chabad.org/multimedia/music_cdo/aid/1415368/jewish/Singing-the-Beinoni.htm",
+          "label": "Melody (Yacov Young)",
+          "type": "chabad_media"
+        }
+      ],
       "tags": []
     },
     {
@@ -675,6 +933,7 @@
         "has_words_as_ashk": false,
         "has_versions_dir": false
       },
+      "references": [],
       "tags": []
     },
     {
@@ -700,6 +959,7 @@
         "has_words_as_ashk": false,
         "has_versions_dir": false
       },
+      "references": [],
       "tags": []
     }
   ]

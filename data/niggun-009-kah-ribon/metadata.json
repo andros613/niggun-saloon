@@ -21,5 +21,18 @@
     "has_words_as_ashk": true,
     "has_versions_dir": true
   },
+  "references": [
+    {
+      "url": "https://www.zemirotdatabase.org/view_song.php?id=56#rec",
+      "label": null,
+      "type": "link"
+    },
+    {
+      "url": "https://www.youtube.com/watch?v=L16bkB7BDYQ",
+      "label": "Melody setting by Ari Goldwag",
+      "type": "youtube",
+      "embed_id": "L16bkB7BDYQ"
+    }
+  ],
   "tags": []
 }

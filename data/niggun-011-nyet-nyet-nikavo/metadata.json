@@ -21,5 +21,17 @@
     "has_words_as_ashk": false,
     "has_versions_dir": true
   },
+  "references": [
+    {
+      "url": "https://crownheights.info/chabad-news/902912/nyet-nyet-nikavo-the-full-song-and-its-history/",
+      "label": "Melody",
+      "type": "link"
+    },
+    {
+      "url": "https://www.zemirotdatabase.org/view_song.php?id=1030",
+      "label": "Translation",
+      "type": "link"
+    }
+  ],
   "tags": []
 }

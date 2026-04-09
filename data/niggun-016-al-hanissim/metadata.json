@@ -21,5 +21,12 @@
     "has_words_as_ashk": true,
     "has_versions_dir": true
   },
+  "references": [
+    {
+      "url": "https://www.chabad.org/multimedia/music_cdo/aid/797126/jewish/Al-Hanissim.htm",
+      "label": "Hebrew text and translation",
+      "type": "chabad_media"
+    }
+  ],
   "tags": []
 }

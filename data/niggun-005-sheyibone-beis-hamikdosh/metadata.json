@@ -21,5 +21,17 @@
     "has_words_as_ashk": true,
     "has_versions_dir": true
   },
+  "references": [
+    {
+      "url": "https://www.chabad.org/multimedia/music_cdo/aid/476629/jewish/Sheyiboneh.htm",
+      "label": "Source",
+      "type": "chabad_media"
+    },
+    {
+      "url": "https://www.alittlehebrew.com/transliterate/",
+      "label": "Transliteration based on",
+      "type": "link"
+    }
+  ],
   "tags": []
 }

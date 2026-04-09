@@ -21,5 +21,17 @@
     "has_words_as_ashk": true,
     "has_versions_dir": true
   },
+  "references": [
+    {
+      "url": "https://www.zemirotdatabase.org/view_song.php?id=867",
+      "label": "Hebrew text",
+      "type": "link"
+    },
+    {
+      "url": "https://www.chabad.org/multimedia/music_cdo/aid/140774/jewish/Halelu.htm",
+      "label": "Melody and English translation",
+      "type": "chabad_media"
+    }
+  ],
   "tags": []
 }

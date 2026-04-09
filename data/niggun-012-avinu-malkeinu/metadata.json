@@ -21,5 +21,17 @@
     "has_words_as_ashk": true,
     "has_versions_dir": true
   },
+  "references": [
+    {
+      "url": "https://www.chabad.org/multimedia/music_cdo/aid/140681/jewish/Ovinu-Malkeinu.htm",
+      "label": "Melody",
+      "type": "chabad_media"
+    },
+    {
+      "url": "https://www.chabad.org/torah-texts/1627771/Online-Siddur-with-Commentary/Viduy-And-Tachnun/Avinu-Malkeinu",
+      "label": "Text",
+      "type": "link"
+    }
+  ],
   "tags": []
 }

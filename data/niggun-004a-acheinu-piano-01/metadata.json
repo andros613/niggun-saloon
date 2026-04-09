@@ -21,5 +21,22 @@
     "has_words_as_ashk": false,
     "has_versions_dir": true
   },
+  "references": [
+    {
+      "url": "https://zemirotdatabase.org/view_song.php?id=19",
+      "label": "Hebrew Source: Zemirot Database",
+      "type": "link"
+    },
+    {
+      "url": "https://aish.com/a_prayer_of_the_jewish_people/",
+      "label": "English Translation: Aish",
+      "type": "link"
+    },
+    {
+      "url": "https://www.alittlehebrew.com/transliterate/",
+      "label": "Transliteration based on",
+      "type": "link"
+    }
+  ],
   "tags": []
 }
