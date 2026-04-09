@@ -47,7 +47,7 @@ function assetUrl(ext: string): string | null {
 
 const TAG_LABELS: Record<string, string> = {
   chabad: 'Chabad', pesach: 'Pesach', purim: 'Purim',
-  shabbat: 'Shabbat', chag: 'Chag', anytime: 'Anytime', chanukah: 'Chanukah',
+  shabbat: 'Shabbat', chag: 'Chag', anytime: 'Anytime', chanukah: 'Chanukah', davening: 'Davening',
 };
 function tagLabel(t: string): string { return TAG_LABELS[t] ?? t; }
 
@@ -212,6 +212,16 @@ const lyUrl   = n.assets.has_ly   ? assetUrl('ly')   : null;
   const select = document.getElementById('speed-select') as HTMLSelectElement | null;
   select?.addEventListener('change', () => {
     if (audio) audio.playbackRate = parseFloat(select.value);
+  });
+
+  // Spacebar play/pause (skip if focus is on an input/button)
+  document.addEventListener('keydown', (e: KeyboardEvent) => {
+    if (e.code !== 'Space') return;
+    const tag = (e.target as HTMLElement).tagName;
+    if (tag === 'INPUT' || tag === 'SELECT' || tag === 'TEXTAREA' || tag === 'BUTTON') return;
+    if (!audio) return;
+    e.preventDefault();
+    audio.paused ? audio.play() : audio.pause();
   });
 
   // PDF zoom

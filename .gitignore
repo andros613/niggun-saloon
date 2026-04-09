@@ -25,3 +25,6 @@ __pycache__/
 *.bk
 *.old
 *.old2
+
+# Claude tmp
+handoff.md

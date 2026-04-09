@@ -275,7 +275,7 @@ def build_metadata(dir_path: Path) -> dict | None:
     }
 
 
-VALID_TAGS = {"chabad", "pesach", "purim", "shabbat", "chag", "chanukah", "anytime"}
+VALID_TAGS = {"chabad", "pesach", "purim", "shabbat", "chag", "chanukah", "anytime", "davening"}
 
 
 def load_tags(repo_root: Path) -> dict[str, list[str]]:

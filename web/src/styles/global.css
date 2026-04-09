@@ -192,6 +192,7 @@ main { max-width: 1100px; margin: 0 auto; padding: 2rem 1.5rem; }
 .tag-chag     { background: #e8f0ff; border-color: #5080d0; color: #1a3a7a; }
 .tag-chanukah { background: #e0f0ff; border-color: #3090e0; color: #003a7a; }
 .tag-anytime  { background: #f0f0f0; border-color: #aaaaaa; color: #444444; }
+.tag-davening { background: #fef0f0; border-color: #d06060; color: #7a1a1a; }
 
 /* tag filter chips on browse page */
 .tag-chip {
