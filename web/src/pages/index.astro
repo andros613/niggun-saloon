@@ -3,13 +3,16 @@ import Layout from '../layouts/Layout.astro';
 import { loadCatalog } from '../lib/catalog';
 
 const catalog = loadCatalog();
-const nigguns = catalog.nigguns;
+const nigguns = catalog.nigguns.filter(n => n.arrangement_type === null);
 
 const allTags = ['chabad', 'pesach', 'purim', 'shabbat', 'chag', 'chanukah', 'anytime', 'davening'];
 const tagLabel: Record<string, string> = {
   chabad: 'Chabad', pesach: 'Pesach', purim: 'Purim',
   shabbat: 'Shabbat', chag: 'Chag', chanukah: 'Chanukah', anytime: 'Anytime', davening: 'Davening',
 };
+
+const hasPianoNigguns = nigguns.some(n => n.piano_arrangements.length > 0);
+const hasChoralNigguns = nigguns.some(n => n.choral_arrangements.length > 0);
 
 const base = import.meta.env.BASE_URL;
 ---
@@ -23,28 +26,37 @@ const base = import.meta.env.BASE_URL;
     {allTags.map(t => (
       <button class={`tag-chip tag-${t}`} data-tag={t}>{tagLabel[t]}</button>
     ))}
+    {hasPianoNigguns  && <button class="tag-chip tag-has-piano"  data-tag="has-piano">🎹 Piano arr.</button>}
+    {hasChoralNigguns && <button class="tag-chip tag-has-choral" data-tag="has-choral">🎼 Choral arr.</button>}
   </div>
 
   <div class="niggun-grid" id="niggun-grid">
-    {nigguns.map(n => (
-      <a href={`${base}niggun/${n.dir}/`} class="niggun-card"
-         data-tags={n.tags.join(',')}>
-        <h2>{n.title}</h2>
-        {n.subtitle && <p class="subtitle">{n.subtitle}</p>}
-        <div class="meta">
-          {n.key       && <span>{n.key}</span>}
-          {n.tempo_bpm && <span>♩= {n.tempo_bpm}</span>}
-          {n.date_gregorian && <span>{n.date_gregorian}</span>}
-        </div>
-        {n.tags.length > 0 && (
+    {nigguns.map(n => {
+      const syntheticTags = [
+        ...n.tags,
+        ...(n.piano_arrangements.length  > 0 ? ['has-piano']  : []),
+        ...(n.choral_arrangements.length > 0 ? ['has-choral'] : []),
+      ];
+      return (
+        <a href={`${base}niggun/${n.dir}/`} class="niggun-card"
+           data-tags={syntheticTags.join(',')}>
+          <h2>{n.title}</h2>
+          {n.subtitle && <p class="subtitle">{n.subtitle}</p>}
+          <div class="meta">
+            {n.key       && <span>{n.key}</span>}
+            {n.tempo_bpm && <span>♩= {n.tempo_bpm}</span>}
+            {n.date_gregorian && <span>{n.date_gregorian}</span>}
+          </div>
           <div class="badges">
             {n.tags.map(t => (
               <span class={`tag tag-${t}`}>{tagLabel[t] ?? t}</span>
             ))}
+            {n.piano_arrangements.length  > 0 && <span class="tag tag-has-piano">🎹 Piano</span>}
+            {n.choral_arrangements.length > 0 && <span class="tag tag-has-choral">🎼 Choral</span>}
           </div>
-        )}
-      </a>
-    ))}
+        </a>
+      );
+    })}
   </div>
 </Layout>
 

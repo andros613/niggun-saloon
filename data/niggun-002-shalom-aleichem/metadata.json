@@ -10,6 +10,7 @@
   "tempo_bpm": 90,
   "description": "",
   "variant_of": null,
+  "arrangement_type": null,
   "assets": {
     "has_ly": true,
     "has_pdf": true,

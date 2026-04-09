@@ -32,6 +32,9 @@ export interface Niggun {
   tempo_bpm: number | null;
   description: string;
   variant_of: string | null;
+  arrangement_type: 'piano' | 'choral' | null;
+  piano_arrangements: string[];
+  choral_arrangements: string[];
   assets: NiggunAssets;
   references: Reference[];
   tags: string[];

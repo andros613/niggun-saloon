@@ -60,6 +60,38 @@
 
 ---
 
+## Instrument Re-compilation (Select Instrument)
+
+**Summary:** Allow users to select an instrument (e.g. piano, strings, organ) and re-compile the LilyPond source with that instrument's soundfont, generating a new MP3 on the fly or from pre-generated variants.
+
+**Approach options:**
+- **Pre-generated:** Build variants per instrument at CI time — each niggun compiled with multiple soundfonts; UI swaps the audio src URL. Simple, no backend needed.
+- **On-demand (server):** A small serverless function accepts a niggun + instrument selection, runs LilyPond + FluidSynth, returns the MP3. More flexible but requires infrastructure.
+
+**Notes:**
+- Pre-generated is simpler and consistent with the existing build pipeline (`build_variants.py`, not yet written)
+- Instrument list would map to FluidSynth soundfont program numbers
+- Could combine with Key/Tempo Transposition UI into a single "playback options" panel
+
+**Effort:** ~1–2 days for pre-generated instrument variants (build script + UI); more for on-demand
+
+---
+
+## Transliteration Style Selection + PDF Variants
+
+**Summary:** Allow selecting a transliteration style (Tehillat Hashem, ArtScroll Ashkenazi, Modern Israeli) for both the follow-along lyrics in the UI and the downloadable PDF.
+
+**Context:** Some nigguns already have multiple PDF versions compiled from LilyPond (different lyric inclusions). The UI currently shows a single PDF download and inline lyrics from separate text files.
+
+**Approach:**
+- **PDF selection:** Detect multiple PDFs in the niggun dir (e.g. `stem_th.pdf`, `stem_ashk.pdf`) at build time; expose a dropdown to choose which PDF to view/download
+- **Inline lyrics:** Already stored per-style in separate text files (`words_th_en.txt`, `words_as_ashk.txt`) — the UI already shows all available columns; a toggle could show only the selected style
+- **Build:** `build_metadata.py` would enumerate available PDF variants and include them in `metadata.json`
+
+**Effort:** ~1 day for PDF variant detection + UI switcher; lyrics toggle is simpler still
+
+---
+
 ## Key/Tempo Transposition UI
 
 **Summary:** Dropdown to change the key (±3 semitones) or tempo (slow/normal/fast) with pre-generated variants.

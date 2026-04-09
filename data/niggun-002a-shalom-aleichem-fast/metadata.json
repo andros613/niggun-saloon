@@ -10,6 +10,7 @@
   "tempo_bpm": 110,
   "description": "",
   "variant_of": "002",
+  "arrangement_type": null,
   "assets": {
     "has_ly": true,
     "has_pdf": true,

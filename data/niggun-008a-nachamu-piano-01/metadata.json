@@ -10,6 +10,7 @@
   "tempo_bpm": 50,
   "description": "",
   "variant_of": "008",
+  "arrangement_type": "piano",
   "assets": {
     "has_ly": true,
     "has_pdf": true,

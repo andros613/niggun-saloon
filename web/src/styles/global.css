@@ -181,7 +181,9 @@ main { max-width: 1100px; margin: 0 auto; padding: 2rem 1.5rem; }
 .tag-chag     { background: #e8f0ff; border-color: #5080d0; color: #1a3a7a; }
 .tag-chanukah { background: #e0f0ff; border-color: #3090e0; color: #003a7a; }
 .tag-anytime  { background: #f0f0f0; border-color: #aaaaaa; color: #444444; }
-.tag-davening { background: #fef0f0; border-color: #d06060; color: #7a1a1a; }
+.tag-davening  { background: #fef0f0; border-color: #d06060; color: #7a1a1a; }
+.tag-has-piano  { background: #f0ebff; border-color: #7c5cbf; color: #3b1f80; }
+.tag-has-choral { background: #e6f5f0; border-color: #3a9e78; color: #1a5c42; }
 
 /* tag filter chips on browse page */
 .tag-chip {
@@ -202,3 +204,22 @@ main { max-width: 1100px; margin: 0 auto; padding: 2rem 1.5rem; }
 
 .page-title { font-size: 1.5rem; font-weight: 700; }
 .page-subtitle { color: var(--color-muted); font-size: 0.95rem; margin-top: 0.25rem; }
+
+/* ── Back-link & arrangements ── */
+.back-link { font-size: 0.85rem; }
+.back-link a { color: var(--color-muted); }
+.back-link a:hover { color: var(--color-primary); }
+
+.arrangements { display: flex; flex-direction: column; gap: 1rem; }
+.arrangement-list { display: flex; flex-direction: column; gap: 0.5rem; margin-top: 0.5rem; }
+.arrangement-card {
+  display: flex; align-items: center; gap: 0.75rem; flex-wrap: wrap;
+  padding: 0.5rem 0.9rem;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius);
+  background: var(--color-surface);
+  font-size: 0.9rem;
+}
+.arrangement-card:hover { background: var(--color-tag-bg); }
+.arr-title { font-weight: 500; }
+.arr-meta { color: var(--color-muted); font-size: 0.82rem; }

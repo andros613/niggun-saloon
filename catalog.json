@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-04-09T04:00:52.931050+00:00",
+  "generated_at": "2026-04-09T04:44:47.524995+00:00",
   "count": 28,
   "nigguns": [
     {
@@ -14,6 +14,7 @@
       "tempo_bpm": 110,
       "description": "Jewish Chassidic Niggun (wordless melody) often sung by Rabbi Mosh Chaim Eade at Aish HaTorah.\n\nArranged by Amichai Rosenbaum, Nissan 5785 / April 2025.",
       "variant_of": null,
+      "arrangement_type": null,
       "assets": {
         "has_ly": true,
         "has_pdf": true,
@@ -28,7 +29,9 @@
       "references": [],
       "tags": [
         "anytime"
-      ]
+      ],
+      "piano_arrangements": [],
+      "choral_arrangements": []
     },
     {
       "id": "002",
@@ -42,6 +45,7 @@
       "tempo_bpm": 90,
       "description": "",
       "variant_of": null,
+      "arrangement_type": null,
       "assets": {
         "has_ly": true,
         "has_pdf": true,
@@ -56,7 +60,9 @@
       "references": [],
       "tags": [
         "shabbat"
-      ]
+      ],
+      "piano_arrangements": [],
+      "choral_arrangements": []
     },
     {
       "id": "002a",
@@ -70,6 +76,7 @@
       "tempo_bpm": 110,
       "description": "",
       "variant_of": "002",
+      "arrangement_type": null,
       "assets": {
         "has_ly": true,
         "has_pdf": true,
@@ -84,7 +91,9 @@
       "references": [],
       "tags": [
         "shabbat"
-      ]
+      ],
+      "piano_arrangements": [],
+      "choral_arrangements": []
     },
     {
       "id": "003",
@@ -98,6 +107,7 @@
       "tempo_bpm": 30,
       "description": "",
       "variant_of": null,
+      "arrangement_type": null,
       "assets": {
         "has_ly": true,
         "has_pdf": true,
@@ -123,7 +133,9 @@
       ],
       "tags": [
         "shabbat"
-      ]
+      ],
+      "piano_arrangements": [],
+      "choral_arrangements": []
     },
     {
       "id": "004",
@@ -137,6 +149,7 @@
       "tempo_bpm": 60,
       "description": "Jewish Folk Song.\n\nArranged by Amichai Rosenbaum, Sivan 5785 / June 2025.",
       "variant_of": null,
+      "arrangement_type": null,
       "assets": {
         "has_ly": true,
         "has_pdf": true,
@@ -167,7 +180,12 @@
       ],
       "tags": [
         "anytime"
-      ]
+      ],
+      "piano_arrangements": [
+        "niggun-004a-acheinu-piano-01",
+        "niggun-004b-acheinu-piano-02"
+      ],
+      "choral_arrangements": []
     },
     {
       "id": "004a",
@@ -181,6 +199,7 @@
       "tempo_bpm": 70,
       "description": "",
       "variant_of": "004",
+      "arrangement_type": "piano",
       "assets": {
         "has_ly": true,
         "has_pdf": true,
@@ -211,7 +230,9 @@
       ],
       "tags": [
         "anytime"
-      ]
+      ],
+      "piano_arrangements": [],
+      "choral_arrangements": []
     },
     {
       "id": "004b",
@@ -225,6 +246,7 @@
       "tempo_bpm": 70,
       "description": "",
       "variant_of": "004",
+      "arrangement_type": "piano",
       "assets": {
         "has_ly": true,
         "has_pdf": true,
@@ -255,7 +277,9 @@
       ],
       "tags": [
         "anytime"
-      ]
+      ],
+      "piano_arrangements": [],
+      "choral_arrangements": []
     },
     {
       "id": "005",
@@ -269,6 +293,7 @@
       "tempo_bpm": 90,
       "description": "",
       "variant_of": null,
+      "arrangement_type": null,
       "assets": {
         "has_ly": true,
         "has_pdf": true,
@@ -296,7 +321,9 @@
         "anytime",
         "davening",
         "chabad"
-      ]
+      ],
+      "piano_arrangements": [],
+      "choral_arrangements": []
     },
     {
       "id": "006",
@@ -310,6 +337,7 @@
       "tempo_bpm": 120,
       "description": "",
       "variant_of": null,
+      "arrangement_type": null,
       "assets": {
         "has_ly": true,
         "has_pdf": true,
@@ -324,7 +352,9 @@
       "references": [],
       "tags": [
         "anytime"
-      ]
+      ],
+      "piano_arrangements": [],
+      "choral_arrangements": []
     },
     {
       "id": "007",
@@ -338,6 +368,7 @@
       "tempo_bpm": 110,
       "description": "",
       "variant_of": null,
+      "arrangement_type": null,
       "assets": {
         "has_ly": true,
         "has_pdf": true,
@@ -365,7 +396,9 @@
         "anytime",
         "davening",
         "chabad"
-      ]
+      ],
+      "piano_arrangements": [],
+      "choral_arrangements": []
     },
     {
       "id": "008",
@@ -379,6 +412,7 @@
       "tempo_bpm": 50,
       "description": "",
       "variant_of": null,
+      "arrangement_type": null,
       "assets": {
         "has_ly": true,
         "has_pdf": true,
@@ -405,7 +439,11 @@
       "tags": [
         "chag",
         "shabbat"
-      ]
+      ],
+      "piano_arrangements": [
+        "niggun-008a-nachamu-piano-01"
+      ],
+      "choral_arrangements": []
     },
     {
       "id": "008a",
@@ -419,6 +457,7 @@
       "tempo_bpm": 50,
       "description": "",
       "variant_of": "008",
+      "arrangement_type": "piano",
       "assets": {
         "has_ly": true,
         "has_pdf": true,
@@ -434,7 +473,9 @@
       "tags": [
         "chag",
         "shabbat"
-      ]
+      ],
+      "piano_arrangements": [],
+      "choral_arrangements": []
     },
     {
       "id": "009",
@@ -448,6 +489,7 @@
       "tempo_bpm": 40,
       "description": "Jewish Folk Song for Shabbat.\n\nArranged by Amichai Rosenbaum, Nissan 5785 / April 2025.",
       "variant_of": null,
+      "arrangement_type": null,
       "assets": {
         "has_ly": true,
         "has_pdf": true,
@@ -474,7 +516,9 @@
       ],
       "tags": [
         "shabbat"
-      ]
+      ],
+      "piano_arrangements": [],
+      "choral_arrangements": []
     },
     {
       "id": "010",
@@ -488,6 +532,7 @@
       "tempo_bpm": 100,
       "description": "",
       "variant_of": null,
+      "arrangement_type": null,
       "assets": {
         "has_ly": true,
         "has_pdf": true,
@@ -514,7 +559,9 @@
       "tags": [
         "anytime",
         "chabad"
-      ]
+      ],
+      "piano_arrangements": [],
+      "choral_arrangements": []
     },
     {
       "id": "011",
@@ -528,6 +575,7 @@
       "tempo_bpm": 120,
       "description": "",
       "variant_of": null,
+      "arrangement_type": null,
       "assets": {
         "has_ly": true,
         "has_pdf": true,
@@ -554,7 +602,9 @@
       "tags": [
         "anytime",
         "chabad"
-      ]
+      ],
+      "piano_arrangements": [],
+      "choral_arrangements": []
     },
     {
       "id": "012",
@@ -568,6 +618,7 @@
       "tempo_bpm": 60,
       "description": "",
       "variant_of": null,
+      "arrangement_type": null,
       "assets": {
         "has_ly": true,
         "has_pdf": true,
@@ -595,7 +646,9 @@
         "chag",
         "davening",
         "chabad"
-      ]
+      ],
+      "piano_arrangements": [],
+      "choral_arrangements": []
     },
     {
       "id": "013",
@@ -609,6 +662,7 @@
       "tempo_bpm": 110,
       "description": "",
       "variant_of": null,
+      "arrangement_type": null,
       "assets": {
         "has_ly": true,
         "has_pdf": true,
@@ -631,7 +685,9 @@
         "chag",
         "anytime",
         "chabad"
-      ]
+      ],
+      "piano_arrangements": [],
+      "choral_arrangements": []
     },
     {
       "id": "014",
@@ -645,6 +701,7 @@
       "tempo_bpm": 120,
       "description": "",
       "variant_of": null,
+      "arrangement_type": null,
       "assets": {
         "has_ly": true,
         "has_pdf": true,
@@ -665,7 +722,9 @@
       ],
       "tags": [
         "shabbat"
-      ]
+      ],
+      "piano_arrangements": [],
+      "choral_arrangements": []
     },
     {
       "id": "015",
@@ -679,6 +738,7 @@
       "tempo_bpm": 120,
       "description": "",
       "variant_of": null,
+      "arrangement_type": null,
       "assets": {
         "has_ly": true,
         "has_pdf": true,
@@ -706,7 +766,9 @@
         "chag",
         "anytime",
         "chabad"
-      ]
+      ],
+      "piano_arrangements": [],
+      "choral_arrangements": []
     },
     {
       "id": "016",
@@ -720,6 +782,7 @@
       "tempo_bpm": 120,
       "description": "",
       "variant_of": null,
+      "arrangement_type": null,
       "assets": {
         "has_ly": true,
         "has_pdf": true,
@@ -743,7 +806,9 @@
         "davening",
         "purim",
         "chanukah"
-      ]
+      ],
+      "piano_arrangements": [],
+      "choral_arrangements": []
     },
     {
       "id": "017",
@@ -757,6 +822,7 @@
       "tempo_bpm": 120,
       "description": "",
       "variant_of": null,
+      "arrangement_type": null,
       "assets": {
         "has_ly": true,
         "has_pdf": true,
@@ -783,7 +849,9 @@
       "tags": [
         "chag",
         "davening"
-      ]
+      ],
+      "piano_arrangements": [],
+      "choral_arrangements": []
     },
     {
       "id": "018",
@@ -797,6 +865,7 @@
       "tempo_bpm": 60,
       "description": "",
       "variant_of": null,
+      "arrangement_type": null,
       "assets": {
         "has_ly": true,
         "has_pdf": true,
@@ -825,7 +894,9 @@
         "davening",
         "anytime",
         "chabad"
-      ]
+      ],
+      "piano_arrangements": [],
+      "choral_arrangements": []
     },
     {
       "id": "019",
@@ -839,6 +910,7 @@
       "tempo_bpm": 120,
       "description": "",
       "variant_of": null,
+      "arrangement_type": null,
       "assets": {
         "has_ly": true,
         "has_pdf": true,
@@ -867,7 +939,9 @@
         "davening",
         "purim",
         "chabad"
-      ]
+      ],
+      "piano_arrangements": [],
+      "choral_arrangements": []
     },
     {
       "id": "020",
@@ -881,6 +955,7 @@
       "tempo_bpm": 120,
       "description": "",
       "variant_of": null,
+      "arrangement_type": null,
       "assets": {
         "has_ly": true,
         "has_pdf": true,
@@ -896,7 +971,76 @@
       "tags": [
         "chag",
         "purim"
-      ]
+      ],
+      "piano_arrangements": [
+        "niggun-020a-mishenichnas-adar-piano-01",
+        "niggun-020b-mishenichnas-adar-piano-02"
+      ],
+      "choral_arrangements": []
+    },
+    {
+      "id": "020a",
+      "dir": "niggun-020a-mishenichnas-adar-piano-01",
+      "title": "Mishenichnas Adar",
+      "subtitle": "Jewish Folk Song",
+      "arranger": "Amichai Rosenbaum",
+      "date_gregorian": "March 2025",
+      "date_hebrew": "Adar 5785",
+      "key": "C major",
+      "tempo_bpm": null,
+      "description": "Jewish Folk Song for Purim.\n\nArranged by Amichai Rosenbaum, Adar 5785 / March 2025.",
+      "variant_of": "020",
+      "arrangement_type": "piano",
+      "assets": {
+        "has_ly": true,
+        "has_pdf": true,
+        "has_mp3": false,
+        "has_midi": true,
+        "has_words_he": false,
+        "has_words_en": false,
+        "has_words_th_en": false,
+        "has_words_as_ashk": false,
+        "has_versions_dir": false
+      },
+      "references": [],
+      "tags": [
+        "purim",
+        "chag"
+      ],
+      "piano_arrangements": [],
+      "choral_arrangements": []
+    },
+    {
+      "id": "020b",
+      "dir": "niggun-020b-mishenichnas-adar-piano-02",
+      "title": "Mishenichnas Adar",
+      "subtitle": "Jewish Folk Song",
+      "arranger": "Amichai Rosenbaum",
+      "date_gregorian": "March 2025",
+      "date_hebrew": "Adar 5785",
+      "key": "C major",
+      "tempo_bpm": 100,
+      "description": "Jewish Folk Song for Purim.\n\nArranged by Amichai Rosenbaum, Adar 5786 / Feb 2026.",
+      "variant_of": "020",
+      "arrangement_type": "piano",
+      "assets": {
+        "has_ly": true,
+        "has_pdf": true,
+        "has_mp3": true,
+        "has_midi": true,
+        "has_words_he": false,
+        "has_words_en": false,
+        "has_words_th_en": false,
+        "has_words_as_ashk": false,
+        "has_versions_dir": false
+      },
+      "references": [],
+      "tags": [
+        "purim",
+        "chag"
+      ],
+      "piano_arrangements": [],
+      "choral_arrangements": []
     },
     {
       "id": "021",
@@ -910,6 +1054,7 @@
       "tempo_bpm": 60,
       "description": "",
       "variant_of": null,
+      "arrangement_type": null,
       "assets": {
         "has_ly": true,
         "has_pdf": true,
@@ -942,7 +1087,9 @@
         "chag",
         "davening",
         "chabad"
-      ]
+      ],
+      "piano_arrangements": [],
+      "choral_arrangements": []
     },
     {
       "id": "022",
@@ -956,6 +1103,7 @@
       "tempo_bpm": 60,
       "description": "",
       "variant_of": null,
+      "arrangement_type": null,
       "assets": {
         "has_ly": true,
         "has_pdf": true,
@@ -988,65 +1136,9 @@
       "tags": [
         "anytime",
         "chabad"
-      ]
-    },
-    {
-      "id": "mishenichnas-adar-01",
-      "dir": "mishenichnas-adar-01",
-      "title": "Mishenichnas Adar",
-      "subtitle": "Jewish Folk Song",
-      "arranger": "Amichai Rosenbaum",
-      "date_gregorian": "March 2025",
-      "date_hebrew": "Adar 5785",
-      "key": "C major",
-      "tempo_bpm": null,
-      "description": "Jewish Folk Song for Purim.\n\nArranged by Amichai Rosenbaum, Adar 5785 / March 2025.",
-      "variant_of": null,
-      "assets": {
-        "has_ly": true,
-        "has_pdf": true,
-        "has_mp3": false,
-        "has_midi": true,
-        "has_words_he": false,
-        "has_words_en": false,
-        "has_words_th_en": false,
-        "has_words_as_ashk": false,
-        "has_versions_dir": false
-      },
-      "references": [],
-      "tags": [
-        "purim",
-        "chag"
-      ]
-    },
-    {
-      "id": "mishenichnas-adar-02",
-      "dir": "mishenichnas-adar-02",
-      "title": "Mishenichnas Adar",
-      "subtitle": "Jewish Folk Song",
-      "arranger": "Amichai Rosenbaum",
-      "date_gregorian": "March 2025",
-      "date_hebrew": "Adar 5785",
-      "key": "C major",
-      "tempo_bpm": 100,
-      "description": "Jewish Folk Song for Purim.\n\nArranged by Amichai Rosenbaum, Adar 5786 / Feb 2026.",
-      "variant_of": null,
-      "assets": {
-        "has_ly": true,
-        "has_pdf": true,
-        "has_mp3": true,
-        "has_midi": true,
-        "has_words_he": false,
-        "has_words_en": false,
-        "has_words_th_en": false,
-        "has_words_as_ashk": false,
-        "has_versions_dir": false
-      },
-      "references": [],
-      "tags": [
-        "purim",
-        "chag"
-      ]
+      ],
+      "piano_arrangements": [],
+      "choral_arrangements": []
     }
   ]
 }

@@ -30,7 +30,7 @@ def sort_key(record: dict) -> tuple:
     m = re.match(r'^(\d+)([a-z]?)$', record["id"])
     if m:
         return (int(m.group(1)), m.group(2))
-    # Non-numeric ids (e.g. mishenichnas-adar-01) sort after all numbered ones
+    # Non-numeric ids sort after all numbered ones
     return (9999, record["id"])
 
 
@@ -63,6 +63,21 @@ def main():
         records.append(record)
 
     records.sort(key=sort_key)
+
+    # Cross-reference: inject piano_arrangements / choral_arrangements onto parent nigguns
+    by_id = {r["id"]: r for r in records}
+    for r in records:
+        r.setdefault("piano_arrangements", [])
+        r.setdefault("choral_arrangements", [])
+
+    for r in records:
+        arr_type = r.get("arrangement_type")
+        if arr_type in ("piano", "choral") and r.get("variant_of"):
+            parent_id = r["variant_of"]
+            if parent_id in by_id:
+                by_id[parent_id][f"{arr_type}_arrangements"].append(r["dir"])
+            else:
+                logger.warning(f"{r['dir']}: variant_of={parent_id!r} not found in catalog")
 
     catalog = {
         "generated_at": datetime.now(timezone.utc).isoformat(),

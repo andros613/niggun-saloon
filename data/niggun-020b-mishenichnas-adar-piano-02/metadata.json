@@ -1,6 +1,6 @@
 {
-  "id": "mishenichnas-adar-02",
-  "dir": "mishenichnas-adar-02",
+  "id": "020b",
+  "dir": "niggun-020b-mishenichnas-adar-piano-02",
   "title": "Mishenichnas Adar",
   "subtitle": "Jewish Folk Song",
   "arranger": "Amichai Rosenbaum",
@@ -9,7 +9,8 @@
   "key": "C major",
   "tempo_bpm": 100,
   "description": "Jewish Folk Song for Purim.\n\nArranged by Amichai Rosenbaum, Adar 5786 / Feb 2026.",
-  "variant_of": null,
+  "variant_of": "020",
+  "arrangement_type": "piano",
   "assets": {
     "has_ly": true,
     "has_pdf": true,

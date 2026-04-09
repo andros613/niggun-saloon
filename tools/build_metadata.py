@@ -180,10 +180,10 @@ def parse_dir_name(dir_name: str) -> dict:
     Parse a directory name into id, slug, and variant info.
 
     Examples:
-      niggun-001-r-eade          → id=001, slug=r-eade, variant_of=None
-      niggun-002a-shalom-aleichem-fast → id=002a, slug=shalom-aleichem-fast, variant_of=002
-      niggun-004b-acheinu-piano-02 → id=004b, slug=acheinu-piano-02, variant_of=004
-      mishenichnas-adar-01       → id=mishenichnas-adar-01, slug=None, variant_of=None
+      niggun-001-r-eade                    → id=001,  slug=r-eade, variant_of=None
+      niggun-002a-shalom-aleichem-fast     → id=002a, slug=shalom-aleichem-fast, variant_of=002
+      niggun-004b-acheinu-piano-02         → id=004b, slug=acheinu-piano-02, variant_of=004
+      some-non-standard-dir                → id=some-non-standard-dir, slug=None, variant_of=None
     """
     m = re.match(r'^niggun-(\d+)([a-z]?)-(.+)$', dir_name)
     if m:
@@ -193,7 +193,7 @@ def parse_dir_name(dir_name: str) -> dict:
         nid = f"{num}{suffix}"
         variant_of = num if suffix else None
         return {"id": nid, "slug": slug, "variant_of": variant_of}
-    # Non-standard dir (mishenichnas-adar-01, etc.)
+    # Non-standard dir (doesn't match niggun-NNN[suffix]-slug pattern)
     return {"id": dir_name, "slug": None, "variant_of": None}
 
 
@@ -257,6 +257,14 @@ def build_metadata(dir_path: Path) -> dict | None:
     dir_info = parse_dir_name(dir_path.name)
     assets = detect_assets(dir_path)
 
+    dir_name = dir_path.name
+    if '-piano-' in dir_name:
+        arrangement_type = 'piano'
+    elif '-choral-' in dir_name:
+        arrangement_type = 'choral'
+    else:
+        arrangement_type = None
+
     return {
         "id": dir_info["id"],
         "dir": dir_path.name,
@@ -269,6 +277,7 @@ def build_metadata(dir_path: Path) -> dict | None:
         "tempo_bpm": tempo_bpm,
         "description": description,
         "variant_of": dir_info["variant_of"],
+        "arrangement_type": arrangement_type,
         "assets": assets,
         "references": references,
         "tags": [],

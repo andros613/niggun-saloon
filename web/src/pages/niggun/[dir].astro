@@ -13,6 +13,12 @@ export async function getStaticPaths() {
 interface Props { niggun: Niggun }
 const { niggun: n } = Astro.props;
 
+// Look up parent and arrangement details at build time
+const catalog = loadCatalog();
+const parentNiggun = n.variant_of ? catalog.nigguns.find(p => p.id === n.variant_of) ?? null : null;
+const pianoDetails  = n.piano_arrangements.map(dir => catalog.nigguns.find(x => x.dir === dir)).filter(Boolean) as Niggun[];
+const choralDetails = n.choral_arrangements.map(dir => catalog.nigguns.find(x => x.dir === dir)).filter(Boolean) as Niggun[];
+
 // Load lyrics files from disk at build time
 const dataRoot = path.resolve(process.cwd(), '..', 'data', n.dir);
 
@@ -79,16 +85,22 @@ const lyUrl   = n.assets.has_ly   ? assetUrl('ly')   : null;
   description={n.subtitle || `${n.title} — arranged by ${n.arranger}`}
 >
   <div class="niggun-detail">
+    {parentNiggun && (
+      <div class="back-link">
+        <a href={`${base}niggun/${parentNiggun.dir}/`}>← {parentNiggun.title}</a>
+      </div>
+    )}
+
     <div>
       <h1>{n.title}</h1>
       {n.subtitle && <p class="sub">{n.subtitle}</p>}
-      {n.tags.length > 0 && (
-        <div class="detail-tags">
-          {n.tags.map(t => (
-            <span class={`tag tag-${t}`}>{tagLabel(t)}</span>
-          ))}
-        </div>
-      )}
+      <div class="detail-tags">
+        {n.arrangement_type === 'piano'  && <span class="tag tag-has-piano">🎹 Piano Arrangement</span>}
+        {n.arrangement_type === 'choral' && <span class="tag tag-has-choral">🎼 Choral Arrangement</span>}
+        {n.tags.map(t => (
+          <span class={`tag tag-${t}`}>{tagLabel(t)}</span>
+        ))}
+      </div>
     </div>
 
     <div class="meta-row">
@@ -96,7 +108,6 @@ const lyUrl   = n.assets.has_ly   ? assetUrl('ly')   : null;
       {n.tempo_bpm   && <span>♩= {n.tempo_bpm} bpm</span>}
       {n.arranger    && <span>✍️ {n.arranger}</span>}
       {n.date_gregorian && <span>📅 {n.date_gregorian}{n.date_hebrew ? ` / ${n.date_hebrew}` : ''}</span>}
-      {n.variant_of  && <span>↳ variant of <a href={`${base}niggun/niggun-${n.variant_of}-*/`}>#{n.variant_of}</a></span>}
     </div>
 
     {n.description && (
@@ -201,6 +212,40 @@ const lyUrl   = n.assets.has_ly   ? assetUrl('ly')   : null;
             </div>
           )}
         </div>
+      </div>
+    )}
+    {(pianoDetails.length > 0 || choralDetails.length > 0) && (
+      <div class="arrangements">
+        {pianoDetails.length > 0 && (
+          <div>
+            <h2>Piano Arrangements</h2>
+            <div class="arrangement-list">
+              {pianoDetails.map(arr => (
+                <a href={`${base}niggun/${arr.dir}/`} class="arrangement-card">
+                  <span class="tag tag-has-piano">🎹 Piano</span>
+                  <span class="arr-title">{arr.title || arr.dir}</span>
+                  {arr.key && <span class="arr-meta">{arr.key}</span>}
+                  {arr.arranger && <span class="arr-meta">✍️ {arr.arranger}</span>}
+                </a>
+              ))}
+            </div>
+          </div>
+        )}
+        {choralDetails.length > 0 && (
+          <div>
+            <h2>Choral Arrangements</h2>
+            <div class="arrangement-list">
+              {choralDetails.map(arr => (
+                <a href={`${base}niggun/${arr.dir}/`} class="arrangement-card">
+                  <span class="tag tag-has-choral">🎼 Choral</span>
+                  <span class="arr-title">{arr.title || arr.dir}</span>
+                  {arr.key && <span class="arr-meta">{arr.key}</span>}
+                  {arr.arranger && <span class="arr-meta">✍️ {arr.arranger}</span>}
+                </a>
+              ))}
+            </div>
+          </div>
+        )}
       </div>
     )}
   </div>
