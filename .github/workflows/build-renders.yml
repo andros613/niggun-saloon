@@ -94,7 +94,10 @@ jobs:
           for dir in ${{ steps.changed.outputs.dirs }}; do
             for ext in mp3 pdf midi mid; do
               for f in data/$dir/*.$ext; do
-                [ -f "$f" ] && gh release upload renders-latest "$f" --clobber
+                if [ -f "$f" ]; then
+                  gh release upload renders-latest "$f" --clobber 2>&1 || { echo "ERROR: failed to upload $f"; exit 1; }
+                  sleep 1
+                fi
               done
             done
           done
