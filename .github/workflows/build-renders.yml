@@ -40,10 +40,29 @@ jobs:
           tar -xzf "lilypond-${LILYPOND_VERSION}-linux-x86_64.tar.gz"
           echo "$PWD/lilypond-${LILYPOND_VERSION}/bin" >> $GITHUB_PATH
 
-      - name: Install FluidSynth, FFmpeg, LAME, soundfont
+      - name: Install FluidSynth, FFmpeg, LAME, MuseScore soundfont, Garamond font
         run: |
           sudo apt-get update -qq
-          sudo apt-get install -y fluidsynth ffmpeg lame fluid-soundfont-gm
+          sudo apt-get install -y fluidsynth ffmpeg lame fonts-ebgaramond
+
+          # MuseScore General SF3 — same soundfont used locally, avoids FluidR3 echo
+          wget -q -O MuseScore_General.sf3 \
+            https://ftp.osuosl.org/pub/musescore/soundfont/MuseScore_General/MuseScore_General.sf3
+          echo "NIGGUN_SF=$PWD/MuseScore_General.sf3" >> $GITHUB_ENV
+
+          # Alias "Garamond" → "EB Garamond" so LilyPond resolves the font correctly
+          mkdir -p ~/.config/fontconfig
+          cat > ~/.config/fontconfig/fonts.conf << 'EOF'
+          <?xml version="1.0"?>
+          <!DOCTYPE fontconfig SYSTEM "fonts.dtd">
+          <fontconfig>
+            <alias>
+              <family>Garamond</family>
+              <prefer><family>EB Garamond</family></prefer>
+            </alias>
+          </fontconfig>
+          EOF
+          fc-cache -f
 
       - name: Detect changed niggun directories
         id: changed
@@ -62,8 +81,6 @@ jobs:
           fi
 
       - name: Build renders for changed directories
-        env:
-          NIGGUN_SF: /usr/share/sounds/sf2/FluidR3_GM.sf2
         run: |
           for dir in ${{ steps.changed.outputs.dirs }}; do
             if [ -f "data/$dir/run.sh" ]; then
