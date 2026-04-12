@@ -3,8 +3,8 @@ name: Build Renders
 # Triggered when a LilyPond source file changes.
 # Recompiles the affected niggun and uploads outputs to the "renders" GitHub Release.
 #
-# NOTE: This workflow requires LilyPond, FluidSynth, FFmpeg, and LAME on the runner.
-# The `apt-get install` step covers Ubuntu/Debian. Adjust if using a different runner.
+# NOTE: LilyPond is installed from GitLab releases (version pinned via LILYPOND_VERSION env var).
+# FluidSynth, FFmpeg, and LAME come from apt. To upgrade LilyPond, update LILYPOND_VERSION.
 #
 # For key/tempo variants, this workflow will call build_variants.py (to be written)
 # which generates all 7-key × 3-tempo combinations before uploading.
@@ -23,6 +23,9 @@ on:
 permissions:
   contents: write   # needed to upload Release assets
 
+env:
+  LILYPOND_VERSION: "2.24.4"
+
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -30,10 +33,16 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
-      - name: Install LilyPond, FluidSynth, FFmpeg, LAME, soundfont
+      - name: Install LilyPond ${{ env.LILYPOND_VERSION }} from GitLab releases
+        run: |
+          wget -q "https://gitlab.com/lilypond/lilypond/-/releases/v${LILYPOND_VERSION}/downloads/lilypond-${LILYPOND_VERSION}-linux-x86_64.tar.gz"
+          tar -xzf "lilypond-${LILYPOND_VERSION}-linux-x86_64.tar.gz"
+          echo "$PWD/lilypond-${LILYPOND_VERSION}/bin" >> $GITHUB_PATH
+
+      - name: Install FluidSynth, FFmpeg, LAME, soundfont
         run: |
           sudo apt-get update -qq
-          sudo apt-get install -y lilypond fluidsynth ffmpeg lame fluid-soundfont-gm
+          sudo apt-get install -y fluidsynth ffmpeg lame fluid-soundfont-gm
 
       - name: Detect changed niggun directories
         id: changed
