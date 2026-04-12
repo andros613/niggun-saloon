@@ -24,6 +24,12 @@
     "has_words_as_ashk": false,
     "has_versions_dir": true
   },
+  "asset_urls": {
+    "mp3": "https://github.com/andros613/niggun-saloon/releases/download/renders-latest/niggun_015_rosh_chodesh_kislev.mp3",
+    "pdf": "https://github.com/andros613/niggun-saloon/releases/download/renders-latest/niggun_015_rosh_chodesh_kislev.pdf",
+    "midi": "https://github.com/andros613/niggun-saloon/releases/download/renders-latest/niggun_015_rosh_chodesh_kislev.midi",
+    "ly": "https://github.com/andros613/niggun-saloon/releases/download/renders-latest/niggun_015_rosh_chodesh_kislev.ly"
+  },
   "references": [
     {
       "url": "https://www.chabad.org/multimedia/music_cdo/aid/3848160/jewish/Singing-the-Rosh-Chodesh-Kislev-Nigun.htm",

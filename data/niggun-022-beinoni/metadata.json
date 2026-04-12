@@ -24,6 +24,12 @@
     "has_words_as_ashk": false,
     "has_versions_dir": true
   },
+  "asset_urls": {
+    "mp3": "https://github.com/andros613/niggun-saloon/releases/download/renders-latest/niggun_022_beinoni.mp3",
+    "pdf": "https://github.com/andros613/niggun-saloon/releases/download/renders-latest/niggun_022_beinoni.pdf",
+    "midi": "https://github.com/andros613/niggun-saloon/releases/download/renders-latest/niggun_022_beinoni.midi",
+    "ly": "https://github.com/andros613/niggun-saloon/releases/download/renders-latest/niggun_022_beinoni.ly"
+  },
   "references": [
     {
       "url": "https://www.youtube.com/watch?v=d7awxGWmIV0",

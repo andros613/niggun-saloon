@@ -24,6 +24,12 @@
     "has_words_as_ashk": true,
     "has_versions_dir": true
   },
+  "asset_urls": {
+    "mp3": "https://github.com/andros613/niggun-saloon/releases/download/renders-latest/niggun_009_kah_ribon.mp3",
+    "pdf": "https://github.com/andros613/niggun-saloon/releases/download/renders-latest/niggun_009_kah_ribon.pdf",
+    "midi": "https://github.com/andros613/niggun-saloon/releases/download/renders-latest/niggun_009_kah_ribon.midi",
+    "ly": "https://github.com/andros613/niggun-saloon/releases/download/renders-latest/niggun_009_kah_ribon.ly"
+  },
   "references": [
     {
       "url": "https://www.zemirotdatabase.org/view_song.php?id=56#rec",

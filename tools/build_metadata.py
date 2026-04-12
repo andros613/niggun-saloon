@@ -20,6 +20,10 @@ from pathlib import Path
 logging.basicConfig(level=logging.INFO, format="%(levelname)s: %(message)s")
 logger = logging.getLogger(__name__)
 
+# GitHub Releases CDN base URL for rendered audio/sheet music assets.
+# Files are uploaded by build-renders.yml to the "renders-latest" release.
+RELEASE_CDN_BASE = "https://github.com/andros613/niggun-saloon/releases/download/renders-latest"
+
 
 # ---------------------------------------------------------------------------
 # LilyPond parsing
@@ -223,6 +227,25 @@ def detect_assets(dir_path: Path) -> dict:
     }
 
 
+def build_asset_urls(dir_path: Path, stem: str) -> dict:
+    """Return GitHub Releases CDN URLs for each rendered asset that exists locally."""
+    def cdn(ext: str) -> str | None:
+        candidates = [f"{stem}.{ext}"]
+        if ext == "midi":
+            candidates.append(f"{stem}.mid")
+        for name in candidates:
+            if (dir_path / name).exists():
+                return f"{RELEASE_CDN_BASE}/{name}"
+        return None
+
+    return {
+        "mp3":  cdn("mp3"),
+        "pdf":  cdn("pdf"),
+        "midi": cdn("midi"),
+        "ly":   cdn("ly"),
+    }
+
+
 # ---------------------------------------------------------------------------
 # Main logic
 # ---------------------------------------------------------------------------
@@ -268,6 +291,8 @@ def build_metadata(dir_path: Path) -> dict | None:
 
     dir_info = parse_dir_name(dir_path.name)
     assets = detect_assets(dir_path)
+    stem = ly_path.stem
+    asset_urls = build_asset_urls(dir_path, stem)
 
     dir_name = dir_path.name
     if '-piano-' in dir_name:
@@ -293,6 +318,7 @@ def build_metadata(dir_path: Path) -> dict | None:
         "variant_of": dir_info["variant_of"],
         "arrangement_type": arrangement_type,
         "assets": assets,
+        "asset_urls": asset_urls,
         "references": references,
         "tags": [],
     }

@@ -52,20 +52,6 @@ jobs:
         env:
           NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
-      - name: Copy audio/PDF/MIDI assets into public/
-        # Assets will eventually come from GitHub Releases CDN.
-        # For now, copy them from the data/ tree so the site works immediately.
-        # Large repos should replace this step with Release asset URL injection.
-        run: |
-          mkdir -p web/public/assets
-          for dir in data/*/; do
-            name=$(basename "$dir")
-            dest="web/public/assets/$name"
-            mkdir -p "$dest"
-            find "$dir" -maxdepth 1 \( -name "*.mp3" -o -name "*.pdf" -o -name "*.midi" -o -name "*.mid" -o -name "*.ly" \) \
-              -exec cp {} "$dest/" \;
-          done
-
       - name: Build Astro site
         run: npm run build
         working-directory: web

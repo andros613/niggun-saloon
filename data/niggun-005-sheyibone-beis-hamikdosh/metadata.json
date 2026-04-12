@@ -24,6 +24,12 @@
     "has_words_as_ashk": true,
     "has_versions_dir": true
   },
+  "asset_urls": {
+    "mp3": "https://github.com/andros613/niggun-saloon/releases/download/renders-latest/niggun_005_sheyibone_beis_hamikdosh.mp3",
+    "pdf": "https://github.com/andros613/niggun-saloon/releases/download/renders-latest/niggun_005_sheyibone_beis_hamikdosh.pdf",
+    "midi": "https://github.com/andros613/niggun-saloon/releases/download/renders-latest/niggun_005_sheyibone_beis_hamikdosh.midi",
+    "ly": "https://github.com/andros613/niggun-saloon/releases/download/renders-latest/niggun_005_sheyibone_beis_hamikdosh.ly"
+  },
   "references": [
     {
       "url": "https://www.chabad.org/multimedia/music_cdo/aid/476629/jewish/Sheyiboneh.htm",

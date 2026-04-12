@@ -24,6 +24,12 @@
     "has_words_as_ashk": true,
     "has_versions_dir": true
   },
+  "asset_urls": {
+    "mp3": "https://github.com/andros613/niggun-saloon/releases/download/renders-latest/niggun_018_keli_ata.mp3",
+    "pdf": "https://github.com/andros613/niggun-saloon/releases/download/renders-latest/niggun_018_keli_ata.pdf",
+    "midi": "https://github.com/andros613/niggun-saloon/releases/download/renders-latest/niggun_018_keli_ata.midi",
+    "ly": "https://github.com/andros613/niggun-saloon/releases/download/renders-latest/niggun_018_keli_ata.ly"
+  },
   "references": [
     {
       "url": "https://www.chabad.org/library/bible_cdo/aid/16339/jewish/Chapter-118.htm",

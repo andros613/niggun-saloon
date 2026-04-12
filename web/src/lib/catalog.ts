@@ -1,6 +1,13 @@
 import fs from 'node:fs';
 import path from 'node:path';
 
+export interface NiggunAssetUrls {
+  mp3:  string | null;
+  pdf:  string | null;
+  midi: string | null;
+  ly:   string | null;
+}
+
 export interface NiggunAssets {
   has_ly: boolean;
   has_pdf: boolean;
@@ -38,6 +45,7 @@ export interface Niggun {
   piano_arrangements: string[];
   choral_arrangements: string[];
   assets: NiggunAssets;
+  asset_urls: NiggunAssetUrls;
   references: Reference[];
   tags: string[];
 }

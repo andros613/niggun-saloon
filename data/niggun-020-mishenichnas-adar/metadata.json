@@ -24,6 +24,12 @@
     "has_words_as_ashk": false,
     "has_versions_dir": false
   },
+  "asset_urls": {
+    "mp3": "https://github.com/andros613/niggun-saloon/releases/download/renders-latest/niggun_020_mishenichnas_adar.mp3",
+    "pdf": "https://github.com/andros613/niggun-saloon/releases/download/renders-latest/niggun_020_mishenichnas_adar.pdf",
+    "midi": "https://github.com/andros613/niggun-saloon/releases/download/renders-latest/niggun_020_mishenichnas_adar.midi",
+    "ly": "https://github.com/andros613/niggun-saloon/releases/download/renders-latest/niggun_020_mishenichnas_adar.ly"
+  },
   "references": [],
   "tags": [
     "chag",

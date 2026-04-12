@@ -24,6 +24,12 @@
     "has_words_as_ashk": true,
     "has_versions_dir": true
   },
+  "asset_urls": {
+    "mp3": "https://github.com/andros613/niggun-saloon/releases/download/renders-latest/niggun_012_avinu_malkeinu.mp3",
+    "pdf": "https://github.com/andros613/niggun-saloon/releases/download/renders-latest/niggun_012_avinu_malkeinu.pdf",
+    "midi": "https://github.com/andros613/niggun-saloon/releases/download/renders-latest/niggun_012_avinu_malkeinu.midi",
+    "ly": "https://github.com/andros613/niggun-saloon/releases/download/renders-latest/niggun_012_avinu_malkeinu.ly"
+  },
   "references": [
     {
       "url": "https://www.chabad.org/multimedia/music_cdo/aid/140681/jewish/Ovinu-Malkeinu.htm",

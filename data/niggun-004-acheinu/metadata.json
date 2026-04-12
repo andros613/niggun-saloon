@@ -24,6 +24,12 @@
     "has_words_as_ashk": true,
     "has_versions_dir": true
   },
+  "asset_urls": {
+    "mp3": "https://github.com/andros613/niggun-saloon/releases/download/renders-latest/niggun_004_acheinu.mp3",
+    "pdf": "https://github.com/andros613/niggun-saloon/releases/download/renders-latest/niggun_004_acheinu.pdf",
+    "midi": "https://github.com/andros613/niggun-saloon/releases/download/renders-latest/niggun_004_acheinu.midi",
+    "ly": "https://github.com/andros613/niggun-saloon/releases/download/renders-latest/niggun_004_acheinu.ly"
+  },
   "references": [
     {
       "url": "https://zemirotdatabase.org/view_song.php?id=19",

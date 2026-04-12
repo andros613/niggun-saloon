@@ -24,6 +24,12 @@
     "has_words_as_ashk": true,
     "has_versions_dir": false
   },
+  "asset_urls": {
+    "mp3": "https://github.com/andros613/niggun-saloon/releases/download/renders-latest/niggun_021_rachamana.mp3",
+    "pdf": "https://github.com/andros613/niggun-saloon/releases/download/renders-latest/niggun_021_rachamana.pdf",
+    "midi": "https://github.com/andros613/niggun-saloon/releases/download/renders-latest/niggun_021_rachamana.midi",
+    "ly": "https://github.com/andros613/niggun-saloon/releases/download/renders-latest/niggun_021_rachamana.ly"
+  },
   "references": [
     {
       "url": "https://www.chabad.org/multimedia/music_cdo/aid/140676/jewish/Rachamono.htm",

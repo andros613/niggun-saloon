@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-04-09T16:43:44.513896+00:00",
+  "generated_at": "2026-04-12T17:13:36.219068+00:00",
   "count": 28,
   "nigguns": [
     {
@@ -27,6 +27,12 @@
         "has_words_th_en": false,
         "has_words_as_ashk": false,
         "has_versions_dir": true
+      },
+      "asset_urls": {
+        "mp3": "https://github.com/andros613/niggun-saloon/releases/download/renders-latest/niggun_001_r_eade.mp3",
+        "pdf": "https://github.com/andros613/niggun-saloon/releases/download/renders-latest/niggun_001_r_eade.pdf",
+        "midi": "https://github.com/andros613/niggun-saloon/releases/download/renders-latest/niggun_001_r_eade.midi",
+        "ly": "https://github.com/andros613/niggun-saloon/releases/download/renders-latest/niggun_001_r_eade.ly"
       },
       "references": [],
       "tags": [
@@ -61,6 +67,12 @@
         "has_words_as_ashk": false,
         "has_versions_dir": true
       },
+      "asset_urls": {
+        "mp3": "https://github.com/andros613/niggun-saloon/releases/download/renders-latest/niggun_002_shalom_aleichem.mp3",
+        "pdf": "https://github.com/andros613/niggun-saloon/releases/download/renders-latest/niggun_002_shalom_aleichem.pdf",
+        "midi": "https://github.com/andros613/niggun-saloon/releases/download/renders-latest/niggun_002_shalom_aleichem.midi",
+        "ly": "https://github.com/andros613/niggun-saloon/releases/download/renders-latest/niggun_002_shalom_aleichem.ly"
+      },
       "references": [],
       "tags": [
         "shabbat"
@@ -94,6 +106,12 @@
         "has_words_as_ashk": false,
         "has_versions_dir": true
       },
+      "asset_urls": {
+        "mp3": "https://github.com/andros613/niggun-saloon/releases/download/renders-latest/niggun_002a_shalom_aleichem_fast.mp3",
+        "pdf": "https://github.com/andros613/niggun-saloon/releases/download/renders-latest/niggun_002a_shalom_aleichem_fast.pdf",
+        "midi": "https://github.com/andros613/niggun-saloon/releases/download/renders-latest/niggun_002a_shalom_aleichem_fast.midi",
+        "ly": "https://github.com/andros613/niggun-saloon/releases/download/renders-latest/niggun_002a_shalom_aleichem_fast.ly"
+      },
       "references": [],
       "tags": [
         "shabbat"
@@ -126,6 +144,12 @@
         "has_words_th_en": true,
         "has_words_as_ashk": true,
         "has_versions_dir": true
+      },
+      "asset_urls": {
+        "mp3": "https://github.com/andros613/niggun-saloon/releases/download/renders-latest/niggun_003_eishet_chayil.mp3",
+        "pdf": "https://github.com/andros613/niggun-saloon/releases/download/renders-latest/niggun_003_eishet_chayil.pdf",
+        "midi": "https://github.com/andros613/niggun-saloon/releases/download/renders-latest/niggun_003_eishet_chayil.midi",
+        "ly": "https://github.com/andros613/niggun-saloon/releases/download/renders-latest/niggun_003_eishet_chayil.ly"
       },
       "references": [
         {
@@ -170,6 +194,12 @@
         "has_words_th_en": false,
         "has_words_as_ashk": true,
         "has_versions_dir": true
+      },
+      "asset_urls": {
+        "mp3": "https://github.com/andros613/niggun-saloon/releases/download/renders-latest/niggun_004_acheinu.mp3",
+        "pdf": "https://github.com/andros613/niggun-saloon/releases/download/renders-latest/niggun_004_acheinu.pdf",
+        "midi": "https://github.com/andros613/niggun-saloon/releases/download/renders-latest/niggun_004_acheinu.midi",
+        "ly": "https://github.com/andros613/niggun-saloon/releases/download/renders-latest/niggun_004_acheinu.ly"
       },
       "references": [
         {
@@ -218,6 +248,12 @@
         "has_words_as_ashk": false,
         "has_versions_dir": true
       },
+      "asset_urls": {
+        "mp3": "https://github.com/andros613/niggun-saloon/releases/download/renders-latest/niggun_004a_acheinu_piano_01.mp3",
+        "pdf": "https://github.com/andros613/niggun-saloon/releases/download/renders-latest/niggun_004a_acheinu_piano_01.pdf",
+        "midi": "https://github.com/andros613/niggun-saloon/releases/download/renders-latest/niggun_004a_acheinu_piano_01.midi",
+        "ly": "https://github.com/andros613/niggun-saloon/releases/download/renders-latest/niggun_004a_acheinu_piano_01.ly"
+      },
       "references": [
         {
           "url": "https://zemirotdatabase.org/view_song.php?id=19",
@@ -261,6 +297,12 @@
         "has_words_th_en": false,
         "has_words_as_ashk": false,
         "has_versions_dir": true
+      },
+      "asset_urls": {
+        "mp3": "https://github.com/andros613/niggun-saloon/releases/download/renders-latest/niggun_004b_acheinu_piano_02.mp3",
+        "pdf": "https://github.com/andros613/niggun-saloon/releases/download/renders-latest/niggun_004b_acheinu_piano_02.pdf",
+        "midi": "https://github.com/andros613/niggun-saloon/releases/download/renders-latest/niggun_004b_acheinu_piano_02.midi",
+        "ly": "https://github.com/andros613/niggun-saloon/releases/download/renders-latest/niggun_004b_acheinu_piano_02.ly"
       },
       "references": [
         {
@@ -306,6 +348,12 @@
         "has_words_as_ashk": true,
         "has_versions_dir": true
       },
+      "asset_urls": {
+        "mp3": "https://github.com/andros613/niggun-saloon/releases/download/renders-latest/niggun_005_sheyibone_beis_hamikdosh.mp3",
+        "pdf": "https://github.com/andros613/niggun-saloon/releases/download/renders-latest/niggun_005_sheyibone_beis_hamikdosh.pdf",
+        "midi": "https://github.com/andros613/niggun-saloon/releases/download/renders-latest/niggun_005_sheyibone_beis_hamikdosh.midi",
+        "ly": "https://github.com/andros613/niggun-saloon/releases/download/renders-latest/niggun_005_sheyibone_beis_hamikdosh.ly"
+      },
       "references": [
         {
           "url": "https://www.chabad.org/multimedia/music_cdo/aid/476629/jewish/Sheyiboneh.htm",
@@ -347,6 +395,12 @@
         "has_words_as_ashk": false,
         "has_versions_dir": true
       },
+      "asset_urls": {
+        "mp3": "https://github.com/andros613/niggun-saloon/releases/download/renders-latest/niggun_006_baruch_hashem.mp3",
+        "pdf": "https://github.com/andros613/niggun-saloon/releases/download/renders-latest/niggun_006_baruch_hashem.pdf",
+        "midi": "https://github.com/andros613/niggun-saloon/releases/download/renders-latest/niggun_006_baruch_hashem.midi",
+        "ly": "https://github.com/andros613/niggun-saloon/releases/download/renders-latest/niggun_006_baruch_hashem.ly"
+      },
       "references": [],
       "tags": [
         "anytime"
@@ -379,6 +433,12 @@
         "has_words_th_en": false,
         "has_words_as_ashk": true,
         "has_versions_dir": true
+      },
+      "asset_urls": {
+        "mp3": "https://github.com/andros613/niggun-saloon/releases/download/renders-latest/niggun_007_al_tira_ach_tzadikim.mp3",
+        "pdf": "https://github.com/andros613/niggun-saloon/releases/download/renders-latest/niggun_007_al_tira_ach_tzadikim.pdf",
+        "midi": "https://github.com/andros613/niggun-saloon/releases/download/renders-latest/niggun_007_al_tira_ach_tzadikim.midi",
+        "ly": "https://github.com/andros613/niggun-saloon/releases/download/renders-latest/niggun_007_al_tira_ach_tzadikim.ly"
       },
       "references": [
         {
@@ -425,6 +485,12 @@
         "has_words_th_en": true,
         "has_words_as_ashk": true,
         "has_versions_dir": true
+      },
+      "asset_urls": {
+        "mp3": "https://github.com/andros613/niggun-saloon/releases/download/renders-latest/niggun_008_nachamu.mp3",
+        "pdf": "https://github.com/andros613/niggun-saloon/releases/download/renders-latest/niggun_008_nachamu.pdf",
+        "midi": "https://github.com/andros613/niggun-saloon/releases/download/renders-latest/niggun_008_nachamu.midi",
+        "ly": "https://github.com/andros613/niggun-saloon/releases/download/renders-latest/niggun_008_nachamu.ly"
       },
       "references": [
         {
@@ -473,6 +539,12 @@
         "has_words_as_ashk": false,
         "has_versions_dir": true
       },
+      "asset_urls": {
+        "mp3": "https://github.com/andros613/niggun-saloon/releases/download/renders-latest/niggun_008a_nachamu_piano_01.mp3",
+        "pdf": "https://github.com/andros613/niggun-saloon/releases/download/renders-latest/niggun_008a_nachamu_piano_01.pdf",
+        "midi": "https://github.com/andros613/niggun-saloon/releases/download/renders-latest/niggun_008a_nachamu_piano_01.midi",
+        "ly": "https://github.com/andros613/niggun-saloon/releases/download/renders-latest/niggun_008a_nachamu_piano_01.ly"
+      },
       "references": [],
       "tags": [
         "chag",
@@ -506,6 +578,12 @@
         "has_words_th_en": true,
         "has_words_as_ashk": true,
         "has_versions_dir": true
+      },
+      "asset_urls": {
+        "mp3": "https://github.com/andros613/niggun-saloon/releases/download/renders-latest/niggun_009_kah_ribon.mp3",
+        "pdf": "https://github.com/andros613/niggun-saloon/releases/download/renders-latest/niggun_009_kah_ribon.pdf",
+        "midi": "https://github.com/andros613/niggun-saloon/releases/download/renders-latest/niggun_009_kah_ribon.midi",
+        "ly": "https://github.com/andros613/niggun-saloon/releases/download/renders-latest/niggun_009_kah_ribon.ly"
       },
       "references": [
         {
@@ -552,6 +630,12 @@
         "has_words_as_ashk": true,
         "has_versions_dir": true
       },
+      "asset_urls": {
+        "mp3": "https://github.com/andros613/niggun-saloon/releases/download/renders-latest/niggun_010_ratzisa_hashem.mp3",
+        "pdf": "https://github.com/andros613/niggun-saloon/releases/download/renders-latest/niggun_010_ratzisa_hashem.pdf",
+        "midi": "https://github.com/andros613/niggun-saloon/releases/download/renders-latest/niggun_010_ratzisa_hashem.midi",
+        "ly": "https://github.com/andros613/niggun-saloon/releases/download/renders-latest/niggun_010_ratzisa_hashem.ly"
+      },
       "references": [
         {
           "url": "https://www.sefaria.org/Psalms.85",
@@ -597,6 +681,12 @@
         "has_words_as_ashk": false,
         "has_versions_dir": true
       },
+      "asset_urls": {
+        "mp3": "https://github.com/andros613/niggun-saloon/releases/download/renders-latest/niggun_011_nyet_nyet_nikavo.mp3",
+        "pdf": "https://github.com/andros613/niggun-saloon/releases/download/renders-latest/niggun_011_nyet_nyet_nikavo.pdf",
+        "midi": "https://github.com/andros613/niggun-saloon/releases/download/renders-latest/niggun_011_nyet_nyet_nikavo.midi",
+        "ly": "https://github.com/andros613/niggun-saloon/releases/download/renders-latest/niggun_011_nyet_nyet_nikavo.ly"
+      },
       "references": [
         {
           "url": "https://crownheights.info/chabad-news/902912/nyet-nyet-nikavo-the-full-song-and-its-history/",
@@ -641,6 +731,12 @@
         "has_words_th_en": true,
         "has_words_as_ashk": true,
         "has_versions_dir": true
+      },
+      "asset_urls": {
+        "mp3": "https://github.com/andros613/niggun-saloon/releases/download/renders-latest/niggun_012_avinu_malkeinu.mp3",
+        "pdf": "https://github.com/andros613/niggun-saloon/releases/download/renders-latest/niggun_012_avinu_malkeinu.pdf",
+        "midi": "https://github.com/andros613/niggun-saloon/releases/download/renders-latest/niggun_012_avinu_malkeinu.midi",
+        "ly": "https://github.com/andros613/niggun-saloon/releases/download/renders-latest/niggun_012_avinu_malkeinu.ly"
       },
       "references": [
         {
@@ -688,6 +784,12 @@
         "has_words_as_ashk": true,
         "has_versions_dir": true
       },
+      "asset_urls": {
+        "mp3": "https://github.com/andros613/niggun-saloon/releases/download/renders-latest/niggun_013_vesamachta.mp3",
+        "pdf": "https://github.com/andros613/niggun-saloon/releases/download/renders-latest/niggun_013_vesamachta.pdf",
+        "midi": "https://github.com/andros613/niggun-saloon/releases/download/renders-latest/niggun_013_vesamachta.midi",
+        "ly": "https://github.com/andros613/niggun-saloon/releases/download/renders-latest/niggun_013_vesamachta.ly"
+      },
       "references": [
         {
           "url": "https://www.chabad.org/multimedia/music_cdo/aid/140746/jewish/Vesomachto.htm",
@@ -729,6 +831,12 @@
         "has_words_as_ashk": true,
         "has_versions_dir": true
       },
+      "asset_urls": {
+        "mp3": "https://github.com/andros613/niggun-saloon/releases/download/renders-latest/niggun_014_mizmor_ledavid_psalm_23.mp3",
+        "pdf": "https://github.com/andros613/niggun-saloon/releases/download/renders-latest/niggun_014_mizmor_ledavid_psalm_23.pdf",
+        "midi": "https://github.com/andros613/niggun-saloon/releases/download/renders-latest/niggun_014_mizmor_ledavid_psalm_23.midi",
+        "ly": "https://github.com/andros613/niggun-saloon/releases/download/renders-latest/niggun_014_mizmor_ledavid_psalm_23.ly"
+      },
       "references": [
         {
           "url": "https://www.sefaria.org/Psalms.23",
@@ -767,6 +875,12 @@
         "has_words_th_en": false,
         "has_words_as_ashk": false,
         "has_versions_dir": true
+      },
+      "asset_urls": {
+        "mp3": "https://github.com/andros613/niggun-saloon/releases/download/renders-latest/niggun_015_rosh_chodesh_kislev.mp3",
+        "pdf": "https://github.com/andros613/niggun-saloon/releases/download/renders-latest/niggun_015_rosh_chodesh_kislev.pdf",
+        "midi": "https://github.com/andros613/niggun-saloon/releases/download/renders-latest/niggun_015_rosh_chodesh_kislev.midi",
+        "ly": "https://github.com/andros613/niggun-saloon/releases/download/renders-latest/niggun_015_rosh_chodesh_kislev.ly"
       },
       "references": [
         {
@@ -814,6 +928,12 @@
         "has_words_as_ashk": true,
         "has_versions_dir": true
       },
+      "asset_urls": {
+        "mp3": "https://github.com/andros613/niggun-saloon/releases/download/renders-latest/niggun_016_al_hanissim.mp3",
+        "pdf": "https://github.com/andros613/niggun-saloon/releases/download/renders-latest/niggun_016_al_hanissim.pdf",
+        "midi": "https://github.com/andros613/niggun-saloon/releases/download/renders-latest/niggun_016_al_hanissim.midi",
+        "ly": "https://github.com/andros613/niggun-saloon/releases/download/renders-latest/niggun_016_al_hanissim.ly"
+      },
       "references": [
         {
           "url": "https://www.chabad.org/multimedia/music_cdo/aid/797126/jewish/Al-Hanissim.htm",
@@ -855,6 +975,12 @@
         "has_words_th_en": true,
         "has_words_as_ashk": true,
         "has_versions_dir": true
+      },
+      "asset_urls": {
+        "mp3": "https://github.com/andros613/niggun-saloon/releases/download/renders-latest/niggun_017_halelu_et_hashem.mp3",
+        "pdf": "https://github.com/andros613/niggun-saloon/releases/download/renders-latest/niggun_017_halelu_et_hashem.pdf",
+        "midi": "https://github.com/andros613/niggun-saloon/releases/download/renders-latest/niggun_017_halelu_et_hashem.midi",
+        "ly": "https://github.com/andros613/niggun-saloon/releases/download/renders-latest/niggun_017_halelu_et_hashem.ly"
       },
       "references": [
         {
@@ -900,6 +1026,12 @@
         "has_words_th_en": true,
         "has_words_as_ashk": true,
         "has_versions_dir": true
+      },
+      "asset_urls": {
+        "mp3": "https://github.com/andros613/niggun-saloon/releases/download/renders-latest/niggun_018_keli_ata.mp3",
+        "pdf": "https://github.com/andros613/niggun-saloon/releases/download/renders-latest/niggun_018_keli_ata.pdf",
+        "midi": "https://github.com/andros613/niggun-saloon/releases/download/renders-latest/niggun_018_keli_ata.midi",
+        "ly": "https://github.com/andros613/niggun-saloon/releases/download/renders-latest/niggun_018_keli_ata.ly"
       },
       "references": [
         {
@@ -948,6 +1080,12 @@
         "has_words_as_ashk": true,
         "has_versions_dir": true
       },
+      "asset_urls": {
+        "mp3": "https://github.com/andros613/niggun-saloon/releases/download/renders-latest/niggun_019_vayehi_bimei_achashveirosh.mp3",
+        "pdf": "https://github.com/andros613/niggun-saloon/releases/download/renders-latest/niggun_019_vayehi_bimei_achashveirosh.pdf",
+        "midi": "https://github.com/andros613/niggun-saloon/releases/download/renders-latest/niggun_019_vayehi_bimei_achashveirosh.midi",
+        "ly": "https://github.com/andros613/niggun-saloon/releases/download/renders-latest/niggun_019_vayehi_bimei_achashveirosh.ly"
+      },
       "references": [
         {
           "url": "https://www.sefaria.org/Esther.1.1",
@@ -995,6 +1133,12 @@
         "has_words_as_ashk": false,
         "has_versions_dir": false
       },
+      "asset_urls": {
+        "mp3": "https://github.com/andros613/niggun-saloon/releases/download/renders-latest/niggun_020_mishenichnas_adar.mp3",
+        "pdf": "https://github.com/andros613/niggun-saloon/releases/download/renders-latest/niggun_020_mishenichnas_adar.pdf",
+        "midi": "https://github.com/andros613/niggun-saloon/releases/download/renders-latest/niggun_020_mishenichnas_adar.midi",
+        "ly": "https://github.com/andros613/niggun-saloon/releases/download/renders-latest/niggun_020_mishenichnas_adar.ly"
+      },
       "references": [],
       "tags": [
         "chag",
@@ -1032,6 +1176,12 @@
         "has_words_as_ashk": false,
         "has_versions_dir": false
       },
+      "asset_urls": {
+        "mp3": "https://github.com/andros613/niggun-saloon/releases/download/renders-latest/niggun_020a_mishenichnas_adar_piano_01.mp3",
+        "pdf": "https://github.com/andros613/niggun-saloon/releases/download/renders-latest/niggun_020a_mishenichnas_adar_piano_01.pdf",
+        "midi": "https://github.com/andros613/niggun-saloon/releases/download/renders-latest/niggun_020a_mishenichnas_adar_piano_01.midi",
+        "ly": "https://github.com/andros613/niggun-saloon/releases/download/renders-latest/niggun_020a_mishenichnas_adar_piano_01.ly"
+      },
       "references": [],
       "tags": [
         "purim",
@@ -1066,6 +1216,12 @@
         "has_words_as_ashk": false,
         "has_versions_dir": false
       },
+      "asset_urls": {
+        "mp3": "https://github.com/andros613/niggun-saloon/releases/download/renders-latest/niggun_020b_mishenichnas_adar_piano_02.mp3",
+        "pdf": "https://github.com/andros613/niggun-saloon/releases/download/renders-latest/niggun_020b_mishenichnas_adar_piano_02.pdf",
+        "midi": "https://github.com/andros613/niggun-saloon/releases/download/renders-latest/niggun_020b_mishenichnas_adar_piano_02.midi",
+        "ly": "https://github.com/andros613/niggun-saloon/releases/download/renders-latest/niggun_020b_mishenichnas_adar_piano_02.ly"
+      },
       "references": [],
       "tags": [
         "purim",
@@ -1099,6 +1255,12 @@
         "has_words_th_en": true,
         "has_words_as_ashk": true,
         "has_versions_dir": false
+      },
+      "asset_urls": {
+        "mp3": "https://github.com/andros613/niggun-saloon/releases/download/renders-latest/niggun_021_rachamana.mp3",
+        "pdf": "https://github.com/andros613/niggun-saloon/releases/download/renders-latest/niggun_021_rachamana.pdf",
+        "midi": "https://github.com/andros613/niggun-saloon/releases/download/renders-latest/niggun_021_rachamana.midi",
+        "ly": "https://github.com/andros613/niggun-saloon/releases/download/renders-latest/niggun_021_rachamana.ly"
       },
       "references": [
         {
@@ -1150,6 +1312,12 @@
         "has_words_th_en": false,
         "has_words_as_ashk": false,
         "has_versions_dir": true
+      },
+      "asset_urls": {
+        "mp3": "https://github.com/andros613/niggun-saloon/releases/download/renders-latest/niggun_022_beinoni.mp3",
+        "pdf": "https://github.com/andros613/niggun-saloon/releases/download/renders-latest/niggun_022_beinoni.pdf",
+        "midi": "https://github.com/andros613/niggun-saloon/releases/download/renders-latest/niggun_022_beinoni.midi",
+        "ly": "https://github.com/andros613/niggun-saloon/releases/download/renders-latest/niggun_022_beinoni.ly"
       },
       "references": [
         {

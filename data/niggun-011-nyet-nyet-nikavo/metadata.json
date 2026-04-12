@@ -24,6 +24,12 @@
     "has_words_as_ashk": false,
     "has_versions_dir": true
   },
+  "asset_urls": {
+    "mp3": "https://github.com/andros613/niggun-saloon/releases/download/renders-latest/niggun_011_nyet_nyet_nikavo.mp3",
+    "pdf": "https://github.com/andros613/niggun-saloon/releases/download/renders-latest/niggun_011_nyet_nyet_nikavo.pdf",
+    "midi": "https://github.com/andros613/niggun-saloon/releases/download/renders-latest/niggun_011_nyet_nyet_nikavo.midi",
+    "ly": "https://github.com/andros613/niggun-saloon/releases/download/renders-latest/niggun_011_nyet_nyet_nikavo.ly"
+  },
   "references": [
     {
       "url": "https://crownheights.info/chabad-news/902912/nyet-nyet-nikavo-the-full-song-and-its-history/",

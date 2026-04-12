@@ -24,6 +24,12 @@
     "has_words_as_ashk": true,
     "has_versions_dir": true
   },
+  "asset_urls": {
+    "mp3": "https://github.com/andros613/niggun-saloon/releases/download/renders-latest/niggun_014_mizmor_ledavid_psalm_23.mp3",
+    "pdf": "https://github.com/andros613/niggun-saloon/releases/download/renders-latest/niggun_014_mizmor_ledavid_psalm_23.pdf",
+    "midi": "https://github.com/andros613/niggun-saloon/releases/download/renders-latest/niggun_014_mizmor_ledavid_psalm_23.midi",
+    "ly": "https://github.com/andros613/niggun-saloon/releases/download/renders-latest/niggun_014_mizmor_ledavid_psalm_23.ly"
+  },
   "references": [
     {
       "url": "https://www.sefaria.org/Psalms.23",

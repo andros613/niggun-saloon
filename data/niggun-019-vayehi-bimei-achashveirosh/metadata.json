@@ -24,6 +24,12 @@
     "has_words_as_ashk": true,
     "has_versions_dir": true
   },
+  "asset_urls": {
+    "mp3": "https://github.com/andros613/niggun-saloon/releases/download/renders-latest/niggun_019_vayehi_bimei_achashveirosh.mp3",
+    "pdf": "https://github.com/andros613/niggun-saloon/releases/download/renders-latest/niggun_019_vayehi_bimei_achashveirosh.pdf",
+    "midi": "https://github.com/andros613/niggun-saloon/releases/download/renders-latest/niggun_019_vayehi_bimei_achashveirosh.midi",
+    "ly": "https://github.com/andros613/niggun-saloon/releases/download/renders-latest/niggun_019_vayehi_bimei_achashveirosh.ly"
+  },
   "references": [
     {
       "url": "https://www.sefaria.org/Esther.1.1",

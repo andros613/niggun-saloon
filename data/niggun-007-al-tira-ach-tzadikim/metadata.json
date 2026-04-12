@@ -24,6 +24,12 @@
     "has_words_as_ashk": true,
     "has_versions_dir": true
   },
+  "asset_urls": {
+    "mp3": "https://github.com/andros613/niggun-saloon/releases/download/renders-latest/niggun_007_al_tira_ach_tzadikim.mp3",
+    "pdf": "https://github.com/andros613/niggun-saloon/releases/download/renders-latest/niggun_007_al_tira_ach_tzadikim.pdf",
+    "midi": "https://github.com/andros613/niggun-saloon/releases/download/renders-latest/niggun_007_al_tira_ach_tzadikim.midi",
+    "ly": "https://github.com/andros613/niggun-saloon/releases/download/renders-latest/niggun_007_al_tira_ach_tzadikim.ly"
+  },
   "references": [
     {
       "url": "https://www.chabad.org/torah-texts/1666781/Online-Siddur-with-Commentary/Conclusion-of-Shachrit/Al-Tira",

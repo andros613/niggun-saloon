@@ -24,6 +24,12 @@
     "has_words_as_ashk": false,
     "has_versions_dir": true
   },
+  "asset_urls": {
+    "mp3": "https://github.com/andros613/niggun-saloon/releases/download/renders-latest/niggun_002_shalom_aleichem.mp3",
+    "pdf": "https://github.com/andros613/niggun-saloon/releases/download/renders-latest/niggun_002_shalom_aleichem.pdf",
+    "midi": "https://github.com/andros613/niggun-saloon/releases/download/renders-latest/niggun_002_shalom_aleichem.midi",
+    "ly": "https://github.com/andros613/niggun-saloon/releases/download/renders-latest/niggun_002_shalom_aleichem.ly"
+  },
   "references": [],
   "tags": [
     "shabbat"
