@@ -25,10 +25,10 @@
     "has_versions_dir": true
   },
   "asset_urls": {
-    "mp3": "https://github.com/andros613/niggun-saloon/releases/download/renders-latest/niggun_015_rosh_chodesh_kislev.mp3",
-    "pdf": "https://github.com/andros613/niggun-saloon/releases/download/renders-latest/niggun_015_rosh_chodesh_kislev.pdf",
-    "midi": "https://github.com/andros613/niggun-saloon/releases/download/renders-latest/niggun_015_rosh_chodesh_kislev.midi",
-    "ly": "https://github.com/andros613/niggun-saloon/releases/download/renders-latest/niggun_015_rosh_chodesh_kislev.ly"
+    "mp3": "assets/niggun-015-rosh-chodesh-kislev/niggun_015_rosh_chodesh_kislev.mp3",
+    "pdf": "assets/niggun-015-rosh-chodesh-kislev/niggun_015_rosh_chodesh_kislev.pdf",
+    "midi": "assets/niggun-015-rosh-chodesh-kislev/niggun_015_rosh_chodesh_kislev.midi",
+    "ly": "assets/niggun-015-rosh-chodesh-kislev/niggun_015_rosh_chodesh_kislev.ly"
   },
   "references": [
     {

@@ -25,10 +25,10 @@
     "has_versions_dir": true
   },
   "asset_urls": {
-    "mp3": "https://github.com/andros613/niggun-saloon/releases/download/renders-latest/niggun_005_sheyibone_beis_hamikdosh.mp3",
-    "pdf": "https://github.com/andros613/niggun-saloon/releases/download/renders-latest/niggun_005_sheyibone_beis_hamikdosh.pdf",
-    "midi": "https://github.com/andros613/niggun-saloon/releases/download/renders-latest/niggun_005_sheyibone_beis_hamikdosh.midi",
-    "ly": "https://github.com/andros613/niggun-saloon/releases/download/renders-latest/niggun_005_sheyibone_beis_hamikdosh.ly"
+    "mp3": "assets/niggun-005-sheyibone-beis-hamikdosh/niggun_005_sheyibone_beis_hamikdosh.mp3",
+    "pdf": "assets/niggun-005-sheyibone-beis-hamikdosh/niggun_005_sheyibone_beis_hamikdosh.pdf",
+    "midi": "assets/niggun-005-sheyibone-beis-hamikdosh/niggun_005_sheyibone_beis_hamikdosh.midi",
+    "ly": "assets/niggun-005-sheyibone-beis-hamikdosh/niggun_005_sheyibone_beis_hamikdosh.ly"
   },
   "references": [
     {

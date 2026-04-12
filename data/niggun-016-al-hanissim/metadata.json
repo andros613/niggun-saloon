@@ -25,10 +25,10 @@
     "has_versions_dir": true
   },
   "asset_urls": {
-    "mp3": "https://github.com/andros613/niggun-saloon/releases/download/renders-latest/niggun_016_al_hanissim.mp3",
-    "pdf": "https://github.com/andros613/niggun-saloon/releases/download/renders-latest/niggun_016_al_hanissim.pdf",
-    "midi": "https://github.com/andros613/niggun-saloon/releases/download/renders-latest/niggun_016_al_hanissim.midi",
-    "ly": "https://github.com/andros613/niggun-saloon/releases/download/renders-latest/niggun_016_al_hanissim.ly"
+    "mp3": "assets/niggun-016-al-hanissim/niggun_016_al_hanissim.mp3",
+    "pdf": "assets/niggun-016-al-hanissim/niggun_016_al_hanissim.pdf",
+    "midi": "assets/niggun-016-al-hanissim/niggun_016_al_hanissim.midi",
+    "ly": "assets/niggun-016-al-hanissim/niggun_016_al_hanissim.ly"
   },
   "references": [
     {

@@ -25,10 +25,10 @@
     "has_versions_dir": true
   },
   "asset_urls": {
-    "mp3": "https://github.com/andros613/niggun-saloon/releases/download/renders-latest/niggun_004b_acheinu_piano_02.mp3",
-    "pdf": "https://github.com/andros613/niggun-saloon/releases/download/renders-latest/niggun_004b_acheinu_piano_02.pdf",
-    "midi": "https://github.com/andros613/niggun-saloon/releases/download/renders-latest/niggun_004b_acheinu_piano_02.midi",
-    "ly": "https://github.com/andros613/niggun-saloon/releases/download/renders-latest/niggun_004b_acheinu_piano_02.ly"
+    "mp3": "assets/niggun-004b-acheinu-piano-02/niggun_004b_acheinu_piano_02.mp3",
+    "pdf": "assets/niggun-004b-acheinu-piano-02/niggun_004b_acheinu_piano_02.pdf",
+    "midi": "assets/niggun-004b-acheinu-piano-02/niggun_004b_acheinu_piano_02.midi",
+    "ly": "assets/niggun-004b-acheinu-piano-02/niggun_004b_acheinu_piano_02.ly"
   },
   "references": [
     {

@@ -35,11 +35,12 @@ const wordsAshk  = n.assets.has_words_as_ashk ? readLyrics('words_as_ashk.txt') 
 
 const base = import.meta.env.BASE_URL;
 
-// Asset URLs come from catalog (GitHub Releases CDN), populated by build_metadata.py
-const mp3Url  = n.asset_urls?.mp3  ?? null;
-const pdfUrl  = n.asset_urls?.pdf  ?? null;
-const midiUrl = n.asset_urls?.midi ?? null;
-const lyUrl   = n.asset_urls?.ly   ?? null;
+// Asset paths are site-relative (e.g. "assets/niggun-001-r-eade/file.mp3").
+// Prepend base so they resolve correctly both on GitHub Pages and local dev.
+const mp3Url  = n.asset_urls?.mp3  ? `${base}${n.asset_urls.mp3}`  : null;
+const pdfUrl  = n.asset_urls?.pdf  ? `${base}${n.asset_urls.pdf}`  : null;
+const midiUrl = n.asset_urls?.midi ? `${base}${n.asset_urls.midi}` : null;
+const lyUrl   = n.asset_urls?.ly   ? `${base}${n.asset_urls.ly}`   : null;
 
 function sourceName(url: string): string {
   const domain = new URL(url).hostname.replace(/^www\./, '');

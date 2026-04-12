@@ -25,10 +25,10 @@
     "has_versions_dir": true
   },
   "asset_urls": {
-    "mp3": "https://github.com/andros613/niggun-saloon/releases/download/renders-latest/niggun_007_al_tira_ach_tzadikim.mp3",
-    "pdf": "https://github.com/andros613/niggun-saloon/releases/download/renders-latest/niggun_007_al_tira_ach_tzadikim.pdf",
-    "midi": "https://github.com/andros613/niggun-saloon/releases/download/renders-latest/niggun_007_al_tira_ach_tzadikim.midi",
-    "ly": "https://github.com/andros613/niggun-saloon/releases/download/renders-latest/niggun_007_al_tira_ach_tzadikim.ly"
+    "mp3": "assets/niggun-007-al-tira-ach-tzadikim/niggun_007_al_tira_ach_tzadikim.mp3",
+    "pdf": "assets/niggun-007-al-tira-ach-tzadikim/niggun_007_al_tira_ach_tzadikim.pdf",
+    "midi": "assets/niggun-007-al-tira-ach-tzadikim/niggun_007_al_tira_ach_tzadikim.midi",
+    "ly": "assets/niggun-007-al-tira-ach-tzadikim/niggun_007_al_tira_ach_tzadikim.ly"
   },
   "references": [
     {

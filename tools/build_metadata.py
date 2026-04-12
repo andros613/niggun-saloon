@@ -20,9 +20,10 @@ from pathlib import Path
 logging.basicConfig(level=logging.INFO, format="%(levelname)s: %(message)s")
 logger = logging.getLogger(__name__)
 
-# GitHub Releases CDN base URL for rendered audio/sheet music assets.
-# Files are uploaded by build-renders.yml to the "renders-latest" release.
-RELEASE_CDN_BASE = "https://github.com/andros613/niggun-saloon/releases/download/renders-latest"
+# Base path for rendered assets within the web/public/ directory.
+# Files are committed to web/public/assets/<dir>/ by build-renders.yml.
+# The Astro site prepends the base URL at runtime, so this is a site-relative path.
+ASSETS_BASE = "assets"
 
 
 # ---------------------------------------------------------------------------
@@ -228,21 +229,25 @@ def detect_assets(dir_path: Path) -> dict:
 
 
 def build_asset_urls(dir_path: Path, stem: str) -> dict:
-    """Return GitHub Releases CDN URLs for each rendered asset that exists locally."""
-    def cdn(ext: str) -> str | None:
+    """Return site-relative asset paths for each rendered asset that exists locally.
+    The Astro site prepends BASE_URL at runtime: `${base}${asset_url}`.
+    """
+    dir_name = dir_path.name
+
+    def rel(ext: str) -> str | None:
         candidates = [f"{stem}.{ext}"]
         if ext == "midi":
             candidates.append(f"{stem}.mid")
         for name in candidates:
             if (dir_path / name).exists():
-                return f"{RELEASE_CDN_BASE}/{name}"
+                return f"{ASSETS_BASE}/{dir_name}/{name}"
         return None
 
     return {
-        "mp3":  cdn("mp3"),
-        "pdf":  cdn("pdf"),
-        "midi": cdn("midi"),
-        "ly":   cdn("ly"),
+        "mp3":  rel("mp3"),
+        "pdf":  rel("pdf"),
+        "midi": rel("midi"),
+        "ly":   rel("ly"),
     }
 
 

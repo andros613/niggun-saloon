@@ -25,10 +25,10 @@
     "has_versions_dir": true
   },
   "asset_urls": {
-    "mp3": "https://github.com/andros613/niggun-saloon/releases/download/renders-latest/niggun_008_nachamu.mp3",
-    "pdf": "https://github.com/andros613/niggun-saloon/releases/download/renders-latest/niggun_008_nachamu.pdf",
-    "midi": "https://github.com/andros613/niggun-saloon/releases/download/renders-latest/niggun_008_nachamu.midi",
-    "ly": "https://github.com/andros613/niggun-saloon/releases/download/renders-latest/niggun_008_nachamu.ly"
+    "mp3": "assets/niggun-008-nachamu/niggun_008_nachamu.mp3",
+    "pdf": "assets/niggun-008-nachamu/niggun_008_nachamu.pdf",
+    "midi": "assets/niggun-008-nachamu/niggun_008_nachamu.midi",
+    "ly": "assets/niggun-008-nachamu/niggun_008_nachamu.ly"
   },
   "references": [
     {

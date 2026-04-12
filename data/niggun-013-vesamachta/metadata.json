@@ -25,10 +25,10 @@
     "has_versions_dir": true
   },
   "asset_urls": {
-    "mp3": "https://github.com/andros613/niggun-saloon/releases/download/renders-latest/niggun_013_vesamachta.mp3",
-    "pdf": "https://github.com/andros613/niggun-saloon/releases/download/renders-latest/niggun_013_vesamachta.pdf",
-    "midi": "https://github.com/andros613/niggun-saloon/releases/download/renders-latest/niggun_013_vesamachta.midi",
-    "ly": "https://github.com/andros613/niggun-saloon/releases/download/renders-latest/niggun_013_vesamachta.ly"
+    "mp3": "assets/niggun-013-vesamachta/niggun_013_vesamachta.mp3",
+    "pdf": "assets/niggun-013-vesamachta/niggun_013_vesamachta.pdf",
+    "midi": "assets/niggun-013-vesamachta/niggun_013_vesamachta.midi",
+    "ly": "assets/niggun-013-vesamachta/niggun_013_vesamachta.ly"
   },
   "references": [
     {

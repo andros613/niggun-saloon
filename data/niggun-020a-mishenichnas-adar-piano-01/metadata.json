@@ -25,10 +25,10 @@
     "has_versions_dir": false
   },
   "asset_urls": {
-    "mp3": "https://github.com/andros613/niggun-saloon/releases/download/renders-latest/niggun_020a_mishenichnas_adar_piano_01.mp3",
-    "pdf": "https://github.com/andros613/niggun-saloon/releases/download/renders-latest/niggun_020a_mishenichnas_adar_piano_01.pdf",
-    "midi": "https://github.com/andros613/niggun-saloon/releases/download/renders-latest/niggun_020a_mishenichnas_adar_piano_01.midi",
-    "ly": "https://github.com/andros613/niggun-saloon/releases/download/renders-latest/niggun_020a_mishenichnas_adar_piano_01.ly"
+    "mp3": "assets/niggun-020a-mishenichnas-adar-piano-01/niggun_020a_mishenichnas_adar_piano_01.mp3",
+    "pdf": "assets/niggun-020a-mishenichnas-adar-piano-01/niggun_020a_mishenichnas_adar_piano_01.pdf",
+    "midi": "assets/niggun-020a-mishenichnas-adar-piano-01/niggun_020a_mishenichnas_adar_piano_01.midi",
+    "ly": "assets/niggun-020a-mishenichnas-adar-piano-01/niggun_020a_mishenichnas_adar_piano_01.ly"
   },
   "references": [],
   "tags": [

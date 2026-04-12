@@ -25,10 +25,10 @@
     "has_versions_dir": true
   },
   "asset_urls": {
-    "mp3": "https://github.com/andros613/niggun-saloon/releases/download/renders-latest/niggun_010_ratzisa_hashem.mp3",
-    "pdf": "https://github.com/andros613/niggun-saloon/releases/download/renders-latest/niggun_010_ratzisa_hashem.pdf",
-    "midi": "https://github.com/andros613/niggun-saloon/releases/download/renders-latest/niggun_010_ratzisa_hashem.midi",
-    "ly": "https://github.com/andros613/niggun-saloon/releases/download/renders-latest/niggun_010_ratzisa_hashem.ly"
+    "mp3": "assets/niggun-010-ratzisa-hashem/niggun_010_ratzisa_hashem.mp3",
+    "pdf": "assets/niggun-010-ratzisa-hashem/niggun_010_ratzisa_hashem.pdf",
+    "midi": "assets/niggun-010-ratzisa-hashem/niggun_010_ratzisa_hashem.midi",
+    "ly": "assets/niggun-010-ratzisa-hashem/niggun_010_ratzisa_hashem.ly"
   },
   "references": [
     {

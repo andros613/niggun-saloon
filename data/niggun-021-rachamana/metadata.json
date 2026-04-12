@@ -25,10 +25,10 @@
     "has_versions_dir": false
   },
   "asset_urls": {
-    "mp3": "https://github.com/andros613/niggun-saloon/releases/download/renders-latest/niggun_021_rachamana.mp3",
-    "pdf": "https://github.com/andros613/niggun-saloon/releases/download/renders-latest/niggun_021_rachamana.pdf",
-    "midi": "https://github.com/andros613/niggun-saloon/releases/download/renders-latest/niggun_021_rachamana.midi",
-    "ly": "https://github.com/andros613/niggun-saloon/releases/download/renders-latest/niggun_021_rachamana.ly"
+    "mp3": "assets/niggun-021-rachamana/niggun_021_rachamana.mp3",
+    "pdf": "assets/niggun-021-rachamana/niggun_021_rachamana.pdf",
+    "midi": "assets/niggun-021-rachamana/niggun_021_rachamana.midi",
+    "ly": "assets/niggun-021-rachamana/niggun_021_rachamana.ly"
   },
   "references": [
     {

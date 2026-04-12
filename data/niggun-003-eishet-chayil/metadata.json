@@ -25,10 +25,10 @@
     "has_versions_dir": true
   },
   "asset_urls": {
-    "mp3": "https://github.com/andros613/niggun-saloon/releases/download/renders-latest/niggun_003_eishet_chayil.mp3",
-    "pdf": "https://github.com/andros613/niggun-saloon/releases/download/renders-latest/niggun_003_eishet_chayil.pdf",
-    "midi": "https://github.com/andros613/niggun-saloon/releases/download/renders-latest/niggun_003_eishet_chayil.midi",
-    "ly": "https://github.com/andros613/niggun-saloon/releases/download/renders-latest/niggun_003_eishet_chayil.ly"
+    "mp3": "assets/niggun-003-eishet-chayil/niggun_003_eishet_chayil.mp3",
+    "pdf": "assets/niggun-003-eishet-chayil/niggun_003_eishet_chayil.pdf",
+    "midi": "assets/niggun-003-eishet-chayil/niggun_003_eishet_chayil.midi",
+    "ly": "assets/niggun-003-eishet-chayil/niggun_003_eishet_chayil.ly"
   },
   "references": [
     {

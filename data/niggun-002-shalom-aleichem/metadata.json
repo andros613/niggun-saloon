@@ -25,10 +25,10 @@
     "has_versions_dir": true
   },
   "asset_urls": {
-    "mp3": "https://github.com/andros613/niggun-saloon/releases/download/renders-latest/niggun_002_shalom_aleichem.mp3",
-    "pdf": "https://github.com/andros613/niggun-saloon/releases/download/renders-latest/niggun_002_shalom_aleichem.pdf",
-    "midi": "https://github.com/andros613/niggun-saloon/releases/download/renders-latest/niggun_002_shalom_aleichem.midi",
-    "ly": "https://github.com/andros613/niggun-saloon/releases/download/renders-latest/niggun_002_shalom_aleichem.ly"
+    "mp3": "assets/niggun-002-shalom-aleichem/niggun_002_shalom_aleichem.mp3",
+    "pdf": "assets/niggun-002-shalom-aleichem/niggun_002_shalom_aleichem.pdf",
+    "midi": "assets/niggun-002-shalom-aleichem/niggun_002_shalom_aleichem.midi",
+    "ly": "assets/niggun-002-shalom-aleichem/niggun_002_shalom_aleichem.ly"
   },
   "references": [],
   "tags": [

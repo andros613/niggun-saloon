@@ -25,10 +25,10 @@
     "has_versions_dir": true
   },
   "asset_urls": {
-    "mp3": "https://github.com/andros613/niggun-saloon/releases/download/renders-latest/niggun_018_keli_ata.mp3",
-    "pdf": "https://github.com/andros613/niggun-saloon/releases/download/renders-latest/niggun_018_keli_ata.pdf",
-    "midi": "https://github.com/andros613/niggun-saloon/releases/download/renders-latest/niggun_018_keli_ata.midi",
-    "ly": "https://github.com/andros613/niggun-saloon/releases/download/renders-latest/niggun_018_keli_ata.ly"
+    "mp3": "assets/niggun-018-keli-ata/niggun_018_keli_ata.mp3",
+    "pdf": "assets/niggun-018-keli-ata/niggun_018_keli_ata.pdf",
+    "midi": "assets/niggun-018-keli-ata/niggun_018_keli_ata.midi",
+    "ly": "assets/niggun-018-keli-ata/niggun_018_keli_ata.ly"
   },
   "references": [
     {
