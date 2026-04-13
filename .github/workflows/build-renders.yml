@@ -1,8 +1,18 @@
 name: Build Renders
 
-# Triggered when a LilyPond source file changes.
-# Recompiles the affected niggun and commits rendered assets (MP3/PDF/MIDI) to
-# web/public/assets/ so they are served by GitHub Pages with correct headers.
+# DISABLED: renders are now compiled locally (run.sh) and committed pre-built.
+# Reason: font rendering differed between macOS Garamond (local) and EB Garamond
+# (Ubuntu CI), and remote compilation wasn't worth the inconsistency.
+#
+# Kept here to document the hard-won CI setup in case remote compilation is
+# revisited. Last known-good: 2026-04-12.
+#
+# To re-enable: restore the `push` trigger below and remove this notice.
+#
+# Original trigger comment:
+#   Triggered when a LilyPond source file changes.
+#   Recompiles the affected niggun and commits rendered assets (MP3/PDF/MIDI) to
+#   web/public/assets/ so they are served by GitHub Pages with correct headers.
 #
 # NOTE: LilyPond is installed from GitLab releases (version pinned via LILYPOND_VERSION env var).
 # FluidSynth, FFmpeg, and LAME come from apt. To upgrade LilyPond, update LILYPOND_VERSION.
@@ -11,10 +21,10 @@ name: Build Renders
 # which generates all 7-key × 3-tempo combinations.
 
 on:
-  push:
-    branches: [main]
-    paths:
-      - 'data/**/*.ly'
+  # push:          # disabled — uncomment to re-enable automatic CI renders
+  #   branches: [main]
+  #   paths:
+  #     - 'data/**/*.ly'
   workflow_dispatch:
     inputs:
       dir:
