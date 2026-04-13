@@ -1,5 +1,6 @@
 ---
 import Layout from '../layouts/Layout.astro';
+import HeroImage from '@andros613/theme/components/HeroImage.astro';
 import { loadCatalog } from '../lib/catalog';
 import { allTags, tagLabel as tagLabelFn } from '../lib/tags';
 
@@ -12,18 +13,12 @@ const hasChoralNigguns = nigguns.some(n => n.choral_arrangements.length > 0);
 const base = import.meta.env.BASE_URL;
 ---
 <Layout title="Browse">
-  <div class="hero" id="hero" role="button" tabindex="0" aria-label="View full image">
-    <img src={`${base}temple_v02.png`} alt="Temple with musical notes and Hebrew letters" class="hero-img" />
-    <div class="hero-overlay">
-      <h1 class="hero-title">Niggun Saloon</h1>
-      <p class="hero-subtitle">Jewish music arrangements by Amichai Andy Rosenbaum</p>
-    </div>
-  </div>
-
-  <div class="lightbox" id="lightbox" aria-modal="true" role="dialog" aria-label="Full image view" hidden>
-    <img src={`${base}temple_v02.png`} alt="Temple with musical notes and Hebrew letters" class="lightbox-img" />
-    <button class="lightbox-close" aria-label="Close">✕</button>
-  </div>
+  <HeroImage
+    src={`${base}temple_v02.png`}
+    alt="Temple with musical notes and Hebrew letters"
+    title="Niggun Saloon"
+    subtitle="Jewish music arrangements by Amichai Andy Rosenbaum"
+  />
 
   <div class="search-bar-wrap">
     <span class="search-icon" aria-hidden="true">
@@ -158,17 +153,3 @@ const base = import.meta.env.BASE_URL;
   emptyReset.addEventListener('click', resetAll);
 </script>
 
-<script>
-  const hero     = document.getElementById('hero')!;
-  const lightbox = document.getElementById('lightbox')!;
-  const lbClose  = lightbox.querySelector('.lightbox-close')!;
-
-  function open()  { lightbox.hidden = false; document.body.style.overflow = 'hidden'; }
-  function close() { lightbox.hidden = true;  document.body.style.overflow = ''; }
-
-  hero.addEventListener('click', open);
-  hero.addEventListener('keydown', e => { if (e.key === 'Enter' || e.key === ' ') open(); });
-  lightbox.addEventListener('click', e => { if (e.target === lightbox) close(); });
-  lbClose.addEventListener('click', close);
-  document.addEventListener('keydown', e => { if (e.key === 'Escape' && !lightbox.hidden) close(); });
-</script>
