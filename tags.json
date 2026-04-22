@@ -26,5 +26,7 @@
   "niggun-019-vayehi-bimei-achashveirosh": ["chag", "davening", "purim", "chabad"],
   "niggun-020-mishenichnas-adar": ["chag", "purim"],
   "niggun-021-rachamana": ["chag", "davening", "chabad"],
-  "niggun-022-beinoni": ["anytime", "chabad"]
+  "niggun-022-beinoni": ["anytime", "chabad"],
+  "niggun-023-dayenu": ["chag", "pesach"],
+  "niggun-023a-dayenu-choral-01": ["chag", "pesach"]
 }

@@ -1,0 +1,45 @@
+{
+  "id": "023a",
+  "dir": "niggun-023a-dayenu-choral-01",
+  "title": "Dayenu (Chroral) 01",
+  "subtitle": "Jewish Folk Song for Pesach (Passover)",
+  "arranger": "Amichai Andy Rosenbaum",
+  "date_gregorian": "April 2020",
+  "date_hebrew": "Nissan 5780",
+  "version": "v03",
+  "license": "Licensed under CC BY-NC-SA 4.0",
+  "key": "D major",
+  "tempo_bpm": 100,
+  "description": "",
+  "variant_of": "023",
+  "arrangement_type": "choral",
+  "assets": {
+    "has_ly": true,
+    "has_pdf": true,
+    "has_mp3": true,
+    "has_midi": true,
+    "has_words_he": false,
+    "has_words_en": false,
+    "has_words_th_en": false,
+    "has_words_as_ashk": false,
+    "has_versions_dir": false
+  },
+  "asset_urls": {
+    "mp3": "assets/niggun-023a-dayenu-choral-01/niggun_023a_dayenu_choral_01.mp3",
+    "pdf": "assets/niggun-023a-dayenu-choral-01/niggun_023a_dayenu_choral_01.pdf",
+    "midi": "assets/niggun-023a-dayenu-choral-01/niggun_023a_dayenu_choral_01.midi",
+    "ly": "assets/niggun-023a-dayenu-choral-01/niggun_023a_dayenu_choral_01.ly"
+  },
+  "references": [
+    {
+      "url": "https://www.youtube.com/watch?v=TEN90SJWVbU",
+      "label": "Honorable Menschen recording",
+      "type": "youtube",
+      "embed_id": "TEN90SJWVbU"
+    }
+  ],
+  "tags": [
+    "chag",
+    "pesach"
+  ]
+}
