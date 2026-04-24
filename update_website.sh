@@ -6,7 +6,7 @@
 #
 # CI (deploy-site.yml) fires on pushes touching:
 #   catalog.json, data/**/metadata.json, web/**
-# It copies data/**/*.{mp3,pdf,midi,mid,ly} into web/public/assets/ at build time.
+# Assets (mp3/pdf/midi/ly) are committed to web/public/assets/ by this script.
 
 set -euo pipefail
 
@@ -30,15 +30,26 @@ echo "=== Step 2: Assemble catalog.json ==="
 python3.13 tools/build_catalog.py
 
 echo ""
-echo "=== Step 3: Stage changes ==="
+echo "=== Step 3: Copy assets to web/public/assets/ ==="
+find data -type f -not -path "*/versions/*" \( -name "*.mp3" -o -name "*.pdf" -o -name "*.midi" -o -name "*.mid" -o -name "*.ly" \) \
+  | while read -r src; do
+      dir=$(basename "$(dirname "$src")")
+      dest="web/public/assets/$dir"
+      mkdir -p "$dest"
+      cp "$src" "$dest/"
+    done
+
+echo ""
+echo "=== Step 4: Stage changes ==="
 git add catalog.json tags.json
 git add data/
+git add web/public/assets/
 
 git status --short
 
 echo ""
 if git diff --cached --quiet; then
-  echo "Nothing to commit — catalog already up to date."
+  echo "Nothing to commit — already up to date."
   exit 0
 fi
 
@@ -50,11 +61,11 @@ if $DRY_RUN; then
   exit 0
 fi
 
-echo "=== Step 4: Commit ==="
+echo "=== Step 5: Commit ==="
 git commit -m "$COMMIT_MSG"
 
 echo ""
-echo "=== Step 5: Push (triggers CI deploy) ==="
+echo "=== Step 6: Push (triggers CI deploy) ==="
 git push
 
 echo ""
