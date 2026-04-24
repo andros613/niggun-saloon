@@ -1,7 +1,7 @@
 \version "2.24.4"
 
 \header {
-	title = "Niggun 023a - Dayenu (Chroral) 01"
+	title = "Niggun 023a - Dayenu Chroral 01"
   subtitle = "Jewish Folk Song for Pesach (Passover)"
   arranger = "Arranged by Amichai Andy Rosenbaum | Nissan 5780 / April 2020 | v03 | B''H"
   copyright = "Licensed under CC BY-NC-SA 4.0"

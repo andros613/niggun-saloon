@@ -1,0 +1,38 @@
+{
+  "id": "025a",
+  "dir": "niggun-025a-eliyahu-choral-01",
+  "title": "Niggun 025a Eliyahu HaNavi Choral 01",
+  "subtitle": "Jewish Folk Song for Pesach (Passover)",
+  "arranger": "Amichai Andy Rosenbaum",
+  "date_gregorian": "April 2020",
+  "date_hebrew": "Nissan 5780",
+  "version": "v03",
+  "license": "Licensed under CC BY-NC-SA 4.0",
+  "key": "G minor",
+  "tempo_bpm": 65,
+  "description": "",
+  "variant_of": "025",
+  "arrangement_type": "choral",
+  "assets": {
+    "has_ly": true,
+    "has_pdf": true,
+    "has_mp3": true,
+    "has_midi": true,
+    "has_words_he": false,
+    "has_words_en": false,
+    "has_words_th_en": false,
+    "has_words_as_ashk": false,
+    "has_versions_dir": false
+  },
+  "asset_urls": {
+    "mp3": "assets/niggun-025a-eliyahu-choral-01/niggun_025a_eliyahu_choral_01.mp3",
+    "pdf": "assets/niggun-025a-eliyahu-choral-01/niggun_025a_eliyahu_choral_01.pdf",
+    "midi": "assets/niggun-025a-eliyahu-choral-01/niggun_025a_eliyahu_choral_01.midi",
+    "ly": "assets/niggun-025a-eliyahu-choral-01/niggun_025a_eliyahu_choral_01.ly"
+  },
+  "references": [],
+  "tags": [
+    "chag",
+    "pesach"
+  ]
+}

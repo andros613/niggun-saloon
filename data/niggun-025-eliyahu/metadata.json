@@ -1,0 +1,44 @@
+{
+  "id": "025",
+  "dir": "niggun-025-eliyahu",
+  "title": "Eliyahu HaNavi",
+  "subtitle": "Jewish Folk Song for Pesach (Passover)",
+  "arranger": "Amichai Andy Rosenbaum",
+  "date_gregorian": "April 2026",
+  "date_hebrew": "Nissan 5786",
+  "version": "v01",
+  "license": "Licensed under CC BY-NC-SA 4.0",
+  "key": "E minor",
+  "tempo_bpm": 65,
+  "description": "",
+  "variant_of": null,
+  "arrangement_type": null,
+  "assets": {
+    "has_ly": true,
+    "has_pdf": true,
+    "has_mp3": true,
+    "has_midi": true,
+    "has_words_he": true,
+    "has_words_en": true,
+    "has_words_th_en": true,
+    "has_words_as_ashk": true,
+    "has_versions_dir": false
+  },
+  "asset_urls": {
+    "mp3": "assets/niggun-025-eliyahu/niggun_025_eliyahu.mp3",
+    "pdf": "assets/niggun-025-eliyahu/niggun_025_eliyahu.pdf",
+    "midi": "assets/niggun-025-eliyahu/niggun_025_eliyahu.midi",
+    "ly": "assets/niggun-025-eliyahu/niggun_025_eliyahu.ly"
+  },
+  "references": [
+    {
+      "url": "https://www.zemirotdatabase.org/view_song.php?id=78",
+      "label": "Melody and words",
+      "type": "link"
+    }
+  ],
+  "tags": [
+    "chag",
+    "pesach"
+  ]
+}
