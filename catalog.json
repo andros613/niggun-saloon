@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-05-26T05:49:01.147479+00:00",
-  "count": 33,
+  "generated_at": "2026-05-27T06:41:59.115102+00:00",
+  "count": 34,
   "nigguns": [
     {
       "id": "001",
@@ -1558,6 +1558,46 @@
         "pdf": "assets/niggun-026-shir-hamalot-psalm-126/niggun_026_shir_hamalot_psalm_126.pdf",
         "midi": "assets/niggun-026-shir-hamalot-psalm-126/niggun_026_shir_hamalot_psalm_126.midi",
         "ly": "assets/niggun-026-shir-hamalot-psalm-126/niggun_026_shir_hamalot_psalm_126.ly"
+      },
+      "references": [],
+      "tags": [
+        "chag",
+        "shabbat"
+      ],
+      "piano_arrangements": [],
+      "choral_arrangements": []
+    },
+    {
+      "id": "026a",
+      "dir": "niggun-026a-shir-hamalot-psalm-126-melody-2",
+      "title": "Shir HaMalot (Psalm 126) - Melody 2",
+      "subtitle": "Jewish Folk Song, for Birkat Hamazon (Grace After Meals) on Shabbat and Festivals",
+      "arranger": "Amichai Andy Rosenbaum",
+      "date_gregorian": "May 2026",
+      "date_hebrew": "Sivan 5786",
+      "version": "v01",
+      "license": "Licensed under CC BY-NC-SA 4.0",
+      "key": "D minor",
+      "tempo_bpm": 100,
+      "description": "",
+      "variant_of": "026",
+      "arrangement_type": null,
+      "assets": {
+        "has_ly": true,
+        "has_pdf": true,
+        "has_mp3": true,
+        "has_midi": true,
+        "has_words_he": true,
+        "has_words_en": true,
+        "has_words_th_en": true,
+        "has_words_as_ashk": true,
+        "has_versions_dir": false
+      },
+      "asset_urls": {
+        "mp3": "assets/niggun-026a-shir-hamalot-psalm-126-melody-2/niggun_026a_shir_hamalot_psalm_126_melody_2.mp3",
+        "pdf": "assets/niggun-026a-shir-hamalot-psalm-126-melody-2/niggun_026a_shir_hamalot_psalm_126_melody_2.pdf",
+        "midi": "assets/niggun-026a-shir-hamalot-psalm-126-melody-2/niggun_026a_shir_hamalot_psalm_126_melody_2.midi",
+        "ly": "assets/niggun-026a-shir-hamalot-psalm-126-melody-2/niggun_026a_shir_hamalot_psalm_126_melody_2.ly"
       },
       "references": [],
       "tags": [
