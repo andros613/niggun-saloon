@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-07T08:09:09.547397+00:00",
+  "generated_at": "2026-06-07T08:10:20.234043+00:00",
   "count": 36,
   "nigguns": [
     {
@@ -1680,7 +1680,10 @@
         "ly": "assets/niggun-026c-shir-hamalot-psalm-126-melody-4/niggun_026c_shir_hamalot_psalm_126_melody_4.ly"
       },
       "references": [],
-      "tags": [],
+      "tags": [
+        "chag",
+        "shabbat"
+      ],
       "piano_arrangements": [],
       "choral_arrangements": []
     }
