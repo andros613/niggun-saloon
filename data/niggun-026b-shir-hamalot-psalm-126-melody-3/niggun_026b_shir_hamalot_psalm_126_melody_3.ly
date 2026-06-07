@@ -3,42 +3,50 @@
 
 
 \header {
-  title = "Niggun 026a - Shir HaMalot (Psalm 126) - Melody 2"
+  title = "Niggun 026b - Shir HaMalot (Psalm 126) - Melody 3"
   subtitle = "Jewish Folk Song, for Birkat Hamazon (Grace After Meals) on Shabbat and Festivals"
   subsubtitle = "Transliteration Style: Tehillat Hashem English"
 %   subsubtitle = "Transliteration Style: Modern Israeli"
   % subsubtitle = "Transliteration Style: ArtScroll Ashkenazi"
-  arranger = "Arranged by Amichai Andy Rosenbaum | Sivan 5786 / May 2026 | v01 | B''H"
+  arranger = "Arranged by Amichai Andy Rosenbaum | Sivan 5786 / June 2026 | v01 | B''H"
   copyright = "Licensed under CC BY-NC-SA 4.0"
 }
 
 upperA = \relative c' {
   \mark \markup { "A1" }
-  | d4( a'8.) a16 g( a bes8) a8. a16
-  | g8( e f) g a4 a
-  | d,4 a'8 a g16( a bes8) a8. a16
-  | g8 e f e d2
+  % shir ha- ma'a- los b'- shuv A- do- no̞y
+  % es- shi- vas tzi- yon ho̞- yi- nu k'- chol'- mim.
+  | d8( c d) e f4 f8. f16
+  | f8( e f) g f( e) d4
+  | d8( c) d e f4 f8. f16
+  | f8 f e f g2
   \break
   \mark \markup { "A2" }
-  | a'8( bes c8.) c16 d8( c) bes4
-  | bes8( g a bes) c( bes) a4
-  | f8( g a) bes g4 g
-  | f4( e) d2
+  % o̞z yi- mo̞- lei s'chok pi- nu
+  % ul'- sho- nei- nu ri- no̞.
+  | d8( g4) g8 g4 g
+  | g8( a16 g f8 g) a( g) f4
+  | d8( f4) f8 f4 g
+  | f4( e) d4( c)
 }
 
 upperB = \relative c' {
   \break
   \mark \markup { "B1" }
-  | a'4( d) c4. a8
-  | g8( a bes c) a( g) f4
-  | a4 d8 d c4. a8
-  | g8 a bes c a4 a
+  % o̞z yom- ru va- go- yim
+  % hig- dil A- do- no̞y la- a- sos im- ei- le.
+  | f8( c f g) a4 a
+  | g4( a) g8 f4. 
+  | f8( c) f g a4 a
+  | g8 g c bes a4 a
   \break
   \mark \markup { "B2" }
-  | d4 d8 e f4 e
-  | d8 cis d e f4 c
-  | bes8( a g bes) d4 d
-  | cis4 b8( cis) d2
+  % hig- dil A- do- no̞y la- a- sos i- mo̞- nu
+  % ho̞- yi- nu s'- mei- chim.
+  | f8( c) f g a4 a
+  | g8 g a8. a16 g8 f4.
+  | f8( g4 f8) a8( g) g4
+  | f4 e d2
 }
 
 upperC = \relative c' {
@@ -46,18 +54,18 @@ upperC = \relative c' {
   \mark \markup { "C1" }
   %   shu- vo̞ A- do- no̞y es- sh'- vi- sei- nu
   %   ka- a- fi- kim ba- ne- gev.
-  | d4 a' g16( a) bes8 a4
-  | g8( e) f g a4 a
-  | d,4 a' g16( a bes8) a4
-  | g8( e) f( e) d2
+  | d8( c) d e f4 f4
+  | f8( e) f g f( e) d4
+  | d8( c) d( e) f4 f4
+  | f4 e8( f) g2
   \break
   \mark \markup { "C2" }
   %   ha- zo- r'im b'- dim- o̞
   %   b'- ri- no̞ yik- tzo- ru.
-  | a'8( bes c4) d8( c) bes4
-  | bes8( g a bes) c( bes) a4
-  | f8( g a bes) g4 g
-  | f4 e d2
+  | d8( g4.) g4 g
+  | g8( a16 g f8 g) a( g) f4
+  | d8( f4.) f4 g
+  | f4 e d4( c)
 }
 
 upperD = \relative c' {
@@ -65,18 +73,18 @@ upperD = \relative c' {
   \mark \markup { "D1" }
   %   ho̞- loch yei- leich u- vo̞- cho
   %   no- sei me- shech- ha- zo̞- ra
-  | a'4 d c4. a8
-  | g8( a bes c) a( g) f4
-  | a4 f'8( d) c4. a8
-  | g8( a) bes( c) a2
+  | f8( c f) g a4 a
+  | g4( a) g8 f4. 
+  | r8 c'4 bes8 a4 a
+  | g4 c8( bes) a2
   \break
   \mark \markup { "D2" }
   %   bo- yo̞- vo v'- ri- no̞
   %   no- sei a- lu- mo- so̞v.
-  | d8.( cis16 d8 e) f4 e
-  | d8.( cis16 d8 e) f4 c
-  | bes8( a g bes) d4. d8
-  | cis4 b8( cis) d2
+  | f8( c f g) a4 a
+  | g4( a) g8 f4.
+  | f8( g4 f8) a4( g8) g8
+  | f4 e d2
 }
 
 
@@ -197,9 +205,9 @@ theScoreMidi = {
 \markup { \vspace #-2 }
 
 \score {
-  \transpose d b, {
+%   \transpose d b, {
     \theScore
-  }
+%   }
   \layout {
     ragged-last = ##f
     \context {
@@ -221,9 +229,9 @@ theScoreMidi = {
 \score {
 \unfoldRepeats {
   \transpose c' c  {
-    \transpose d b, {
+%     \transpose d b, {
       \theScoreMidi
-    }
+%     }
   }
 }
   \midi {
@@ -314,6 +322,6 @@ theScoreMidi = {
 
 % \markup {
 %   \fill-line {
-%     \line { \tiny "Melody: https://www.chabad.org/multimedia/music_cdo/aid/692758/jewish/16-Shir-Hamalot-Song-2.htm" }
+%     \line { \tiny "Melody: https://www.chabad.org/multimedia/music_cdo/aid/692759/jewish/17-Shir-Hamalot-Song-3.htm" }
 %   }
 % }
