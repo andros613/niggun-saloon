@@ -1,0 +1,35 @@
+{
+  "id": "026c",
+  "dir": "niggun-026c-shir-hamalot-psalm-126-melody-4",
+  "title": "Shir HaMalot (Psalm 126) - Melody 4",
+  "subtitle": "Jewish Folk Song, for Birkat Hamazon (Grace After Meals) on Shabbat and Festivals",
+  "arranger": "Amichai Andy Rosenbaum",
+  "date_gregorian": "June 2026",
+  "date_hebrew": "Sivan 5786",
+  "version": "v01",
+  "license": "Licensed under CC BY-NC-SA 4.0",
+  "key": "C major",
+  "tempo_bpm": 120,
+  "description": "",
+  "variant_of": "026",
+  "arrangement_type": null,
+  "assets": {
+    "has_ly": true,
+    "has_pdf": true,
+    "has_mp3": true,
+    "has_midi": true,
+    "has_words_he": true,
+    "has_words_en": true,
+    "has_words_th_en": true,
+    "has_words_as_ashk": true,
+    "has_versions_dir": false
+  },
+  "asset_urls": {
+    "mp3": "assets/niggun-026c-shir-hamalot-psalm-126-melody-4/niggun_026c_shir_hamalot_psalm_126_melody_4.mp3",
+    "pdf": "assets/niggun-026c-shir-hamalot-psalm-126-melody-4/niggun_026c_shir_hamalot_psalm_126_melody_4.pdf",
+    "midi": "assets/niggun-026c-shir-hamalot-psalm-126-melody-4/niggun_026c_shir_hamalot_psalm_126_melody_4.midi",
+    "ly": "assets/niggun-026c-shir-hamalot-psalm-126-melody-4/niggun_026c_shir_hamalot_psalm_126_melody_4.ly"
+  },
+  "references": [],
+  "tags": []
+}
