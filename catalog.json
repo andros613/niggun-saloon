@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-29T06:09:16.854841+00:00",
+  "generated_at": "2026-06-29T06:57:14.913772+00:00",
   "count": 37,
   "nigguns": [
     {
@@ -1719,18 +1719,7 @@
         "midi": "assets/niggun-027-yedid-nefesh/niggun_027_yedid_nefesh.midi",
         "ly": "assets/niggun-027-yedid-nefesh/niggun_027_yedid_nefesh.ly"
       },
-      "references": [
-        {
-          "url": "https://www.chabad.org/multimedia/music_cdo/aid/692759/jewish/17-Shir-Hamalot-Song-3.htm",
-          "label": "Melody",
-          "type": "chabad_media"
-        },
-        {
-          "url": "https://www.chabad.org/multimedia/media_cdo/aid/265805/jewish/Yedid-Nefesh.htm",
-          "label": "Text",
-          "type": "chabad_media"
-        }
-      ],
+      "references": [],
       "tags": [
         "shabbat",
         "kabbalat_shabbat"

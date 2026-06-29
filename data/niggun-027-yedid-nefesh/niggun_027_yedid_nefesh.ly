@@ -683,16 +683,10 @@ theScoreMidi = {
 
 
 
-\markup {
-  \fill-line {
-    \line { \tiny "Melody: https://www.chabad.org/multimedia/music_cdo/aid/692759/jewish/17-Shir-Hamalot-Song-3.htm" }
-  }
-}
-
-\markup {
-  \fill-line {
-    \line { \tiny "Text: https://www.chabad.org/multimedia/media_cdo/aid/265805/jewish/Yedid-Nefesh.htm" }
-  }
-}
+% \markup {
+%   \fill-line {
+%     \line { \tiny "Text: https://www.chabad.org/multimedia/media_cdo/aid/265805/jewish/Yedid-Nefesh.htm" }
+%   }
+% }
 
 
