@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-06-07T08:10:20.234043+00:00",
-  "count": 36,
+  "generated_at": "2026-06-29T06:07:50.277148+00:00",
+  "count": 37,
   "nigguns": [
     {
       "id": "001",
@@ -1684,6 +1684,54 @@
         "chag",
         "shabbat"
       ],
+      "piano_arrangements": [],
+      "choral_arrangements": []
+    },
+    {
+      "id": "027",
+      "dir": "niggun-027-yedid-nefesh",
+      "title": "Yedid Nefesh",
+      "subtitle": "Jewish Folk Song for Kabbalat Shabbat",
+      "arranger": "Amichai Andy Rosenbaum",
+      "date_gregorian": "June 2026",
+      "date_hebrew": "Tammuz 5786",
+      "version": "v01",
+      "license": "Licensed under CC BY-NC-SA 4.0",
+      "key": "E minor",
+      "tempo_bpm": 50,
+      "description": "",
+      "variant_of": null,
+      "arrangement_type": null,
+      "assets": {
+        "has_ly": true,
+        "has_pdf": true,
+        "has_mp3": true,
+        "has_midi": true,
+        "has_words_he": true,
+        "has_words_en": true,
+        "has_words_th_en": true,
+        "has_words_as_ashk": true,
+        "has_versions_dir": false
+      },
+      "asset_urls": {
+        "mp3": "assets/niggun-027-yedid-nefesh/niggun_027_yedid_nefesh.mp3",
+        "pdf": "assets/niggun-027-yedid-nefesh/niggun_027_yedid_nefesh.pdf",
+        "midi": "assets/niggun-027-yedid-nefesh/niggun_027_yedid_nefesh.midi",
+        "ly": "assets/niggun-027-yedid-nefesh/niggun_027_yedid_nefesh.ly"
+      },
+      "references": [
+        {
+          "url": "https://www.chabad.org/multimedia/music_cdo/aid/692759/jewish/17-Shir-Hamalot-Song-3.htm",
+          "label": "Melody",
+          "type": "chabad_media"
+        },
+        {
+          "url": "https://www.chabad.org/multimedia/media_cdo/aid/265805/jewish/Yedid-Nefesh.htm",
+          "label": "Text",
+          "type": "chabad_media"
+        }
+      ],
+      "tags": [],
       "piano_arrangements": [],
       "choral_arrangements": []
     }
