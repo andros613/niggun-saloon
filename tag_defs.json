@@ -6,5 +6,6 @@
   { "slug": "chag",     "label": "Chag"     },
   { "slug": "chanukah", "label": "Chanukah" },
   { "slug": "anytime",  "label": "Anytime"  },
-  { "slug": "davening", "label": "Davening" }
+  { "slug": "davening", "label": "Davening" },
+  { "slug": "kabbalat_shabbat", "label": "Kabbalat Shabbat" }
 ]
